@@ -4,9 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import "./styles/global.css";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/technosafe_">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
