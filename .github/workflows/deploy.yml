@@ -5,8 +5,6 @@ on:
     branches:
       - main
 
-  workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
@@ -14,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -28,12 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Fix Vite permission
+        run: chmod +x node_modules/.bin/vite
 
       - name: Build Vite application
-        run: npm run build
+        run: node ./node_modules/vite/bin/vite.js build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -44,11 +46,13 @@ jobs:
           path: ./dist
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    needs: build
+
+    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy to GitHub Pages
