@@ -1,0 +1,790 @@
+/* =========================================================
+   TECHNOSAFE FOOTER
+   Premium Dark Fire-Safety Theme
+   Fully Scoped CSS
+========================================================= */
+
+.ts-footer {
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 80, 55, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 80, 55, 0.055),
+      transparent 30%
+    ),
+    #050505;
+
+  border: none;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.ts-footer-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+
+  opacity: 0.5;
+}
+
+
+.ts-footer-glow-left {
+  top: -220px;
+  left: -220px;
+
+  background:
+    rgba(255, 70, 45, 0.10);
+}
+
+
+.ts-footer-glow-right {
+  right: -220px;
+  bottom: -220px;
+
+  background:
+    rgba(255, 70, 45, 0.08);
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.ts-footer > .container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.ts-footer-main {
+  display: grid;
+
+  grid-template-columns:
+    1.7fr
+    0.8fr
+    1fr
+    1.45fr;
+
+  gap: 55px;
+
+  padding:
+    80px 0 55px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.ts-footer-brand {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LOGO WRAPPER
+   CLEAN PREMIUM LOGO
+========================================================= */
+
+.ts-footer-logo-wrap {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 205px;
+  height: 64px;
+
+  margin-bottom: 24px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border: none;
+
+  /*
+    Clean rounded corners.
+    No asymmetric radius.
+  */
+  border-radius: 14px;
+
+  /*
+    Subtle shadow so the white logo
+    stays clearly visible on dark footer.
+  */
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   ACTUAL LOGO IMAGE
+========================================================= */
+
+.ts-footer-logo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+    Important:
+    contain keeps the complete logo visible.
+  */
+  object-fit: contain;
+
+  object-position: center center;
+
+  background: #ffffff;
+
+  border: none;
+
+  border-radius: 14px;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   LOGO HOVER
+========================================================= */
+
+.ts-footer-logo-wrap:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+
+.ts-footer-logo-wrap:hover .ts-footer-logo {
+  transform: scale(1.02);
+
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ts-footer-description {
+  max-width: 350px;
+
+  margin: 0 0 22px;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TRUST BADGE
+========================================================= */
+
+.ts-footer-trust {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 13px;
+
+  margin-bottom: 25px;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 9px;
+
+  font-size: 10px;
+}
+
+
+.ts-footer-trust-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff5038;
+
+  background:
+    rgba(255, 80, 55, 0.10);
+
+  border-radius: 7px;
+}
+
+
+.ts-footer-trust-icon i {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.ts-footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.ts-footer-social {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-footer-social:hover {
+  color: #ffffff;
+
+  background: #ff5038;
+
+  border-color: #ff5038;
+
+  transform:
+    translateY(-3px);
+}
+
+
+.ts-footer-social i {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.ts-footer-column {
+  min-width: 0;
+}
+
+
+.ts-footer-column h4 {
+  position: relative;
+
+  margin: 5px 0 24px;
+
+  padding-bottom: 12px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   HEADING UNDERLINE
+========================================================= */
+
+.ts-footer-column h4::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 25px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #ff5038;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.ts-footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+.ts-footer-links a {
+  position: relative;
+
+  width: fit-content;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-footer-links a:hover {
+  color: #ff6048;
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.ts-footer-contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.ts-footer-contact-list > a {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 11px;
+
+  line-height: 1.65;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.ts-footer-contact-list > a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.ts-footer-contact-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff5038;
+
+  background:
+    rgba(255, 80, 55, 0.08);
+
+  border:
+    1px solid rgba(255, 80, 55, 0.12);
+
+  border-radius: 9px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-footer-contact-list > a:hover
+.ts-footer-contact-icon {
+  color: #ffffff;
+
+  background: #ff5038;
+
+  transform:
+    translateY(-2px);
+}
+
+
+.ts-footer-contact-icon i {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER STRIP
+========================================================= */
+
+.ts-footer-strip {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding:
+    20px 0 25px;
+}
+
+
+.ts-footer-strip-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 80, 55, 0.35),
+      transparent
+    );
+}
+
+
+.ts-footer-strip-text {
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.ts-footer-bottom {
+  position: relative;
+
+  z-index: 3;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  background:
+    rgba(0, 0, 0, 0.28);
+}
+
+
+.ts-footer-bottom-inner {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.ts-footer-bottom p,
+.ts-footer-bottom span {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+.ts-footer-bottom span {
+  color:
+    rgba(255, 80, 55, 0.70);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ts-footer-main {
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+
+    gap: 45px;
+
+    padding:
+      70px 0 45px;
+  }
+
+
+  .ts-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+
+  .ts-footer-description {
+    max-width: 500px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .ts-footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding:
+      60px 0 35px;
+  }
+
+
+  .ts-footer-brand {
+    grid-column: auto;
+  }
+
+
+  /* =====================================================
+     MOBILE LOGO
+  ===================================================== */
+
+  .ts-footer-logo-wrap {
+    width: 185px;
+    height: 60px;
+
+    margin-bottom: 20px;
+
+    border-radius: 13px;
+  }
+
+
+  .ts-footer-logo {
+    border-radius: 13px;
+  }
+
+
+  .ts-footer-description {
+    font-size: 12px;
+  }
+
+
+  .ts-footer-column h4 {
+    margin-bottom: 20px;
+  }
+
+
+  .ts-footer-strip {
+    gap: 10px;
+  }
+
+
+  .ts-footer-strip-text {
+    font-size: 7px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .ts-footer-bottom-inner {
+    min-height: auto;
+
+    padding:
+      17px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ts-footer-main {
+    padding:
+      50px 0 30px;
+
+    gap: 35px;
+  }
+
+
+  /* =====================================================
+     SMALL MOBILE LOGO
+  ===================================================== */
+
+  .ts-footer-logo-wrap {
+    width: 165px;
+    height: 55px;
+
+    border-radius: 12px;
+  }
+
+
+  .ts-footer-logo {
+    border-radius: 12px;
+  }
+
+
+  .ts-footer-description {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .ts-footer-trust {
+    font-size: 9px;
+  }
+
+
+  .ts-footer-social {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .ts-footer-contact-list {
+    gap: 15px;
+  }
+
+
+  .ts-footer-strip-line {
+    display: none;
+  }
+
+
+  .ts-footer-strip {
+    justify-content: center;
+
+    padding:
+      18px 0 22px;
+  }
+
+
+  .ts-footer-strip-text {
+    font-size: 6.5px;
+  }
+
+}

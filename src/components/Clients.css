@@ -1,0 +1,1199 @@
+/* =========================================================
+   TECHNOSAFE — CLIENTS
+   Premium Dual Infinite Carousel
+========================================================= */
+
+.ts-clients {
+  position: relative;
+
+  width: 100%;
+
+  padding: 115px 0 100px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 70, 45, 0.08),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(255, 70, 45, 0.055),
+      transparent 30%
+    ),
+    #070707;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.ts-clients::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -3;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.ts-clients-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: -2;
+}
+
+
+.ts-clients-glow-one {
+  width: 500px;
+  height: 500px;
+
+  left: -250px;
+  top: 25%;
+
+  background: rgba(255, 70, 45, 0.07);
+}
+
+
+.ts-clients-glow-two {
+  width: 450px;
+  height: 450px;
+
+  right: -220px;
+  bottom: 10%;
+
+  background: rgba(255, 70, 45, 0.055);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ts-clients-head {
+  position: relative;
+
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(300px, 0.9fr);
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 65px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.ts-clients-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: #ff674d;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.ts-clients-eyebrow span {
+  width: 28px;
+
+  height: 2px;
+
+  background: #ff5038;
+
+  box-shadow:
+    0 0 12px rgba(255, 80, 56, 0.5);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.ts-clients-heading h2 {
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: clamp(40px, 5vw, 68px) !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1.02 !important;
+
+  letter-spacing: -0.045em;
+
+  max-width: 700px;
+}
+
+
+.ts-clients-heading h2 span {
+  color: #ff674d !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ts-clients-description {
+  padding-bottom: 5px;
+}
+
+
+.ts-clients-description p {
+  margin: 0 0 25px !important;
+
+  max-width: 470px;
+
+  color: rgba(255, 255, 255, 0.52) !important;
+
+  font-size: 14px !important;
+
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   STAT
+========================================================= */
+
+.ts-clients-stat {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.ts-clients-stat strong {
+  color: #ff674d;
+
+  font-size: 28px;
+
+  font-weight: 750;
+
+  line-height: 1;
+}
+
+
+.ts-clients-stat span {
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.ts-client-carousel {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CAROUSEL FADE
+========================================================= */
+
+.ts-client-carousel::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 10;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 180px;
+
+  background:
+    linear-gradient(
+      to right,
+      #070707,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+.ts-client-carousel::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 10;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 180px;
+
+  background:
+    linear-gradient(
+      to left,
+      #070707,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.ts-client-track {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 18px;
+
+  width: max-content;
+
+  will-change: transform;
+}
+
+
+/* TOP — LEFT TO RIGHT */
+
+.ts-client-track-forward {
+  animation:
+    tsClientsForward 42s linear infinite;
+
+  transform: translateX(-50%);
+}
+
+
+/* BOTTOM — RIGHT TO LEFT */
+
+.ts-client-track-reverse {
+  animation:
+    tsClientsReverse 42s linear infinite;
+}
+
+
+/* Pause individually */
+
+.ts-client-carousel:hover
+.ts-client-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   CLIENT CARD
+========================================================= */
+
+.ts-client-card {
+  position: relative;
+
+  width: 330px;
+
+  min-height: 155px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.ts-client-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  right: -70px;
+  top: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 70, 45, 0.12);
+
+  filter: blur(45px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.ts-client-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 80, 55, 0.32);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 70, 45, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.35),
+    0 0 35px rgba(255, 70, 45, 0.06);
+}
+
+
+.ts-client-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CLIENT LOGO
+========================================================= */
+
+.ts-client-logo {
+  position: relative;
+
+  width: 140px;
+
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* Actual logo */
+
+.ts-client-logo img {
+  display: block;
+
+  width: 118px;
+
+  height: 48px;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  filter: grayscale(100%);
+
+  opacity: 0.72;
+
+  transition:
+    filter 0.35s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.ts-client-card:hover
+.ts-client-logo img {
+  filter: grayscale(0);
+
+  opacity: 1;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   PLACEHOLDER LOGO
+========================================================= */
+
+.ts-client-placeholder {
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color: #ff674d;
+
+  background: rgba(255, 80, 55, 0.08);
+
+  border: 1px solid rgba(255, 80, 55, 0.12);
+
+  font-size: 16px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.ts-client-card:hover
+.ts-client-placeholder {
+  color: #ffffff;
+
+  background: #ff5038;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CLIENT INFO
+========================================================= */
+
+.ts-client-info {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.ts-client-type {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #ff674d;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.18em;
+
+  line-height: 1;
+}
+
+
+.ts-client-info h3 {
+  margin: 0 0 7px !important;
+
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+
+  font-weight: 650 !important;
+
+  line-height: 1.3 !important;
+
+  letter-spacing: -0.015em;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+
+.ts-client-card:hover
+.ts-client-info h3 {
+  color: #ff765f !important;
+}
+
+
+.ts-client-info p {
+  display: -webkit-box;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.42) !important;
+
+  font-size: 11px !important;
+
+  line-height: 1.55 !important;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.ts-client-arrow {
+  position: absolute;
+
+  right: 15px;
+
+  top: 15px;
+
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 10px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-client-card:hover
+.ts-client-arrow {
+  color: #ffffff;
+
+  background: rgba(255, 80, 55, 0.15);
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   MIDDLE DIVIDER
+========================================================= */
+
+.ts-clients-middle {
+  width: min(850px, 90%);
+
+  margin: 30px auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+.ts-clients-middle-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 80, 55, 0.25)
+    );
+}
+
+
+.ts-clients-middle-line:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      rgba(255, 80, 55, 0.25)
+    );
+}
+
+
+.ts-clients-middle-text {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ts-clients-footer {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 65px;
+
+  padding: 22px 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  backdrop-filter: blur(10px);
+}
+
+
+.ts-clients-footer-icon {
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 13px;
+
+  color: #ff674d;
+
+  background: rgba(255, 80, 55, 0.08);
+
+  border: 1px solid rgba(255, 80, 55, 0.12);
+
+  font-size: 17px;
+}
+
+
+.ts-clients-footer-content {
+  min-width: 0;
+}
+
+
+.ts-clients-footer-content strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  line-height: 1.4;
+}
+
+
+.ts-clients-footer-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER BADGE
+========================================================= */
+
+.ts-clients-footer-badge {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+
+  color: #ff674d;
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.15em;
+}
+
+
+.ts-clients-footer-badge i {
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 80, 55, 0.15);
+
+  border-radius: 50%;
+
+  font-size: 10px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-clients-footer:hover
+.ts-clients-footer-badge i {
+  color: #ffffff;
+
+  background: #ff5038;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+/*
+   IMPORTANT:
+
+   Each track contains exactly two copies
+   of the same number of cards.
+
+   This makes the movement seamless.
+*/
+
+
+@keyframes tsClientsForward {
+
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+
+@keyframes tsClientsReverse {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ts-clients {
+    padding: 90px 0 80px;
+  }
+
+
+  .ts-clients-head {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+  }
+
+
+  .ts-clients-heading h2 {
+    max-width: 650px;
+  }
+
+
+  .ts-client-card {
+    width: 300px;
+
+    min-height: 145px;
+  }
+
+
+  .ts-client-logo {
+    width: 120px;
+
+    height: 55px;
+  }
+
+
+  .ts-client-logo img {
+    width: 100px;
+
+    height: 45px;
+  }
+
+
+  .ts-client-carousel::before,
+  .ts-client-carousel::after {
+    width: 100px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ts-clients {
+    padding: 75px 0 65px;
+  }
+
+
+  .ts-clients-head {
+    gap: 25px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .ts-clients-eyebrow {
+    font-size: 9px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .ts-clients-heading h2 {
+    font-size: 38px !important;
+
+    line-height: 1.04 !important;
+  }
+
+
+  .ts-clients-description p {
+    font-size: 13px !important;
+
+    line-height: 1.7 !important;
+  }
+
+
+  .ts-client-card {
+    width: 275px;
+
+    min-height: 135px;
+
+    padding: 18px;
+
+    gap: 15px;
+
+    border-radius: 16px;
+  }
+
+
+  .ts-client-logo {
+    width: 100px;
+
+    height: 50px;
+
+    border-radius: 10px;
+  }
+
+
+  .ts-client-logo img {
+    width: 85px;
+
+    height: 42px;
+  }
+
+
+  .ts-client-placeholder {
+    width: 35px;
+
+    height: 35px;
+
+    font-size: 14px;
+  }
+
+
+  .ts-client-info h3 {
+    font-size: 13px !important;
+  }
+
+
+  .ts-client-info p {
+    font-size: 10px !important;
+  }
+
+
+  .ts-client-carousel {
+    overflow: hidden;
+  }
+
+
+  .ts-client-carousel::before,
+  .ts-client-carousel::after {
+    width: 55px;
+  }
+
+
+  .ts-clients-middle {
+    margin: 24px auto;
+
+    gap: 12px;
+  }
+
+
+  .ts-clients-middle-text {
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  .ts-clients-footer {
+    align-items: flex-start;
+
+    padding: 18px;
+
+    margin-top: 45px;
+  }
+
+
+  .ts-clients-footer-badge {
+    display: none;
+  }
+
+
+  .ts-clients-footer-icon {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 15px;
+  }
+
+
+  .ts-clients-footer-content strong {
+    font-size: 13px;
+  }
+
+
+  .ts-clients-footer-content p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ts-client-card {
+    width: 250px;
+
+    min-height: 125px;
+
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+
+  .ts-client-logo {
+    width: 88px;
+
+    height: 45px;
+  }
+
+
+  .ts-client-logo img {
+    width: 75px;
+
+    height: 38px;
+  }
+
+
+  .ts-client-info h3 {
+    font-size: 12px !important;
+  }
+
+
+  .ts-client-info p {
+    font-size: 9px !important;
+  }
+
+
+  .ts-clients-heading h2 {
+    font-size: 34px !important;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ts-client-track {
+    animation: none !important;
+  }
+
+}

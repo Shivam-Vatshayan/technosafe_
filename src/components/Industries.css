@@ -1,0 +1,733 @@
+/* =========================================================
+   TECHNOSAFE INDUSTRIES
+========================================================= */
+
+.ts-industries {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  overflow: hidden;
+  background: #070707;
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.ts-industries::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 5%;
+  left: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 70, 45, 0.07);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.ts-industries::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: -180px;
+  bottom: 5%;
+
+  border-radius: 50%;
+
+  background: rgba(255, 70, 45, 0.045);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+.ts-industries > .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADING — WHITE ONLY
+========================================================= */
+
+.ts-industries h2 {
+  color: #ffffff !important;
+}
+
+.ts-industries h2 span {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ts-industries .ts-industries-grid {
+  width: 100%;
+
+  margin-top: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ts-industries .ts-industry-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 325px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.ts-industries .ts-industry-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 70, 45, 0.18);
+
+  filter: blur(60px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD BOTTOM LINE
+========================================================= */
+
+.ts-industries .ts-industry-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ff5038;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.ts-industries .ts-industry-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255, 80, 55, 0.35);
+
+  background: rgba(255, 255, 255, 0.055);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(255, 70, 45, 0.06);
+}
+
+.ts-industries .ts-industry-card:hover::before {
+  opacity: 1;
+}
+
+.ts-industries .ts-industry-card:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.ts-industries .ts-industry-number {
+  position: absolute;
+
+  right: 20px;
+  bottom: 8px;
+
+  z-index: 0;
+
+  font-size: 110px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -7px;
+
+  color: rgba(255, 255, 255, 0.025);
+
+  pointer-events: none;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.ts-industries
+.ts-industry-card:hover
+.ts-industry-number {
+  color: rgba(255, 70, 45, 0.055);
+
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.ts-industries .ts-industry-top {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.ts-industries .ts-industry-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: #ff553c;
+
+  font-size: 21px;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Icon Hover */
+
+.ts-industries
+.ts-industry-card:hover
+.ts-industry-icon {
+  transform: rotate(-5deg) scale(1.05);
+
+  color: #ffffff;
+
+  background: #ff5038;
+
+  box-shadow:
+    0 10px 30px rgba(255, 70, 45, 0.25);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.ts-industries .ts-industry-arrow {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.ts-industries
+.ts-industry-card:hover
+.ts-industry-arrow {
+  transform: translate(3px, -3px);
+
+  color: #ffffff;
+
+  background: rgba(255, 70, 45, 0.15);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ts-industries .ts-industry-content {
+  position: relative;
+
+  z-index: 3;
+
+  margin-top: auto;
+
+  padding-top: 50px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.ts-industries .ts-industry-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ff553c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.ts-industries .ts-industry-content h3 {
+  margin: 0 0 10px !important;
+
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 24px !important;
+
+  font-weight: 650 !important;
+
+  line-height: 1.2 !important;
+
+  letter-spacing: -0.02em;
+
+  transition: color 0.3s ease;
+}
+
+
+.ts-industries
+.ts-industry-card:hover
+.ts-industry-content h3 {
+  color: #ff684f !important;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.ts-industries .ts-industry-content p {
+  max-width: 290px;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  color: rgba(255, 255, 255, 0.55) !important;
+
+  font-size: 14px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.ts-industries .ts-industry-line {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.ts-industries .ts-industry-line span {
+  display: block;
+
+  width: 35%;
+
+  height: 100%;
+
+  background: #ff5038;
+
+  transform: translateX(-120%);
+
+  transition: transform 0.55s ease;
+}
+
+
+.ts-industries
+.ts-industry-card:hover
+.ts-industry-line span {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   FOOTER STRIP
+========================================================= */
+
+.ts-industries .ts-industries-footer {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 24px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.ts-industries
+.ts-industries-footer:hover {
+  border-color: rgba(255, 80, 55, 0.25);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   FOOTER ICON
+========================================================= */
+
+.ts-industries .ts-industries-footer-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #ff553c;
+
+  background: rgba(255, 70, 45, 0.1);
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.ts-industries
+.ts-industries-footer-content {
+  min-width: 0;
+}
+
+
+.ts-industries
+.ts-industries-footer strong {
+  display: block;
+
+  margin: 0 0 5px !important;
+
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.4 !important;
+}
+
+
+.ts-industries
+.ts-industries-footer p {
+  margin: 0 !important;
+
+  color: rgba(255, 255, 255, 0.5) !important;
+
+  font-size: 13px !important;
+
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   FOOTER ARROW
+========================================================= */
+
+.ts-industries
+.ts-industries-footer-arrow {
+  width: 42px;
+  height: 42px;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-industries
+.ts-industries-footer:hover
+.ts-industries-footer-arrow {
+  color: #ff553c;
+
+  transform: translateX(6px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ts-industries {
+    padding: 90px 0;
+  }
+
+  .ts-industries .ts-industries-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ts-industries {
+    padding: 75px 0;
+  }
+
+  .ts-industries .ts-industries-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    margin-top: 45px;
+  }
+
+  .ts-industries .ts-industry-card {
+    min-height: 290px;
+
+    padding: 24px;
+
+    border-radius: 18px;
+  }
+
+  .ts-industries .ts-industry-content {
+    padding-top: 40px;
+  }
+
+  .ts-industries
+  .ts-industry-content h3 {
+    font-size: 22px !important;
+  }
+
+  .ts-industries
+  .ts-industry-number {
+    font-size: 90px;
+  }
+
+  .ts-industries
+  .ts-industries-footer {
+    padding: 20px;
+
+    align-items: flex-start;
+  }
+
+  .ts-industries
+  .ts-industries-footer-arrow {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ts-industries
+  .ts-industry-card {
+    min-height: 270px;
+
+    padding: 20px;
+  }
+
+  .ts-industries
+  .ts-industry-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ts-industries
+  .ts-industry-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ts-industries
+  .ts-industry-content h3 {
+    font-size: 20px !important;
+  }
+
+  .ts-industries
+  .ts-industry-content p {
+    font-size: 13px !important;
+  }
+}

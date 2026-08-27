@@ -1,0 +1,483 @@
+/* =========================================================
+   TECHNOSAFE — PARTNERS
+   Dark Premium + Fire Accent
+========================================================= */
+
+.ts-partners {
+  position: relative;
+  width: 100%;
+  padding: 70px 0;
+  overflow: hidden;
+
+  background: #070707;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.ts-partners-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+  margin-bottom: 45px;
+
+  color: #ff674d;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+/* Small decorative lines */
+
+.ts-partners-line {
+  width: 45px;
+  height: 1px;
+
+  background: rgba(255, 103, 77, 0.35);
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.ts-partners-carousel {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* Left fade */
+
+.ts-partners-carousel::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 180px;
+
+  background: linear-gradient(
+    to right,
+    #070707,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+
+/* Right fade */
+
+.ts-partners-carousel::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 5;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 180px;
+
+  background: linear-gradient(
+    to left,
+    #070707,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.ts-partners-track {
+  width: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  animation:
+    tsPartnerScroll 32s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Pause carousel */
+
+.ts-partners-carousel:hover
+.ts-partners-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.ts-partner {
+  position: relative;
+
+  width: 210px;
+  height: 105px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 18px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD TOP GLOW
+========================================================= */
+
+.ts-partner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  top: -40px;
+  right: -30px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 80, 55, 0.12);
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.ts-partner:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 90, 65, 0.3);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 80, 55, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(255, 70, 45, 0.06);
+}
+
+.ts-partner:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   LOGO BOX
+========================================================= */
+
+.ts-partner-logo {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Actual image */
+
+.ts-partner-logo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter: grayscale(100%);
+
+  opacity: 0.68;
+
+  transition:
+    filter 0.35s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* Image hover */
+
+.ts-partner:hover
+.ts-partner-logo img {
+  filter: grayscale(0);
+
+  opacity: 1;
+
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   PLACEHOLDER ICON
+========================================================= */
+
+.ts-partner-logo i {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #ff674d;
+
+  background: rgba(255, 80, 55, 0.08);
+
+  border: 1px solid rgba(255, 80, 55, 0.14);
+
+  font-size: 20px;
+
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.ts-partner:hover
+.ts-partner-logo i {
+  color: #ffffff;
+
+  background: #ff5038;
+
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   PARTNER NAME
+========================================================= */
+
+.ts-partner-name {
+  max-width: 110px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.01em;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* Name hover */
+
+.ts-partner:hover
+.ts-partner-name {
+  color: #ff765f;
+}
+
+
+/* =========================================================
+   INFINITE ANIMATION
+========================================================= */
+
+@keyframes tsPartnerScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(
+      calc(-50% - 10px)
+    );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ts-partners {
+    padding: 60px 0;
+  }
+
+  .ts-partner {
+    width: 190px;
+    height: 100px;
+  }
+
+  .ts-partners-carousel::before,
+  .ts-partners-carousel::after {
+    width: 100px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ts-partners {
+    padding: 55px 0;
+  }
+
+  .ts-partners-label {
+    gap: 12px;
+
+    margin-bottom: 35px;
+
+    font-size: 9px;
+  }
+
+  .ts-partners-line {
+    width: 25px;
+  }
+
+  .ts-partner {
+    width: 175px;
+    height: 90px;
+
+    padding: 15px;
+
+    gap: 10px;
+
+    border-radius: 14px;
+  }
+
+  .ts-partner-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ts-partner-logo i {
+    width: 44px;
+    height: 44px;
+
+    font-size: 17px;
+
+    border-radius: 11px;
+  }
+
+  .ts-partner-name {
+    max-width: 95px;
+    font-size: 12px;
+  }
+
+  .ts-partners-carousel::before,
+  .ts-partners-carousel::after {
+    width: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ts-partner {
+    width: 160px;
+    height: 85px;
+  }
+
+  .ts-partner-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ts-partner-name {
+    font-size: 11px;
+  }
+
+}

@@ -1,0 +1,214 @@
+/* =========================================
+   TECHNOSAFE STATS BAR
+========================================= */
+
+.statsbar {
+  width: 100%;
+
+  background: #07131f;
+
+  padding: 34px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.stat-card {
+  position: relative;
+
+  text-align: center;
+
+  padding: 10px 25px;
+}
+
+
+.stat-card:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+
+  top: 15%;
+
+  width: 1px;
+
+  height: 70%;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.stat-card h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 38px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+
+  transition: color 0.3s ease;
+}
+
+
+.stat-card h2 span {
+  color: #f0442e;
+
+  margin-left: 2px;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.stat-card p {
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.3px;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.stat-card:hover h2 {
+  color: #f0442e;
+}
+
+
+.stat-card:hover h2 span {
+  color: #ffffff;
+}
+
+
+.stat-card:hover p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 28px;
+  }
+
+
+  .stat-card:nth-child(2)::after {
+    display: none;
+  }
+
+
+  .stat-card:nth-child(1)::after,
+  .stat-card:nth-child(3)::after {
+    height: 60%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .statsbar {
+    padding: 28px 0;
+  }
+
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 0;
+  }
+
+
+  .stat-card {
+    padding: 8px 15px;
+  }
+
+
+  .stat-card h2 {
+    font-size: 30px;
+
+    font-weight: 600;
+  }
+
+
+  .stat-card p {
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  .stat-card:nth-child(1)::after,
+  .stat-card:nth-child(3)::after {
+    display: block;
+  }
+
+
+  .stat-card:nth-child(2)::after,
+  .stat-card:nth-child(4)::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .stat-card h2,
+  .stat-card h2 span,
+  .stat-card p {
+    transition: none;
+  }
+
+}

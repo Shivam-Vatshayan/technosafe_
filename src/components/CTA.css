@@ -1,0 +1,862 @@
+/* =========================================================
+   TECHNOSAFE CTA / CONSULTATION
+   Fully Scoped — No Global Override
+========================================================= */
+
+.ts-cta {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+
+  overflow: hidden;
+
+  background: #070707;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.ts-cta::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: -3;
+}
+
+
+/* =========================================================
+   GLOWS
+========================================================= */
+
+.ts-cta-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+
+  z-index: -2;
+}
+
+.ts-cta-glow-one {
+  width: 500px;
+  height: 500px;
+
+  left: -280px;
+  top: 15%;
+
+  background: rgba(255, 70, 45, 0.08);
+}
+
+.ts-cta-glow-two {
+  width: 450px;
+  height: 450px;
+
+  right: -250px;
+  bottom: -100px;
+
+  background: rgba(255, 70, 45, 0.07);
+}
+
+
+/* =========================================================
+   MAIN BOX
+========================================================= */
+
+.ts-cta-box {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(400px, 0.9fr);
+
+  gap: 80px;
+
+  padding: 70px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38);
+
+  backdrop-filter: blur(16px);
+}
+
+
+/* =========================================================
+   TOP ACCENT LINE
+========================================================= */
+
+.ts-cta-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff5038,
+      #ff765f,
+      #ff5038,
+      transparent
+    );
+
+  box-shadow:
+    0 0 20px rgba(255, 80, 56, 0.4);
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.ts-cta-left {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.ts-cta-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: #ff674d;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.ts-cta-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ff5038;
+
+  box-shadow:
+    0 0 14px rgba(255, 80, 56, 0.8);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.ts-cta-left h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: clamp(44px, 5vw, 68px) !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1.02 !important;
+
+  letter-spacing: -0.05em;
+}
+
+
+.ts-cta-left h2 span {
+  color: #ff674d !important;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ts-cta-description {
+  max-width: 600px;
+
+  margin: 25px 0 0 !important;
+  padding: 0 !important;
+
+  color: rgba(255, 255, 255, 0.52) !important;
+
+  font-size: 14px !important;
+
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.ts-cta-benefits {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+
+.ts-cta-benefit {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  padding: 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-cta-benefit:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(255, 80, 55, 0.25);
+
+  background: rgba(255, 80, 55, 0.045);
+}
+
+
+/* Benefit icon */
+
+.ts-cta-benefit-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #ff674d;
+
+  background: rgba(255, 80, 55, 0.08);
+
+  font-size: 14px;
+}
+
+
+/* Benefit title */
+
+.ts-cta-benefit strong {
+  display: block;
+
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+
+/* Benefit text */
+
+.ts-cta-benefit span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.ts-cta-trust {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+}
+
+
+.ts-cta-trust-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: #ff5038;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.ts-cta-form-wrap {
+  position: relative;
+
+  z-index: 3;
+
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 22px;
+
+  background:
+    rgba(5, 5, 5, 0.65);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.3);
+
+  backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.ts-cta-form-head {
+  margin-bottom: 25px;
+}
+
+
+.ts-cta-form-head span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ff674d;
+
+  font-size: 9px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.18em;
+}
+
+
+.ts-cta-form-head h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 24px !important;
+
+  font-weight: 650 !important;
+
+  line-height: 1.2 !important;
+}
+
+
+.ts-cta-form-head p {
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+
+  color: rgba(255, 255, 255, 0.4) !important;
+
+  font-size: 11px !important;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.ts-cta-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.ts-cta-field {
+  width: 100%;
+}
+
+
+.ts-cta-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.ts-cta-input {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.ts-cta-input i {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: rgba(255, 103, 77, 0.7);
+
+  font-size: 11px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+.ts-cta-input input,
+.ts-cta-input select {
+  width: 100%;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 0 14px 0 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  outline: none;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.ts-cta-input input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+.ts-cta-input input:focus,
+.ts-cta-input select:focus {
+  border-color: rgba(255, 80, 55, 0.5);
+
+  background: rgba(255, 80, 55, 0.035);
+
+  box-shadow:
+    0 0 0 3px rgba(255, 80, 55, 0.06);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.ts-cta-select select {
+  appearance: none;
+
+  cursor: pointer;
+
+  padding-right: 35px;
+}
+
+
+.ts-cta-select::after {
+  content: "\f078";
+
+  position: absolute;
+
+  right: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-family: "Font Awesome 6 Free";
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  pointer-events: none;
+}
+
+
+.ts-cta-select select option {
+  color: #ffffff;
+
+  background: #111111;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.ts-cta-submit {
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 3px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  background: #ff5038;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 30px rgba(255, 70, 45, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.ts-cta-submit i {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ff5038;
+
+  background: #ffffff;
+
+  font-size: 9px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.ts-cta-submit:hover {
+  transform: translateY(-3px);
+
+  background: #ff624a;
+
+  box-shadow:
+    0 16px 38px rgba(255, 70, 45, 0.28);
+}
+
+
+.ts-cta-submit:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   FORM NOTE
+========================================================= */
+
+.ts-cta-form-note {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin: 4px 0 0 !important;
+
+  color: rgba(255, 255, 255, 0.25) !important;
+
+  font-size: 8px !important;
+}
+
+
+.ts-cta-form-note i {
+  color: rgba(255, 103, 77, 0.65);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .ts-cta {
+    padding: 85px 0;
+  }
+
+
+  .ts-cta-box {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 55px;
+  }
+
+
+  .ts-cta-left {
+    max-width: 800px;
+  }
+
+
+  .ts-cta-form-wrap {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .ts-cta {
+    padding: 70px 0;
+  }
+
+
+  .ts-cta-box {
+    gap: 40px;
+
+    padding: 38px 22px;
+
+    border-radius: 22px;
+  }
+
+
+  .ts-cta-left h2 {
+    font-size: 40px !important;
+  }
+
+
+  .ts-cta-description {
+    font-size: 13px !important;
+  }
+
+
+  .ts-cta-benefits {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 28px;
+  }
+
+
+  .ts-cta-benefit {
+    flex-direction: row;
+
+    align-items: center;
+
+    padding: 13px;
+  }
+
+
+  .ts-cta-benefit-icon {
+    flex-shrink: 0;
+  }
+
+
+  .ts-cta-form-wrap {
+    padding: 22px;
+
+    border-radius: 17px;
+  }
+
+
+  .ts-cta-form-head h3 {
+    font-size: 21px !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ts-cta {
+    padding: 55px 0;
+  }
+
+
+  .ts-cta-box {
+    padding: 30px 17px;
+  }
+
+
+  .ts-cta-left h2 {
+    font-size: 34px !important;
+  }
+
+
+  .ts-cta-eyebrow {
+    font-size: 8px;
+  }
+
+
+  .ts-cta-form-wrap {
+    padding: 18px;
+  }
+
+}

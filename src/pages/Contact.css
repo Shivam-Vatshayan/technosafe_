@@ -1,0 +1,19 @@
+.contact-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:35px; align-items:start; }
+.contact-form { border:1px solid var(--line); border-radius:28px; padding:32px; }
+.form-head h2 { margin:12px 0 25px; font:800 32px "Manrope"; }
+.fields { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.fields label { color:#4c575e; font-size:12px; font-weight:700; }
+.fields .full { grid-column:1/-1; }
+.fields input,.fields select,.fields textarea { width:100%; margin-top:7px; border:1px solid #dce1e4; border-radius:12px; padding:13px 14px; outline:none; background:#fbfcfc; }
+.fields input:focus,.fields select:focus,.fields textarea:focus { border-color:#ff938d; box-shadow:0 0 0 3px #fff0ef; }
+.contact-form > .btn { margin-top:20px; }
+.contact-aside { border-radius:28px; overflow:hidden; background:var(--navy); color:#fff; }
+.contact-aside > img { width:100%; height:260px; object-fit:cover; }
+.contact-info { padding:28px; }
+.contact-info h3 { font:800 24px "Manrope"; margin:0 0 18px; }
+.contact-info p { color:#cbd5d9; font-size:13px; }
+.contact-info p i { width:22px; color:#ff5b52; }
+.contact-info .socials { display:flex; }
+.contact-info .socials a { width:38px; height:38px; border:1px solid #31404a; border-radius:50%; display:grid; place-items:center; }
+@media(max-width:800px){ .contact-grid{grid-template-columns:1fr;} }
+@media(max-width:560px){ .fields{grid-template-columns:1fr;} .fields .full{grid-column:auto;} .contact-form{padding:22px;} }
