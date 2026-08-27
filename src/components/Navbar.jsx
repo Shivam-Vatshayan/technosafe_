@@ -13,6 +13,8 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.png`;
+
   return (
     <header className="ts-nav">
 
@@ -21,6 +23,7 @@ export default function Navbar() {
         <div className="container ts-nav-top-inner">
 
           <div className="ts-nav-top-left">
+
             <span>
               <i className="fa-solid fa-shield-halved"></i>
               Fire Safety & Protection Solutions
@@ -32,6 +35,7 @@ export default function Navbar() {
               <i className="fa-solid fa-envelope"></i>
               sales@technosafe.in
             </a>
+
           </div>
 
           <a href="tel:+919813055906">
@@ -55,13 +59,13 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             <img
-              src="/images/technosafe-logo.png"
+              src={logoPath}
               alt="TechnoSafe Solutions"
             />
           </NavLink>
 
 
-          {/* DESKTOP / MOBILE LINKS */}
+          {/* NAVIGATION MENU */}
           <div className={`ts-nav-menu ${open ? "open" : ""}`}>
 
             <div className="ts-nav-links">
@@ -73,9 +77,7 @@ export default function Navbar() {
                   end={path === "/"}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    isActive
-                      ? "ts-nav-link active"
-                      : "ts-nav-link"
+                    `ts-nav-link ${isActive ? "active" : ""}`
                   }
                 >
                   {label}
@@ -85,6 +87,7 @@ export default function Navbar() {
             </div>
 
 
+            {/* CTA BUTTON */}
             <NavLink
               to="/contact"
               className="ts-nav-button"
@@ -97,12 +100,13 @@ export default function Navbar() {
           </div>
 
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE MENU BUTTON */}
           <button
             type="button"
             className="ts-nav-toggle"
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((prev) => !prev)}
             aria-label="Toggle navigation"
+            aria-expanded={open}
           >
             <span></span>
             <span></span>

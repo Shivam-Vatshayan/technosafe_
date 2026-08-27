@@ -4,107 +4,131 @@ import "./Partners.css";
 const partners = [
   {
     name: "SafeGuard",
-    logo: "",
+    logo: null,
   },
   {
     name: "Honeywell",
-    logo: "",
+    logo: null,
   },
   {
     name: "Notifier",
-    logo: "",
+    logo: null,
   },
   {
     name: "Siemens",
-    logo: "",
+    logo: null,
   },
   {
     name: "Tyco",
-    logo: "",
+    logo: null,
   },
   {
     name: "Kidde",
-    logo: "",
+    logo: null,
   },
   {
     name: "Johnson Controls",
-    logo: "",
+    logo: null,
   },
   {
     name: "Minimax",
-    logo: "",
+    logo: null,
   },
   {
     name: "Bosch",
-    logo: "",
+    logo: null,
   },
   {
     name: "Viking",
-    logo: "",
+    logo: null,
   },
   {
     name: "FirePro",
-    logo: "",
+    logo: null,
   },
 ];
 
 export default function Partners() {
   /*
-    Duplicate list for seamless infinite carousel
+    Duplicate partners for seamless infinite carousel
   */
   const carouselItems = [...partners, ...partners];
 
   return (
     <section className="ts-partners section-sm">
+
+      {/* ================================
+          SECTION LABEL
+      ================================= */}
+
       <div className="container">
 
-        {/* Section Label */}
         <div className="ts-partners-label">
-          <span className="ts-partners-line"></span>
-
-          <span>
-             
-            Partners
-          </span>
 
           <span className="ts-partners-line"></span>
+
+          <span>Partners</span>
+
+          <span className="ts-partners-line"></span>
+
         </div>
 
       </div>
 
-      {/* Carousel */}
+
+      {/* ================================
+          PARTNERS CAROUSEL
+      ================================= */}
+
       <div className="ts-partners-carousel">
 
         <div className="ts-partners-track">
 
           {carouselItems.map((partner, index) => (
+
             <div
               className="ts-partner"
               key={`${partner.name}-${index}`}
             >
+
+              {/* Partner Logo */}
               <div className="ts-partner-logo">
 
                 {partner.logo ? (
+
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
                     loading="lazy"
                   />
+
                 ) : (
-                  <i className="fa-solid fa-shield-halved"></i>
+
+                  <div
+                    className="ts-partner-placeholder"
+                    aria-label={`${partner.name} logo placeholder`}
+                  >
+                    <i className="fa-solid fa-shield-halved"></i>
+                  </div>
+
                 )}
 
               </div>
 
+
+              {/* Partner Name */}
               <span className="ts-partner-name">
                 {partner.name}
               </span>
+
             </div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }

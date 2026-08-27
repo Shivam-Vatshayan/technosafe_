@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
+  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.png`;
+
   return (
     <footer className="ts-footer">
 
@@ -14,16 +16,13 @@ export default function Footer() {
 
         <div className="ts-footer-main">
 
-          {/* =================================================
-              BRAND
-          ================================================= */}
-
+          {/* BRAND */}
           <div className="ts-footer-brand">
 
             <Link to="/" className="ts-footer-logo-wrap">
               <img
                 className="ts-footer-logo"
-                src="/images/technosafe-logo.png"
+                src={logoPath}
                 alt="TechnoSafe Solutions"
               />
             </Link>
@@ -34,7 +33,6 @@ export default function Footer() {
             </p>
 
             {/* Trust badge */}
-
             <div className="ts-footer-trust">
               <span className="ts-footer-trust-icon">
                 <i className="fa-solid fa-shield-halved"></i>
@@ -45,9 +43,7 @@ export default function Footer() {
               </span>
             </div>
 
-
             {/* Socials */}
-
             <div className="ts-footer-socials">
 
               <a
@@ -87,33 +83,21 @@ export default function Footer() {
           </div>
 
 
-          {/* =================================================
-              COMPANY
-          ================================================= */}
-
+          {/* COMPANY */}
           <div className="ts-footer-column">
 
             <h4>Company</h4>
 
             <div className="ts-footer-links">
-
               <Link to="/about">About Us</Link>
-
               <Link to="/services">Services</Link>
-
-             
-
               <Link to="/contact">Contact</Link>
-
             </div>
 
           </div>
 
 
-          {/* =================================================
-              SOLUTIONS
-          ================================================= */}
-
+          {/* SOLUTIONS */}
           <div className="ts-footer-column">
 
             <h4>Solutions</h4>
@@ -141,10 +125,7 @@ export default function Footer() {
           </div>
 
 
-          {/* =================================================
-              CONTACT
-          ================================================= */}
-
+          {/* CONTACT */}
           <div className="ts-footer-column ts-footer-contact">
 
             <h4>Reach us</h4>
@@ -152,13 +133,11 @@ export default function Footer() {
             <div className="ts-footer-contact-list">
 
               {/* ADDRESS */}
-
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Plot+No.+51+Sundernagar+Naraingarh+Road+Ambala+City+Haryana+134003"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-
                 <span className="ts-footer-contact-icon">
                   <i className="fa-solid fa-location-dot"></i>
                 </span>
@@ -170,12 +149,10 @@ export default function Footer() {
                   <br />
                   Ambala City, Haryana – 134003
                 </span>
-
               </a>
 
 
               {/* PHONE */}
-
               <a href="tel:+919813055906">
 
                 <span className="ts-footer-contact-icon">
@@ -190,7 +167,6 @@ export default function Footer() {
 
 
               {/* EMAIL */}
-
               <a href="mailto:sales@technosafe.in">
 
                 <span className="ts-footer-contact-icon">
@@ -210,10 +186,7 @@ export default function Footer() {
         </div>
 
 
-        {/* =================================================
-            FOOTER CTA STRIP
-        ================================================= */}
-
+        {/* FOOTER CTA STRIP */}
         <div className="ts-footer-strip">
 
           <span className="ts-footer-strip-line"></span>
@@ -229,10 +202,7 @@ export default function Footer() {
       </div>
 
 
-      {/* =================================================
-          BOTTOM
-      ================================================= */}
-
+      {/* BOTTOM */}
       <div className="ts-footer-bottom">
 
         <div className="container ts-footer-bottom-inner">

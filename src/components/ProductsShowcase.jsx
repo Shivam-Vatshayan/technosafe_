@@ -7,29 +7,33 @@ const products = [
     title: "Fire Extinguishers",
     copy: "ABC, DCP, CO₂, foam and clean-agent extinguishers for different fire risks.",
     icon: "fa-solid fa-fire-extinguisher",
-    image: "/images/fire-extinguisher.jpg"
+    image: "images/fire-extinguisher.jpg",
   },
   {
     title: "Fire Alarm Systems",
     copy: "Conventional and addressable panels, smoke detectors, MCPs and alarm accessories.",
     icon: "fa-solid fa-bell",
-    image: "/images/fire-alarm-system.png"
+    image: "images/fire-alarm-system.png",
   },
   {
     title: "Hydrant Equipment",
     copy: "Hose reels, landing valves, hydrant accessories and essential firefighting equipment.",
     icon: "fa-solid fa-faucet-drip",
-    image: "/images/hydrant-equipment.png"
+    image: "images/hydrant-equipment.png",
   },
   {
     title: "Fire Safety Kits",
     copy: "Emergency kits, PPE, safety signage and essential evacuation equipment.",
     icon: "fa-solid fa-kit-medical",
-    image: "/images/fire-safety-kits.png"
-  }
+    image: "images/fire-safety-kits.png",
+  },
 ];
 
 export default function ProductsShowcase() {
+  const getAssetPath = (path) => {
+    return `${import.meta.env.BASE_URL}${path}`;
+  };
+
   return (
     <section className="ts-products-section">
 
@@ -94,7 +98,7 @@ export default function ProductsShowcase() {
               <div className="ts-product-image">
 
                 <img
-                  src={product.image}
+                  src={getAssetPath(product.image)}
                   alt={product.title}
                   loading="lazy"
                 />

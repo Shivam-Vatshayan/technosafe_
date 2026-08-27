@@ -3,86 +3,108 @@ import { Link } from "react-router-dom";
 import SectionHeading from "../components/SectionHeading";
 import "./InnerPage.css";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const services = [
   {
     no: "01",
     icon: "fa-solid fa-triangle-exclamation",
     title: "Fire Risk Assessment",
-    text: "Identify hazards, evaluate risks and create a clear action plan for improving fire safety."
+    text: "Identify hazards, evaluate risks and create a clear action plan for improving fire safety.",
   },
   {
     no: "02",
     icon: "fa-solid fa-bell",
     title: "Fire Alarm & Detection",
-    text: "Addressable and conventional fire alarm systems with detectors, MCPs, sounders and panels."
+    text: "Addressable and conventional fire alarm systems with detectors, MCPs, sounders and panels.",
   },
   {
     no: "03",
     icon: "fa-solid fa-droplet",
     title: "Hydrant & Sprinkler Systems",
-    text: "Complete hydrant and sprinkler solutions including pumps, tanks, hose reels and accessories."
+    text: "Complete hydrant and sprinkler solutions including pumps, tanks, hose reels and accessories.",
   },
   {
     no: "04",
     icon: "fa-solid fa-cloud",
     title: "Fire Suppression Systems",
-    text: "Specialized suppression solutions for server rooms, electrical areas and high-value assets."
+    text: "Specialized suppression solutions for server rooms, electrical areas and high-value assets.",
   },
   {
     no: "05",
     icon: "fa-solid fa-fire-extinguisher",
     title: "Fire Extinguisher Services",
-    text: "Supply, installation, inspection, refilling and servicing of fire extinguishers."
+    text: "Supply, installation, inspection, refilling and servicing of fire extinguishers.",
   },
   {
     no: "06",
     icon: "fa-solid fa-screwdriver-wrench",
     title: "AMC & Maintenance",
-    text: "Planned inspection, testing and preventive maintenance to keep systems operational."
+    text: "Planned inspection, testing and preventive maintenance to keep systems operational.",
   },
   {
     no: "07",
     icon: "fa-solid fa-clipboard-check",
     title: "Fire Safety Audit",
-    text: "Professional audits to identify safety gaps, operational risks and improvement areas."
+    text: "Professional audits to identify safety gaps, operational risks and improvement areas.",
   },
   {
     no: "08",
     icon: "fa-solid fa-graduation-cap",
     title: "Fire Safety Training",
-    text: "Practical extinguisher training, evacuation drills and emergency response awareness."
+    text: "Practical extinguisher training, evacuation drills and emergency response awareness.",
   },
   {
     no: "09",
     icon: "fa-solid fa-file-shield",
     title: "Compliance & Documentation",
-    text: "Inspection records, checklists, asset registers, drawings and audit documentation."
+    text: "Inspection records, checklists, asset registers, drawings and audit documentation.",
   },
   {
     no: "10",
     icon: "fa-solid fa-lightbulb",
     title: "Emergency Lighting",
-    text: "Emergency luminaires, exit signs and evacuation wayfinding for safer movement."
+    text: "Emergency luminaires, exit signs and evacuation wayfinding for safer movement.",
   },
   {
     no: "11",
     icon: "fa-solid fa-door-closed",
     title: "Passive Fire Protection",
-    text: "Fire doors, fire stopping and compartmentation solutions to help contain fire and smoke."
+    text: "Fire doors, fire stopping and compartmentation solutions to help contain fire and smoke.",
   },
   {
     no: "12",
     icon: "fa-solid fa-gauge-high",
     title: "Fire Pump Testing",
-    text: "Inspection and performance testing of fire pumps, pressure systems and related equipment."
-  }
+    text: "Inspection and performance testing of fire pumps, pressure systems and related equipment.",
+  },
 ];
 
 const process = [
-  ["01", "Assess", "Understand your facility and identify the key risks."],
-  ["02", "Design", "Develop a practical solution around your environment."],
-  ["03", "Implement", "Install, test and commission the required systems."],
-  ["04", "Maintain", "Keep every critical safety system ready."]
+  {
+    number: "01",
+    title: "Assess",
+    text: "Understand your facility and identify the key risks.",
+    icon: "fa-solid fa-magnifying-glass",
+  },
+  {
+    number: "02",
+    title: "Design",
+    text: "Develop a practical solution around your environment.",
+    icon: "fa-solid fa-compass-drafting",
+  },
+  {
+    number: "03",
+    title: "Implement",
+    text: "Install, test and commission the required systems.",
+    icon: "fa-solid fa-screwdriver-wrench",
+  },
+  {
+    number: "04",
+    title: "Maintain",
+    text: "Keep every critical safety system ready.",
+    icon: "fa-solid fa-shield-heart",
+  },
 ];
 
 export default function Services() {
@@ -120,12 +142,19 @@ export default function Services() {
 
               <div className="ts-services-hero-actions">
 
-                <Link to="/contact" className="ts-services-btn-primary">
+                <Link
+                  to="/contact"
+                  className="ts-services-btn-primary"
+                >
                   Discuss Your Requirement
+
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>
 
-                <Link to="/products" className="ts-services-btn-outline">
+                <Link
+                  to="/products"
+                  className="ts-services-btn-outline"
+                >
                   Explore Products
                 </Link>
 
@@ -134,35 +163,58 @@ export default function Services() {
             </div>
 
 
-            {/* Hero visual */}
+            {/* =================================================
+                HERO VISUAL
+            ================================================= */}
 
             <div className="ts-services-hero-visual">
 
               <div className="ts-services-ring ts-ring-one"></div>
+
               <div className="ts-services-ring ts-ring-two"></div>
+
 
               <div className="ts-services-hero-center">
 
                 <i className="fa-solid fa-shield-halved"></i>
 
                 <span>FIRE</span>
+
                 <strong>SAFETY</strong>
 
               </div>
 
+
               <div className="ts-services-floating ts-floating-one">
+
                 <i className="fa-solid fa-bell"></i>
-                <span>Detection</span>
+
+                <span>
+                  Detection
+                </span>
+
               </div>
+
 
               <div className="ts-services-floating ts-floating-two">
+
                 <i className="fa-solid fa-fire-extinguisher"></i>
-                <span>Protection</span>
+
+                <span>
+                  Protection
+                </span>
+
               </div>
 
+
               <div className="ts-services-floating ts-floating-three">
+
                 <i className="fa-solid fa-screwdriver-wrench"></i>
-                <span>Maintenance</span>
+
+                <span>
+                  Maintenance
+                </span>
+
               </div>
 
             </div>
@@ -203,15 +255,21 @@ export default function Services() {
                 key={service.no}
               >
 
+                {/* Background Number */}
+
                 <span className="ts-service-bg-number">
                   {service.no}
                 </span>
 
 
+                {/* Card Top */}
+
                 <div className="ts-service-card-top">
 
                   <div className="ts-service-icon">
+
                     <i className={service.icon}></i>
+
                   </div>
 
                   <span className="ts-service-number">
@@ -220,6 +278,8 @@ export default function Services() {
 
                 </div>
 
+
+                {/* Card Content */}
 
                 <div className="ts-service-card-content">
 
@@ -233,6 +293,8 @@ export default function Services() {
 
                 </div>
 
+
+                {/* Card Footer */}
 
                 <div className="ts-service-card-footer">
 
@@ -268,8 +330,11 @@ export default function Services() {
             <div>
 
               <span className="ts-services-eyebrow">
+
                 <span></span>
+
                 OUR APPROACH
+
               </span>
 
               <h2>
@@ -278,6 +343,7 @@ export default function Services() {
               </h2>
 
             </div>
+
 
             <p>
               A structured approach helps us deliver safety systems
@@ -289,44 +355,35 @@ export default function Services() {
 
           <div className="ts-process-grid">
 
-            {process.map(([number, title, text]) => (
+            {process.map((item) => (
 
-              <div
+              <article
                 className="ts-process-item"
-                key={number}
+                key={item.number}
               >
 
                 <span className="ts-process-number">
-                  {number}
+                  {item.number}
                 </span>
 
+
                 <div className="ts-process-icon">
-                  {number === "01" && (
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                  )}
 
-                  {number === "02" && (
-                    <i className="fa-solid fa-compass-drafting"></i>
-                  )}
+                  <i className={item.icon}></i>
 
-                  {number === "03" && (
-                    <i className="fa-solid fa-screwdriver-wrench"></i>
-                  )}
-
-                  {number === "04" && (
-                    <i className="fa-solid fa-shield-heart"></i>
-                  )}
                 </div>
 
+
                 <h3>
-                  {title}
+                  {item.title}
                 </h3>
 
+
                 <p>
-                  {text}
+                  {item.text}
                 </p>
 
-              </div>
+              </article>
 
             ))}
 
@@ -338,7 +395,7 @@ export default function Services() {
 
 
       {/* =====================================================
-          FINAL CONTACT STRIP — CTA COMPONENT NAHI
+          CONTACT STRIP
       ===================================================== */}
 
       <section className="ts-services-contact-strip">
@@ -348,8 +405,11 @@ export default function Services() {
           <div className="ts-services-contact-inner">
 
             <div className="ts-contact-icon">
+
               <i className="fa-solid fa-headset"></i>
+
             </div>
+
 
             <div className="ts-contact-content">
 
@@ -363,12 +423,15 @@ export default function Services() {
 
             </div>
 
+
             <Link
               to="/contact"
               className="ts-contact-button"
             >
               Contact TechnoSafe
+
               <i className="fa-solid fa-arrow-right"></i>
+
             </Link>
 
           </div>

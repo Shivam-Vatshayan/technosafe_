@@ -3,6 +3,8 @@ import SectionHeading from "../components/SectionHeading";
 import "./InnerPage.css";
 
 export default function About() {
+  const aboutImage = `${import.meta.env.BASE_URL}images/about_image.png`;
+
   return (
     <main className="ts-about">
 
@@ -78,7 +80,7 @@ export default function About() {
               <div className="ts-about-image-frame">
 
                 <img
-                  src="/images/about_image.png"
+                  src={aboutImage}
                   alt="TechnoSafe professional team"
                   loading="lazy"
                 />
@@ -86,6 +88,7 @@ export default function About() {
                 <div className="ts-about-image-overlay"></div>
 
               </div>
+
 
               {/* Experience badge */}
 
@@ -101,6 +104,7 @@ export default function About() {
                 </div>
 
               </div>
+
 
               <div className="ts-about-visual-accent"></div>
 

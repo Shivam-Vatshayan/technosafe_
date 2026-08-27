@@ -6,6 +6,10 @@ export default function VideoSection() {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // GitHub Pages compatible asset paths
+  const posterPath = `${import.meta.env.BASE_URL}images/fire-safety-poster.png`;
+  const videoPath = `${import.meta.env.BASE_URL}videos/fire-safety.mp4`;
+
   const handlePlay = async () => {
     if (!videoRef.current) return;
 
@@ -33,6 +37,7 @@ export default function VideoSection() {
         {/* =========================================
             LEFT CONTENT
         ========================================= */}
+
         <div className="ts-video-copy">
 
           <span className="ts-video-eyebrow">
@@ -79,6 +84,7 @@ export default function VideoSection() {
         {/* =========================================
             RIGHT VIDEO
         ========================================= */}
+
         <div className="ts-video-media">
 
           <div className="ts-video-frame">
@@ -86,31 +92,37 @@ export default function VideoSection() {
             <video
               ref={videoRef}
               className="ts-video-player"
-              poster="/images/fire-safety-poster.png"
+              poster={posterPath}
               playsInline
               preload="metadata"
               onPause={handlePause}
               onEnded={handleVideoEnd}
               aria-label="TechnoSafe fire safety operations"
             >
+
               <source
-                src="/videos/fire-safety.mp4"
+                src={videoPath}
                 type="video/mp4"
               />
 
               Your browser does not support the video tag.
+
             </video>
 
 
             {/* VIDEO DARK OVERLAY */}
+
             <div
               className={`ts-video-frame-overlay ${
-                isPlaying ? "ts-video-frame-overlay-hidden" : ""
+                isPlaying
+                  ? "ts-video-frame-overlay-hidden"
+                  : ""
               }`}
             ></div>
 
 
             {/* PLAY BUTTON */}
+
             {!isPlaying && (
               <button
                 type="button"
@@ -118,25 +130,34 @@ export default function VideoSection() {
                 onClick={handlePlay}
                 aria-label="Play TechnoSafe fire safety video"
               >
+
                 <span className="ts-video-play-ring"></span>
 
                 <span className="ts-video-play-circle">
                   <i className="fa-solid fa-play"></i>
                 </span>
+
               </button>
             )}
 
 
             {/* VIDEO LABEL */}
+
             <div className="ts-video-label">
+
               <span className="ts-video-label-dot"></span>
+
               TechnoSafe Operations
+
             </div>
 
 
             {/* VIDEO CORNER */}
+
             <div className="ts-video-corner">
+
               <i className="fa-solid fa-expand"></i>
+
             </div>
 
           </div>

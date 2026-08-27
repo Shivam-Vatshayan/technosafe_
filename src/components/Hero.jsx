@@ -8,14 +8,90 @@ import {
 } from "react-icons/fa";
 import "./Hero.css";
 
+/* =========================================================
+   API
+========================================================= */
+
 const API_URL = import.meta.env.VITE_API_URL || "";
+
+
+/* =========================================================
+   GITHUB PAGES / LOCAL ASSETS
+========================================================= */
+
+const BASE_URL = import.meta.env.BASE_URL;
+
+const LOCAL_VIDEO =
+  `${BASE_URL}videos/hero_video.mp4`;
+
+const FALLBACK_VIDEO =
+  `${BASE_URL}videos/fire-safety-hero.mp4`;
+
+const HERO_POSTER =
+  `${BASE_URL}assets/hero-poster.jpg`;
+
+
+/* =========================================================
+   BACKEND VIDEO
+========================================================= */
 
 const BACKEND_VIDEO = API_URL
   ? `${API_URL}/videos/hero_video.mp4`
-  : "/videos/hero_video.mp4";
+  : null;
+
+
+/* =========================================================
+   HERO COMPONENT
+========================================================= */
 
 export default function Hero() {
+
+  const [videoSource, setVideoSource] = useState(
+    BACKEND_VIDEO || LOCAL_VIDEO
+  );
+
   const [videoError, setVideoError] = useState(false);
+
+
+  /* =======================================================
+     VIDEO ERROR HANDLER
+  ======================================================= */
+
+  const handleVideoError = () => {
+
+    /*
+      Backend video failed
+      → Try local hero video
+    */
+
+    if (
+      BACKEND_VIDEO &&
+      videoSource === BACKEND_VIDEO
+    ) {
+      setVideoSource(LOCAL_VIDEO);
+      return;
+    }
+
+
+    /*
+      Local hero video failed
+      → Try fallback video
+    */
+
+    if (videoSource === LOCAL_VIDEO) {
+      setVideoSource(FALLBACK_VIDEO);
+      return;
+    }
+
+
+    /*
+      Everything failed
+      → Show poster only
+    */
+
+    setVideoError(true);
+  };
+
 
   return (
     <section className="hero">
@@ -25,28 +101,29 @@ export default function Hero() {
       ===================================================== */}
 
       {!videoError && (
+
         <video
+          key={videoSource}
           className="hero-video"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
-          poster="/assets/hero-poster.jpg"
-          onError={() => setVideoError(true)}
+          preload="metadata"
+          poster={HERO_POSTER}
+          onError={handleVideoError}
+          aria-hidden="true"
         >
-          <source
-            src={BACKEND_VIDEO}
-            type="video/mp4"
-          />
 
           <source
-            src="/videos/fire-safety-hero.mp4"
+            src={videoSource}
             type="video/mp4"
           />
 
           Your browser does not support the video tag.
+
         </video>
+
       )}
 
 
@@ -60,14 +137,17 @@ export default function Hero() {
 
 
       {/* =====================================================
-          CENTER CONTENT
+          HERO CONTENT
       ===================================================== */}
 
       <div className="hero-content">
 
         <div className="hero-copy">
 
-          {/* Badge */}
+
+          {/* =================================================
+              BADGE
+          ================================================= */}
 
           <div className="hero-badge">
 
@@ -82,36 +162,51 @@ export default function Hero() {
           </div>
 
 
-          {/* Main Heading */}
+          {/* =================================================
+              MAIN HEADING
+          ================================================= */}
 
           <h1>
+
             Protecting People.
+
             <br />
 
             <span>
               Protecting What Matters.
             </span>
+
           </h1>
 
 
-          {/* Description */}
+          {/* =================================================
+              DESCRIPTION
+          ================================================= */}
 
           <p className="hero-description">
+
             Complete fire protection solutions designed to protect
             people, property and businesses — from fire detection
             and suppression to safety audits, emergency training
             and preventive maintenance.
+
           </p>
 
 
-          {/* CTA Buttons */}
+          {/* =================================================
+              CTA BUTTONS
+          ================================================= */}
 
           <div className="hero-actions">
+
+
+            {/* PRIMARY CTA */}
 
             <Link
               to="/contact"
               className="hero-btn hero-btn-primary"
             >
+
               <span>
                 Get a Free Safety Audit
               </span>
@@ -121,13 +216,17 @@ export default function Hero() {
             </Link>
 
 
+            {/* SECONDARY CTA */}
+
             <Link
               to="/products"
               className="hero-btn hero-btn-secondary"
             >
 
               <span className="play-icon">
+
                 <FaPlay />
+
               </span>
 
               <span>
@@ -139,9 +238,14 @@ export default function Hero() {
           </div>
 
 
-          {/* Trust Points */}
+          {/* =================================================
+              TRUST POINTS
+          ================================================= */}
 
           <div className="hero-trust">
+
+
+            {/* TRUST 01 */}
 
             <div className="trust-item">
 
@@ -154,6 +258,8 @@ export default function Hero() {
             </div>
 
 
+            {/* TRUST 02 */}
+
             <div className="trust-item">
 
               <FaCheckCircle />
@@ -165,6 +271,8 @@ export default function Hero() {
             </div>
 
 
+            {/* TRUST 03 */}
+
             <div className="trust-item">
 
               <FaCheckCircle />
@@ -174,6 +282,7 @@ export default function Hero() {
               </span>
 
             </div>
+
 
           </div>
 

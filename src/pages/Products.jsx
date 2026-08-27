@@ -2,153 +2,345 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./InnerPage.css";
 
+/* =========================================================
+   BASE URL
+   ========================================================= */
+
+const BASE_URL = import.meta.env.BASE_URL;
+
+
+/* =========================================================
+   IMAGE HELPER
+   ========================================================= */
+
+const getImagePath = (path) => {
+  if (!path) return "";
+
+  // If image is already an absolute/external URL
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("/")
+  ) {
+    return path;
+  }
+
+  return `${BASE_URL}${path}`;
+};
+
+
+/* =========================================================
+   PRODUCT DATA
+   Future me image add/change karna ho:
+   
+   image: "images/products/fire-extinguishers.jpg"
+
+   Bas image path change karo.
+========================================================= */
+
 const productSections = [
   {
     title: "Fire Protection",
+
     description:
       "Complete fire protection equipment for detection, prevention, first response and emergency control.",
+
     direction: "left",
+
     products: [
       {
         name: "Fire Extinguishers",
-        image: "/images/products/fire-extinguishers.jpg",
-        text: "ABC, CO₂, Foam and Clean Agent fire extinguishers."
+
+        image: "images/products/fire-extinguishers.jpg",
+
+        icon: "fa-solid fa-fire-extinguisher",
+
+        text:
+          "ABC, CO₂, Foam and Clean Agent fire extinguishers."
       },
+
       {
         name: "Fire Alarm & Detection",
-        image: "/images/products/fire-alarm.jpg",
-        text: "Addressable panels, detectors, MCPs, sounders and modules."
+
+        image: "images/products/fire-alarm.jpg",
+
+        icon: "fa-solid fa-bell",
+
+        text:
+          "Addressable panels, detectors, MCPs, sounders and modules."
       },
+
       {
         name: "Hydrant & Sprinkler Systems",
-        image: "/images/products/hydrant-sprinkler.jpg",
-        text: "Hydrant, hose reel, sprinkler and water-based protection equipment."
+
+        image: "images/products/hydrant-sprinkler.jpg",
+
+        icon: "fa-solid fa-droplet",
+
+        text:
+          "Hydrant, hose reel, sprinkler and water-based protection equipment."
       },
+
       {
         name: "Fire Fighting Equipment",
-        image: "/images/products/fire-fighting-equipment.jpg",
-        text: "Fire blankets, hose accessories and emergency response equipment."
+
+        image: "images/products/fire-fighting-equipment.jpg",
+
+        icon: "fa-solid fa-shield-halved",
+
+        text:
+          "Fire blankets, hose accessories and emergency response equipment."
       }
     ]
   },
+
+
+  /* =========================================================
+     PPE
+  ========================================================= */
 
   {
     title: "Personal Protective Equipment",
+
     description:
       "Workplace PPE designed to protect personnel against everyday industrial and occupational hazards.",
+
     direction: "right",
+
     products: [
       {
         name: "Eye & Face Protection",
-        image: "/images/products/eye-face-protection.jpg",
-        text: "Safety goggles, spectacles, face shields and splash protection."
+
+        image: "images/products/eye-face-protection.jpg",
+
+        icon: "fa-solid fa-glasses",
+
+        text:
+          "Safety goggles, spectacles, face shields and splash protection."
       },
+
       {
         name: "Head Protection",
-        image: "/images/products/head-protection.jpg",
-        text: "Industrial safety helmets, bump caps and helmet accessories."
+
+        image: "images/products/head-protection.jpg",
+
+        icon: "fa-solid fa-helmet-safety",
+
+        text:
+          "Industrial safety helmets, bump caps and helmet accessories."
       },
+
       {
         name: "Hand Protection",
-        image: "/images/products/hand-protection.jpg",
-        text: "Cut, heat, chemical and general-purpose industrial gloves."
+
+        image: "images/products/hand-protection.jpg",
+
+        icon: "fa-solid fa-hand",
+
+        text:
+          "Cut, heat, chemical and general-purpose industrial gloves."
       },
+
       {
         name: "Foot Protection",
-        image: "/images/products/foot-protection.jpg",
-        text: "Safety shoes, boots and protective industrial footwear."
+
+        image: "images/products/foot-protection.jpg",
+
+        icon: "fa-solid fa-shoe-prints",
+
+        text:
+          "Safety shoes, boots and protective industrial footwear."
       },
+
       {
         name: "Protective Clothing",
-        image: "/images/products/protective-clothing.jpg",
-        text: "Coveralls, flame-resistant and high-visibility protective clothing."
+
+        image: "images/products/protective-clothing.jpg",
+
+        icon: "fa-solid fa-shirt",
+
+        text:
+          "Coveralls, flame-resistant and high-visibility protective clothing."
       },
+
       {
         name: "Fall Protection Systems",
-        image: "/images/products/fall-protection.jpg",
-        text: "Harnesses, lanyards, lifelines and anchorage systems."
+
+        image: "images/products/fall-protection.jpg",
+
+        icon: "fa-solid fa-person-falling",
+
+        text:
+          "Harnesses, lanyards, lifelines and anchorage systems."
       }
     ]
   },
+
+
+  /* =========================================================
+     EMERGENCY & SPILL RESPONSE
+  ========================================================= */
 
   {
     title: "Emergency & Spill Response",
+
     description:
       "Emergency equipment that helps teams respond quickly and safely to workplace incidents.",
+
     direction: "left",
+
     products: [
       {
         name: "Emergency Eye & Safety Showers",
-        image: "/images/products/safety-showers.jpg",
-        text: "Emergency eye wash stations, safety showers and combined units."
+
+        image: "images/products/safety-showers.jpg",
+
+        icon: "fa-solid fa-shower",
+
+        text:
+          "Emergency eye wash stations, safety showers and combined units."
       },
+
       {
         name: "Spill Containment Solutions",
-        image: "/images/products/spill-containment.jpg",
-        text: "Spill kits, absorbents, trays and containment equipment."
+
+        image: "images/products/spill-containment.jpg",
+
+        icon: "fa-solid fa-droplet",
+
+        text:
+          "Spill kits, absorbents, trays and containment equipment."
       },
+
       {
         name: "Emergency Response Kits",
-        image: "/images/products/emergency-response.jpg",
-        text: "Ready-to-use equipment for workplace emergency situations."
+
+        image: "images/products/emergency-response.jpg",
+
+        icon: "fa-solid fa-kit-medical",
+
+        text:
+          "Ready-to-use equipment for workplace emergency situations."
       },
+
       {
         name: "Safety Signs & Evacuation",
-        image: "/images/products/safety-signs.jpg",
-        text: "Safety signage, evacuation aids and emergency identification."
+
+        image: "images/products/safety-signs.jpg",
+
+        icon: "fa-solid fa-person-running",
+
+        text:
+          "Safety signage, evacuation aids and emergency identification."
       }
     ]
   },
+
+
+  /* =========================================================
+     HAZARDOUS AREA SAFETY
+  ========================================================= */
 
   {
     title: "Hazardous Area Safety",
+
     description:
       "Specialized equipment for environments where electrical equipment must meet hazardous-area safety requirements.",
+
     direction: "right",
+
     products: [
       {
         name: "Intrinsically Safe Flashlights",
-        image: "/images/products/intrinsically-safe-flashlights.jpg",
-        text: "Intrinsically safe torches and industrial lighting solutions."
+
+        image: "images/products/intrinsically-safe-flashlights.jpg",
+
+        icon: "fa-solid fa-lightbulb",
+
+        text:
+          "Intrinsically safe torches and industrial lighting solutions."
       },
+
       {
         name: "Explosion Protected Lighting",
-        image: "/images/products/explosion-protected-lighting.jpg",
-        text: "Specialized lighting solutions for hazardous working environments."
+
+        image: "images/products/explosion-protected-lighting.jpg",
+
+        icon: "fa-solid fa-lightbulb",
+
+        text:
+          "Specialized lighting solutions for hazardous working environments."
       },
+
       {
         name: "Industrial Inspection Lights",
-        image: "/images/products/inspection-lights.jpg",
-        text: "Portable inspection lighting for demanding industrial applications."
+
+        image: "images/products/inspection-lights.jpg",
+
+        icon: "fa-solid fa-magnifying-glass",
+
+        text:
+          "Portable inspection lighting for demanding industrial applications."
       }
     ]
   },
 
+
+  /* =========================================================
+     SAFE STORAGE
+  ========================================================= */
+
   {
     title: "Safe Storage Solutions",
+
     description:
       "Purpose-built storage solutions for safer handling, segregation and organization of hazardous materials.",
+
     direction: "left",
+
     products: [
       {
         name: "Safety Storage Cabinets",
-        image: "/images/products/safety-cabinets.jpg",
-        text: "Safety cabinets for organized storage of hazardous materials."
+
+        image: "images/products/safety-cabinets.jpg",
+
+        icon: "fa-solid fa-box",
+
+        text:
+          "Safety cabinets for organized storage of hazardous materials."
       },
+
       {
         name: "Chemical Storage",
-        image: "/images/products/chemical-storage.jpg",
-        text: "Storage solutions designed for controlled chemical handling."
+
+        image: "images/products/chemical-storage.jpg",
+
+        icon: "fa-solid fa-flask",
+
+        text:
+          "Storage solutions designed for controlled chemical handling."
       },
+
       {
         name: "Flammable Storage",
-        image: "/images/products/flammable-storage.jpg",
-        text: "Dedicated storage solutions for flammable substances."
+
+        image: "images/products/flammable-storage.jpg",
+
+        icon: "fa-solid fa-fire",
+
+        text:
+          "Dedicated storage solutions for flammable substances."
       },
+
       {
         name: "Safety Containers",
-        image: "/images/products/safety-containers.jpg",
-        text: "Durable containers for safer handling and workplace storage."
+
+        image: "images/products/safety-containers.jpg",
+
+        icon: "fa-solid fa-box",
+
+        text:
+          "Durable containers for safer handling and workplace storage."
       }
     ]
   }
@@ -160,20 +352,50 @@ const productSections = [
 ========================================================= */
 
 function ProductCard({ product }) {
+  const imageSrc = getImagePath(product.image);
+
   return (
     <article className="ts-product-card">
 
-      <img
-        src={product.image}
-        alt={product.name}
-        className="ts-product-card-image"
-      />
+      {/* =================================================
+          PRODUCT IMAGE
+      ================================================= */}
 
-      <div className="ts-product-card-overlay"></div>
+      <div className="ts-product-card-image-wrapper">
 
-      <div className="ts-product-card-icon">
-        <i className="fa-solid fa-shield-halved"></i>
+        {imageSrc ? (
+          <img
+            src={imageSrc}
+            alt={product.name}
+            className="ts-product-card-image"
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.style.display = "none";
+            }}
+          />
+        ) : (
+          <div className="ts-product-card-image-placeholder">
+            <i className={product.icon}></i>
+          </div>
+        )}
+
+        {/* Overlay */}
+
+        <div className="ts-product-card-overlay"></div>
+
+
+        {/* Icon */}
+
+        <div className="ts-product-card-icon">
+          <i className={product.icon}></i>
+        </div>
+
       </div>
+
+
+      {/* =================================================
+          CONTENT
+      ================================================= */}
 
       <div className="ts-product-card-content">
 
@@ -181,15 +403,20 @@ function ProductCard({ product }) {
           SAFETY EQUIPMENT
         </span>
 
-        <h3>{product.name}</h3>
+        <h3>
+          {product.name}
+        </h3>
 
-        <p>{product.text}</p>
+        <p>
+          {product.text}
+        </p>
 
         <Link
           to="/contact"
           className="ts-product-card-link"
         >
           Enquire Now
+
           <i className="fa-solid fa-arrow-right"></i>
         </Link>
 
@@ -208,6 +435,7 @@ export default function Products() {
   return (
     <main className="ts-products-page">
 
+
       {/* =====================================================
           HERO
       ===================================================== */}
@@ -219,14 +447,19 @@ export default function Products() {
           <div className="ts-products-hero-content">
 
             <span className="ts-products-eyebrow">
+
               <span></span>
-              PRODUCTS & SAFETY EQUIPMENT
+
+              PRODUCTS &amp; SAFETY EQUIPMENT
+
             </span>
+
 
             <h1>
               Equipment built around
               <strong> workplace safety.</strong>
             </h1>
+
 
             <p>
               Explore our complete range of fire protection,
@@ -234,21 +467,47 @@ export default function Products() {
               and industrial safety solutions.
             </p>
 
+
+            {/* HERO STATS */}
+
             <div className="ts-products-hero-stats">
 
               <div>
-                <strong>05</strong>
-                <span>Product Groups</span>
+
+                <strong>
+                  05
+                </strong>
+
+                <span>
+                  Product Groups
+                </span>
+
               </div>
 
-              <div>
-                <strong>30+</strong>
-                <span>Safety Solutions</span>
-              </div>
 
               <div>
-                <strong>24/7</strong>
-                <span>Protection Focus</span>
+
+                <strong>
+                  30+
+                </strong>
+
+                <span>
+                  Safety Solutions
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  24/7
+                </strong>
+
+                <span>
+                  Protection Focus
+                </span>
+
               </div>
 
             </div>
@@ -267,6 +526,9 @@ export default function Products() {
       <section className="ts-products-content">
 
         <div className="container">
+
+
+          {/* INTRO */}
 
           <div className="ts-products-intro">
 
@@ -289,7 +551,7 @@ export default function Products() {
 
 
           {/* =================================================
-              CATEGORIES
+              PRODUCT SECTIONS
           ================================================= */}
 
           {productSections.map((section) => (
@@ -298,6 +560,11 @@ export default function Products() {
               className="ts-product-section"
               key={section.title}
             >
+
+
+              {/* =================================================
+                  SECTION HEADER
+              ================================================= */}
 
               <div className="ts-product-section-head">
 
@@ -317,6 +584,7 @@ export default function Products() {
 
                 </div>
 
+
                 <p>
                   {section.description}
                 </p>
@@ -325,7 +593,7 @@ export default function Products() {
 
 
               {/* =================================================
-                  ALTERNATING CAROUSEL
+                  CAROUSEL
               ================================================= */}
 
               <div className="ts-product-carousel-wrapper">
@@ -338,7 +606,8 @@ export default function Products() {
                   }`}
                 >
 
-                  {/* First set */}
+
+                  {/* FIRST SET */}
 
                   <div className="ts-product-carousel-track">
 
@@ -354,7 +623,7 @@ export default function Products() {
                   </div>
 
 
-                  {/* Duplicate set */}
+                  {/* DUPLICATE SET */}
 
                   <div
                     className="ts-product-carousel-track"
@@ -386,7 +655,7 @@ export default function Products() {
 
 
       {/* =====================================================
-          CONTACT STRIP
+          BOTTOM CTA
       ===================================================== */}
 
       <section className="ts-products-bottom">
@@ -395,9 +664,17 @@ export default function Products() {
 
           <div className="ts-products-bottom-box">
 
+
+            {/* ICON */}
+
             <div className="ts-products-bottom-icon">
+
               <i className="fa-solid fa-shield-halved"></i>
+
             </div>
+
+
+            {/* CONTENT */}
 
             <div>
 
@@ -417,12 +694,17 @@ export default function Products() {
 
             </div>
 
+
+            {/* BUTTON */}
+
             <Link
               to="/contact"
               className="ts-products-bottom-btn"
             >
               Talk to an Expert
+
               <i className="fa-solid fa-arrow-right"></i>
+
             </Link>
 
           </div>
