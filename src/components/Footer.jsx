@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
-  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.png`;
+  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.jpeg`;
 
   return (
     <footer className="ts-footer">

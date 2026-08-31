@@ -1,3 +1,4 @@
+
 /* =========================================================
    TECHNOSAFE — CLIENTS
    Premium Dual Infinite Carousel
@@ -5,11 +6,8 @@
 
 .ts-clients {
   position: relative;
-
   width: 100%;
-
   padding: 115px 0 100px;
-
   overflow: hidden;
 
   background:
@@ -37,9 +35,7 @@
   content: "";
 
   position: absolute;
-
   inset: 0;
-
   z-index: -3;
 
   background-image:
@@ -55,13 +51,14 @@
 
   background-size: 70px 70px;
 
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
 
   pointer-events: none;
 }
@@ -112,7 +109,6 @@
 
 .ts-clients-head {
   position: relative;
-
   z-index: 3;
 
   display: grid;
@@ -158,7 +154,6 @@
 
 .ts-clients-eyebrow span {
   width: 28px;
-
   height: 2px;
 
   background: #ff5038;
@@ -174,8 +169,9 @@
 
 .ts-clients-heading h2 {
   margin: 0 !important;
-
   padding: 0 !important;
+
+  max-width: 700px;
 
   color: #ffffff !important;
 
@@ -186,8 +182,6 @@
   line-height: 1.02 !important;
 
   letter-spacing: -0.045em;
-
-  max-width: 700px;
 }
 
 
@@ -206,9 +200,10 @@
 
 
 .ts-clients-description p {
-  margin: 0 0 25px !important;
-
   max-width: 470px;
+
+  margin: 0 0 25px !important;
+  padding: 0 !important;
 
   color: rgba(255, 255, 255, 0.52) !important;
 
@@ -331,7 +326,7 @@
 
   align-items: stretch;
 
-  gap: 18px;
+  gap: 20px;
 
   width: max-content;
 
@@ -339,7 +334,9 @@
 }
 
 
-/* TOP — LEFT TO RIGHT */
+/* =========================================================
+   TOP TRACK
+========================================================= */
 
 .ts-client-track-forward {
   animation:
@@ -349,7 +346,9 @@
 }
 
 
-/* BOTTOM — RIGHT TO LEFT */
+/* =========================================================
+   BOTTOM TRACK
+========================================================= */
 
 .ts-client-track-reverse {
   animation:
@@ -357,7 +356,9 @@
 }
 
 
-/* Pause individually */
+/* =========================================================
+   PAUSE CAROUSEL
+========================================================= */
 
 .ts-client-carousel:hover
 .ts-client-track {
@@ -367,24 +368,29 @@
 
 /* =========================================================
    CLIENT CARD
+   Logo + Content + Arrow
 ========================================================= */
 
 .ts-client-card {
   position: relative;
 
-  width: 330px;
+  width: 390px;
 
-  min-height: 155px;
+  min-width: 390px;
 
-  flex-shrink: 0;
+  min-height: 180px;
+
+  flex: 0 0 390px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 20px;
+  gap: 18px;
 
-  padding: 22px;
+  padding: 20px;
+
+  box-sizing: border-box;
 
   overflow: hidden;
 
@@ -467,17 +473,22 @@
 
 
 /* =========================================================
-   CLIENT LOGO
+   CLIENT LOGO BOX
+   EXACT RATIO: 262 × 131
 ========================================================= */
 
 .ts-client-logo {
   position: relative;
 
-  width: 140px;
+  width: 262px;
 
-  height: 58px;
+  height: 131px;
 
-  flex-shrink: 0;
+  min-width: 262px;
+
+  min-height: 131px;
+
+  flex: 0 0 262px;
 
   display: flex;
 
@@ -487,26 +498,43 @@
 
   overflow: hidden;
 
-  border-radius: 12px;
+  box-sizing: border-box;
 
-  background: rgba(255, 255, 255, 0.035);
+  border-radius: 16px;
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18);
 }
 
 
-/* Actual logo */
+/* =========================================================
+   ACTUAL CLIENT IMAGE
+========================================================= */
 
 .ts-client-logo img {
   display: block;
 
-  width: 118px;
+  width: 100%;
 
-  height: 48px;
+  height: 100%;
+
+  max-width: 100%;
+
+  max-height: 100%;
 
   object-fit: contain;
 
   object-position: center;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border-radius: 16px;
 
   filter: grayscale(100%);
 
@@ -519,24 +547,28 @@
 }
 
 
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
 .ts-client-card:hover
 .ts-client-logo img {
-  filter: grayscale(0);
+  filter: grayscale(0%);
 
   opacity: 1;
 
-  transform: scale(1.05);
+  transform: scale(1.035);
 }
 
 
 /* =========================================================
-   PLACEHOLDER LOGO
+   PLACEHOLDER
 ========================================================= */
 
 .ts-client-placeholder {
-  width: 40px;
+  width: 100%;
 
-  height: 40px;
+  height: 100%;
 
   display: flex;
 
@@ -544,15 +576,22 @@
 
   justify-content: center;
 
-  border-radius: 11px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
 
   color: #ff674d;
 
-  background: rgba(255, 80, 55, 0.08);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 80, 55, 0.08),
+      rgba(255, 80, 55, 0.03)
+    );
 
   border: 1px solid rgba(255, 80, 55, 0.12);
 
-  font-size: 16px;
+  font-size: 22px;
 
   transition:
     background 0.35s ease,
@@ -567,7 +606,7 @@
 
   background: #ff5038;
 
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 
@@ -663,11 +702,9 @@
   position: absolute;
 
   right: 15px;
-
   top: 15px;
 
   width: 28px;
-
   height: 28px;
 
   display: flex;
@@ -784,7 +821,6 @@
 
 .ts-clients-footer-icon {
   width: 48px;
-
   height: 48px;
 
   flex-shrink: 0;
@@ -865,7 +901,6 @@
 
 .ts-clients-footer-badge i {
   width: 34px;
-
   height: 34px;
 
   display: flex;
@@ -898,18 +933,8 @@
 
 
 /* =========================================================
-   ANIMATIONS
+   INFINITE ANIMATIONS
 ========================================================= */
-
-/*
-   IMPORTANT:
-
-   Each track contains exactly two copies
-   of the same number of cards.
-
-   This makes the movement seamless.
-*/
-
 
 @keyframes tsClientsForward {
 
@@ -957,29 +982,43 @@
   }
 
 
-  .ts-clients-heading h2 {
-    max-width: 650px;
-  }
-
-
   .ts-client-card {
-    width: 300px;
+    width: 360px;
 
-    min-height: 145px;
+    min-width: 360px;
+
+    flex-basis: 360px;
+
+    min-height: 165px;
+
+    padding: 17px;
+
+    gap: 16px;
   }
 
 
   .ts-client-logo {
-    width: 120px;
+    width: 230px;
 
-    height: 55px;
+    height: 115px;
+
+    min-width: 230px;
+
+    min-height: 115px;
+
+    flex-basis: 230px;
+
+    border-radius: 14px;
   }
 
 
   .ts-client-logo img {
-    width: 100px;
+    border-radius: 14px;
+  }
 
-    height: 45px;
+
+  .ts-client-placeholder {
+    border-radius: 14px;
   }
 
 
@@ -1030,41 +1069,61 @@
   }
 
 
+  /* -----------------------------------------
+     MOBILE CLIENT CARD
+  ----------------------------------------- */
+
   .ts-client-card {
-    width: 275px;
+    width: 330px;
 
-    min-height: 135px;
+    min-width: 330px;
 
-    padding: 18px;
+    flex-basis: 330px;
 
-    gap: 15px;
+    min-height: 145px;
+
+    padding: 15px;
+
+    gap: 13px;
 
     border-radius: 16px;
   }
 
 
+  /* -----------------------------------------
+     MOBILE LOGO
+  ----------------------------------------- */
+
   .ts-client-logo {
-    width: 100px;
+    width: 150px;
 
-    height: 50px;
+    height: 75px;
 
-    border-radius: 10px;
+    min-width: 150px;
+
+    min-height: 75px;
+
+    flex-basis: 150px;
+
+    border-radius: 11px;
   }
 
 
   .ts-client-logo img {
-    width: 85px;
+    width: 100%;
 
-    height: 42px;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 11px;
   }
 
 
   .ts-client-placeholder {
-    width: 35px;
+    border-radius: 11px;
 
-    height: 35px;
-
-    font-size: 14px;
+    font-size: 18px;
   }
 
 
@@ -1078,16 +1137,15 @@
   }
 
 
-  .ts-client-carousel {
-    overflow: hidden;
-  }
-
-
   .ts-client-carousel::before,
   .ts-client-carousel::after {
     width: 55px;
   }
 
+
+  /* -----------------------------------------
+     MIDDLE
+  ----------------------------------------- */
 
   .ts-clients-middle {
     margin: 24px auto;
@@ -1102,6 +1160,10 @@
     letter-spacing: 0.15em;
   }
 
+
+  /* -----------------------------------------
+     FOOTER
+  ----------------------------------------- */
 
   .ts-clients-footer {
     align-items: flex-start;
@@ -1145,27 +1207,37 @@
 @media (max-width: 420px) {
 
   .ts-client-card {
-    width: 250px;
+    width: 300px;
 
-    min-height: 125px;
+    min-width: 300px;
 
-    padding: 16px;
+    flex-basis: 300px;
 
-    gap: 12px;
+    min-height: 135px;
+
+    padding: 14px;
+
+    gap: 10px;
   }
 
 
   .ts-client-logo {
-    width: 88px;
+    width: 125px;
 
-    height: 45px;
+    height: 63px;
+
+    min-width: 125px;
+
+    min-height: 63px;
+
+    flex-basis: 125px;
+
+    border-radius: 10px;
   }
 
 
   .ts-client-logo img {
-    width: 75px;
-
-    height: 38px;
+    border-radius: 10px;
   }
 
 
@@ -1197,3 +1269,25 @@
   }
 
 }
+```
+
+### Bhai, ek cheez specially fix ki hai
+
+Aapki image files ka ratio **262 × 131 = 2:1** hai, isliye desktop par:
+
+```css
+.ts-client-logo {
+  width: 262px;
+  height: 131px;
+}
+```
+
+aur:
+
+```css
+.ts-client-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+ 

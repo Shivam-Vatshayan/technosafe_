@@ -1,0 +1,438 @@
+/* ========================================
+   VIDEO CAROUSEL
+   Theme:
+   Dark Navy: #050816
+   Accent:    #FF674D
+======================================== */
+
+.video-section {
+  width: 100%;
+  padding: 100px 20px;
+
+  background: #050816;
+
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.video-heading {
+  max-width: 900px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+.video-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ff674d;
+}
+
+.video-heading h2 {
+  margin: 0;
+
+  font-size: 68px;
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.video-heading h2 span {
+  color: #ff674d;
+}
+
+.video-heading p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #ffffff;
+
+  opacity: 0.75;
+}
+
+/* ========================================
+   CAROUSEL WRAPPER
+======================================== */
+
+.video-carousel-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* ========================================
+   CAROUSEL
+======================================== */
+
+.video-carousel {
+  position: relative;
+
+  width: 100%;
+
+  height: 640px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   VIDEO CARD
+======================================== */
+
+.video-card {
+  position: absolute;
+
+  width: 360px;
+  height: 640px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #000;
+
+  border: 1px solid rgba(255, 103, 77, 0.15);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ========================================
+   ACTIVE VIDEO
+======================================== */
+
+.video-active {
+  z-index: 3;
+
+  transform: translateX(0) scale(1);
+
+  opacity: 1;
+
+  border-color: rgba(255, 103, 77, 0.65);
+
+  box-shadow:
+    0 25px 70px rgba(255, 103, 77, 0.15);
+}
+
+/* ========================================
+   PREVIOUS VIDEO
+======================================== */
+
+.video-prev-card {
+  z-index: 2;
+
+  transform: translateX(-390px) scale(0.87);
+
+  opacity: 0.55;
+
+  filter: brightness(0.55);
+}
+
+/* ========================================
+   NEXT VIDEO
+======================================== */
+
+.video-next-card {
+  z-index: 2;
+
+  transform: translateX(390px) scale(0.87);
+
+  opacity: 0.55;
+
+  filter: brightness(0.55);
+}
+
+/* ========================================
+   HIDDEN VIDEOS
+======================================== */
+
+.video-hidden {
+  z-index: 1;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: scale(0.7);
+}
+
+/* ========================================
+   ARROWS
+======================================== */
+
+.video-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 10;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 103, 77, 0.25);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.video-arrow:hover {
+  background: #ff674d;
+
+  border-color: #ff674d;
+
+  color: #ffffff;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+.video-prev {
+  left: 0;
+}
+
+.video-next {
+  right: 0;
+}
+
+/* ========================================
+   DOTS
+======================================== */
+
+.video-dots {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 35px;
+}
+
+.video-dot {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #475569;
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.video-dot.active {
+  width: 30px;
+
+  background: #ff674d;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .video-section {
+    padding: 80px 20px;
+  }
+
+  .video-heading h2 {
+    font-size: 52px;
+  }
+
+  .video-card {
+    width: 300px;
+    height: 533px;
+  }
+
+  .video-carousel {
+    height: 533px;
+  }
+
+  .video-prev-card {
+    transform: translateX(-310px) scale(0.84);
+  }
+
+  .video-next-card {
+    transform: translateX(310px) scale(0.84);
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .video-section {
+    padding: 65px 15px;
+  }
+
+  .video-heading {
+    margin-bottom: 40px;
+  }
+
+  .video-label {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .video-heading h2 {
+    font-size: 38px;
+
+    line-height: 1.15;
+  }
+
+  .video-heading p {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+  .video-carousel {
+    height: 498px;
+  }
+
+  .video-card {
+    width: 280px;
+    height: 498px;
+
+    border-radius: 18px;
+  }
+
+  /* Hide side videos on mobile */
+
+  .video-prev-card {
+    transform: translateX(-150px) scale(0.8);
+
+    opacity: 0;
+  }
+
+  .video-next-card {
+    transform: translateX(150px) scale(0.8);
+
+    opacity: 0;
+  }
+
+  .video-arrow {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+  .video-prev {
+    left: 2px;
+  }
+
+  .video-next {
+    right: 2px;
+  }
+
+  .video-dots {
+    margin-top: 25px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 350px) {
+
+  .video-heading h2 {
+    font-size: 32px;
+  }
+
+  .video-card {
+    width: 260px;
+    height: 462px;
+  }
+
+  .video-carousel {
+    height: 462px;
+  }
+
+  .video-arrow {
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+}

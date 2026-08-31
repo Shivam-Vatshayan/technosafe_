@@ -1,3 +1,4 @@
+ 
 /* =========================================================
    TECHNOSAFE NAVBAR
    CLEAN PREMIUM VERSION
@@ -5,7 +6,9 @@
 ========================================================= */
 
 .ts-nav {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 9999;
 
   width: 100%;
@@ -22,12 +25,10 @@
 .ts-nav-top {
   width: 100%;
   min-height: 36px;
-
   background: #080808;
-
-  /* NO BORDER */
   border: none;
 }
+
 
 .ts-nav-top-inner {
   min-height: 36px;
@@ -39,16 +40,20 @@
   gap: 20px;
 }
 
+
 .ts-nav-top-left {
   display: flex;
   align-items: center;
+
   gap: 15px;
 }
+
 
 .ts-nav-top span,
 .ts-nav-top a {
   display: inline-flex;
   align-items: center;
+
   gap: 7px;
 
   color: rgba(255, 255, 255, 0.50);
@@ -57,17 +62,21 @@
   font-weight: 500;
 
   text-decoration: none;
+
   white-space: nowrap;
 }
+
 
 .ts-nav-top i {
   color: #ff5038;
   font-size: 9px;
 }
 
+
 .ts-nav-top a:hover {
   color: #ffffff;
 }
+
 
 .ts-nav-separator {
   width: 1px !important;
@@ -85,13 +94,13 @@
   position: relative;
 
   width: 100%;
-  height: 88px;
+  height: 100px;
 
   background: #050505;
 
-  /* IMPORTANT: OUTER BORDER REMOVED */
   border: none;
 }
+
 
 .ts-nav-inner {
   height: 100%;
@@ -106,14 +115,20 @@
 
 /* =========================================================
    LOGO
-   PREMIUM ROUNDED LOGO
+   LARGE + ZOOMED PREMIUM LOGO
 ========================================================= */
 
 .ts-nav-logo {
   display: flex;
 
-  width: 175px !important;
-  height: 64px !important;
+  align-items: center;
+  justify-content: center;
+
+  /*
+    Same sizing treatment as footer logo.
+  */
+  width: 245px !important;
+  height: 82px !important;
 
   flex-shrink: 0;
 
@@ -128,12 +143,13 @@
 
   overflow: hidden !important;
 
-  /* PREMIUM ROUNDED CORNERS */
-  border-radius: 14px !important;
+  /*
+    Reduced radius for sharper premium appearance.
+  */
+  border-radius: 9px !important;
 
-  /* subtle separation from black navbar */
   box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.35);
+    0 8px 28px rgba(0, 0, 0, 0.38);
 
   transition:
     transform 0.3s ease,
@@ -143,6 +159,7 @@
 
 /* =========================================================
    LOGO IMAGE
+   LARGE + ZOOMED
 ========================================================= */
 
 .ts-nav-logo img {
@@ -157,33 +174,49 @@
   margin: 0 !important;
   padding: 0 !important;
 
+  /*
+    Preserve original logo proportions.
+  */
   object-fit: contain !important;
-  object-position: center !important;
+  object-position: center center !important;
 
   background: #ffffff !important;
 
   border: none !important;
 
-  border-radius: 14px !important;
+  border-radius: 9px !important;
 
   box-shadow: none !important;
 
+  /*
+    Strong logo zoom.
+  */
+  transform: scale(1.28);
+
+  transform-origin: center center;
+
   transition:
-    transform 0.3s ease;
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 
-/* LOGO HOVER */
+/* =========================================================
+   LOGO HOVER
+========================================================= */
 
 .ts-nav-logo:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 
   box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.45);
+    0 12px 32px rgba(0, 0, 0, 0.48);
 }
 
+
 .ts-nav-logo:hover img {
-  transform: scale(1.02);
+  transform: scale(1.33);
+
+  opacity: 0.97;
 }
 
 
@@ -199,6 +232,7 @@
 
   gap: 28px;
 }
+
 
 .ts-nav-links {
   display: flex;
@@ -237,16 +271,20 @@
     background 0.3s ease;
 }
 
+
 .ts-nav-link:hover {
   color: #ffffff !important;
 
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    rgba(255, 255, 255, 0.04);
 }
+
 
 .ts-nav-link.active {
   color: #ffffff !important;
 
-  background: rgba(255, 80, 56, 0.08);
+  background:
+    rgba(255, 80, 56, 0.08);
 }
 
 
@@ -274,6 +312,7 @@
   transition:
     width 0.3s ease;
 }
+
 
 .ts-nav-link.active::after {
   width: 20px;
@@ -317,6 +356,7 @@
     box-shadow 0.3s ease;
 }
 
+
 .ts-nav-button:hover {
   color: #ffffff !important;
 
@@ -328,12 +368,14 @@
     0 8px 25px rgba(255, 80, 56, 0.22);
 }
 
+
 .ts-nav-button i {
   font-size: 9px;
 
   transition:
     transform 0.3s ease;
 }
+
 
 .ts-nav-button:hover i {
   transform: translateX(3px);
@@ -359,14 +401,17 @@
 
   gap: 5px;
 
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    rgba(255, 255, 255, 0.04);
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
 
   border-radius: 10px;
 
   cursor: pointer;
 }
+
 
 .ts-nav-toggle span {
   width: 18px;
@@ -387,19 +432,29 @@
 @media (max-width: 1080px) {
 
   .ts-nav-logo {
-    width: 165px !important;
-    height: 60px !important;
+    width: 225px !important;
+    height: 76px !important;
 
-    border-radius: 13px !important;
+    border-radius: 8px !important;
   }
+
 
   .ts-nav-logo img {
-    border-radius: 13px !important;
+    border-radius: 8px !important;
+
+    transform: scale(1.26);
   }
+
+
+  .ts-nav-logo:hover img {
+    transform: scale(1.30);
+  }
+
 
   .ts-nav-menu {
     gap: 12px;
   }
+
 
   .ts-nav-link {
     padding: 0 9px;
@@ -407,9 +462,11 @@
     font-size: 11px;
   }
 
+
   .ts-nav-button {
     min-width: 125px;
   }
+
 }
 
 
@@ -423,13 +480,16 @@
     display: none;
   }
 
+
   .ts-nav-top-inner {
     justify-content: center;
   }
 
+
   .ts-nav-main {
     height: 76px;
   }
+
 
   .ts-nav-inner {
     gap: 15px;
@@ -441,17 +501,25 @@
   ===================================================== */
 
   .ts-nav-logo {
-    width: 165px !important;
-    height: 56px !important;
+    width: 210px !important;
+    height: 70px !important;
 
-    border-radius: 12px !important;
+    border-radius: 8px !important;
 
     box-shadow:
-      0 5px 18px rgba(0, 0, 0, 0.35);
+      0 7px 24px rgba(0, 0, 0, 0.40);
   }
 
+
   .ts-nav-logo img {
-    border-radius: 12px !important;
+    border-radius: 8px !important;
+
+    transform: scale(1.25);
+  }
+
+
+  .ts-nav-logo:hover img {
+    transform: scale(1.29);
   }
 
 
@@ -490,7 +558,6 @@
 
     background: #060606;
 
-    /* NO OUTER BORDER */
     border: none;
 
     box-shadow:
@@ -509,6 +576,7 @@
       transform 0.3s ease,
       visibility 0.3s ease;
   }
+
 
   .ts-nav-menu.open {
     opacity: 1;
@@ -543,8 +611,10 @@
 
     padding: 0 16px;
 
-    background: rgba(255, 255, 255, 0.02);
+    background:
+      rgba(255, 255, 255, 0.02);
   }
+
 
   .ts-nav-link::after {
     left: 16px;
@@ -553,6 +623,7 @@
 
     transform: none;
   }
+
 
   .ts-nav-link.active::after {
     width: 22px;
@@ -564,6 +635,7 @@
 
     height: 48px;
   }
+
 }
 
 
@@ -577,9 +649,11 @@
     min-height: 32px;
   }
 
+
   .ts-nav-top-inner {
     min-height: 32px;
   }
+
 
   .ts-nav-top a {
     font-size: 8px;
@@ -596,14 +670,22 @@
   ===================================================== */
 
   .ts-nav-logo {
-    width: 150px !important;
-    height: 51px !important;
+    width: 190px !important;
+    height: 64px !important;
 
-    border-radius: 11px !important;
+    border-radius: 7px !important;
   }
 
+
   .ts-nav-logo img {
-    border-radius: 11px !important;
+    border-radius: 7px !important;
+
+    transform: scale(1.24);
+  }
+
+
+  .ts-nav-logo:hover img {
+    transform: scale(1.28);
   }
 
 
@@ -612,7 +694,9 @@
     height: 41px;
   }
 
+
   .ts-nav-menu {
     top: 70px;
   }
+
 }

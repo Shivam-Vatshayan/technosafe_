@@ -13,7 +13,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.png`;
+  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.jpeg`;
 
   return (
     <header className="ts-nav">

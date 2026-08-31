@@ -8,6 +8,7 @@ import VideoSection from "../components/VideoSection";
 import Industries from "../components/Industries";
 import Partners from "../components/Partners";
 import Clients from "../components/Clients";
+import Intro from "../components/VideoCarousel";
 import CTA from "../components/CTA";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
     <Industries />
     <Partners />
     <Clients />
+    <Intro />
     <CTA />
   </>;
 }
