@@ -5,49 +5,57 @@ import "./Partners.css";
 const partners = [
   {
     name: "Uni Care",
-    logo: "/images/partner1.jpeg",
+    logo: "images/partner1.jpeg",
   },
   {
     name: "LAKELAND",
-    logo: "/images/partner2.jpeg",
+    logo: "images/partner2.jpeg",
   },
   {
     name: "DELTAPLUS",
-    logo: "/images/partner3.jpeg",
+    logo: "images/partner3.jpeg",
   },
   {
     name: "uvex",
-    logo: "/images/partner4.jpeg",
+    logo: "images/partner4.jpeg",
   },
   {
     name: "Fuel",
-    logo: "/images/partner5.jpeg",
+    logo: "images/partner5.jpeg",
   },
   {
     name: "Perf",
-    logo: "/images/partner6.jpeg",
+    logo: "images/partner6.jpeg",
   },
   {
     name: "pig",
-    logo: "/images/partner7.jpeg",
+    logo: "images/partner7.jpeg",
   },
   {
     name: "Newpig",
-    logo: "/images/partner8.jpeg",
+    logo: "images/partner8.jpeg",
   },
   {
     name: "Sure Safety",
-    logo: "/images/partner9.jpeg",
+    logo: "images/partner9.jpeg",
   },
   {
     name: "Honeywell",
-    logo: "/images/partner10.jpeg",
+    logo: "images/partner10.jpeg",
   },
   {
     name: "Fuel",
-    logo: "/images/partner4.jpeg",
+    logo: "images/partner4.jpeg",
   },
 ];
+
+/*
+  GitHub Pages + Vite compatible image path
+  Automatically adds the Vite base path.
+*/
+const getImagePath = (path) => {
+  return `${import.meta.env.BASE_URL}${path}`;
+};
 
 export default function Partners() {
   /*
@@ -63,11 +71,13 @@ export default function Partners() {
       ================================= */}
       <div className="container">
         <div className="ts-partners-label">
+
           <span className="ts-partners-line"></span>
 
           <span>Our Partners</span>
 
           <span className="ts-partners-line"></span>
+
         </div>
       </div>
 
@@ -75,9 +85,11 @@ export default function Partners() {
           PARTNERS CAROUSEL
       ================================= */}
       <div className="ts-partners-carousel">
+
         <div className="ts-partners-track">
 
           {carouselItems.map((partner, index) => (
+
             <div
               className="ts-partner"
               key={`${partner.name}-${index}`}
@@ -90,15 +102,17 @@ export default function Partners() {
 
                 {partner.logo ? (
                   <img
-                    src={partner.logo}
+                    src={getImagePath(partner.logo)}
                     alt={`${partner.name} logo`}
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
 
-                      if (e.currentTarget.nextElementSibling) {
-                        e.currentTarget.nextElementSibling.style.display =
-                          "flex";
+                      const placeholder =
+                        e.currentTarget.nextElementSibling;
+
+                      if (placeholder) {
+                        placeholder.style.display = "flex";
                       }
                     }}
                   />
@@ -127,13 +141,14 @@ export default function Partners() {
               </span>
 
             </div>
+
           ))}
 
         </div>
+
       </div>
 
     </section>
   );
-} 
-
+}
  

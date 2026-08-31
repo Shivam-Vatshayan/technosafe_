@@ -6,144 +6,152 @@ const clients = [
   {
     name: "ACC",
     work: "Cement & Building Materials",
-    logo: "/images/client1.jpeg",
+    logo: "images/client1.jpeg",
   },
   {
     name: "DLF",
     work: "Commercial & Residential Real Estate",
-    logo: "/images/client2.jpeg",
+    logo: "images/client2.jpeg",
   },
   {
     name: "HMEL",
     work: "Refining & Petrochemicals",
-    logo: "/images/client3.jpeg",
+    logo: "images/client3.jpeg",
   },
   {
     name: "PSPCL",
     work: "Electricity & Power Services",
-    logo: "/images/client4.jpeg",
+    logo: "images/client4.jpeg",
   },
   {
-    name: "LARSEN  & TURBO",
+    name: "LARSEN & TURBO",
     work: "Infrastructure & Technology",
-    logo: "/images/client5.jpeg",
+    logo: "images/client5.jpeg",
   },
   {
     name: "WRIGLEY",
     work: "Chewing Gum Manufacturing",
-    logo: "/images/client6.jpeg",
+    logo: "images/client6.jpeg",
   },
   {
     name: "TOTECH",
     work: "Engineering Solutions & Services",
-    logo: "/images/client7.jpeg",
+    logo: "images/client7.jpeg",
   },
   {
-    name: "INDRAPARASTA GAS LIMITED ",
+    name: "INDRAPRASTHA GAS LIMITED",
     work: "Natural Gas Distribution",
-    logo: "/images/client8.jpeg",
+    logo: "images/client8.jpeg",
   },
   {
     name: "VARDHMAN",
     work: "Textile Manufacturing",
-    logo: "/images/client9.jpeg",
+    logo: "images/client9.jpeg",
   },
   {
     name: "CENTRIENT",
     work: "Pharmaceutical Manufacturing",
-    logo: "/images/client10.jpeg",
+    logo: "images/client10.jpeg",
   },
   {
     name: "PRIMO",
     work: "Engineering & Manufacturing",
-    logo: "/images/client11.jpeg",
+    logo: "images/client11.jpeg",
   },
   {
     name: "Vertex Engineering",
-    work: "Industrial fire protection solutions",
-    logo: "/images/client12.jpeg",
+    work: "Industrial Engineering Solutions",
+    logo: "images/client12.jpeg",
   },
   {
     name: "NPL Instruments",
     work: "Measurement & Metrology",
-    logo: "/images/client13.jpeg",
+    logo: "images/client13.jpeg",
   },
   {
-    name: "GLENMARK Pharmaceuticals",
+    name: "GLENMARK",
     work: "Pharmaceutical Research & Development",
-    logo: "/images/client14.jpeg",
+    logo: "images/client14.jpeg",
   },
   {
-    name: "SUN FARMA",
-    work: "Pharmaceutical Research & Development",
-    logo: "/images/client15.jpeg",
+    name: "SUN PHARMA",
+    work: "Pharmaceuticals & Healthcare",
+    logo: "images/client15.jpeg",
   },
   {
     name: "LPGCL",
-    work: "Electricity Generation & Distribution",
-    logo: "/images/client16.jpeg",
+    work: "Thermal Power Generation",
+    logo: "images/client16.jpeg",
   },
   {
     name: "OPAL",
     work: "Petrochemical Manufacturing",
-    logo: "/images/client17.jpeg",
+    logo: "images/client17.jpeg",
   },
   {
     name: "OPUS",
     work: "Industrial Solutions",
-    logo: "/images/client18.jpeg",
+    logo: "images/client18.jpeg",
   },
   {
     name: "IRCTC",
     work: "Railway Catering & Tourism",
-    logo: "/images/client19.jpeg",
+    logo: "images/client19.jpeg",
   },
   {
     name: "CIPLA",
-    work: "Pharmaceutical Research & Development",
-    logo: "/images/client20.jpeg",
+    work: "Pharmaceuticals & Healthcare",
+    logo: "images/client20.jpeg",
   },
   {
-    name: "TFIKA",
+    name: "FIKA",
     work: "Manufacturing Solutions & Services",
-    logo: "/images/client21.jpeg",
+    logo: "images/client21.jpeg",
   },
   {
-    name: "YOKOHMA",
-    work: "Hotel fire protection & complianceRubber & Automotive Products",
-    logo: "/images/client22.jpeg",
+    name: "YOKOHAMA",
+    work: "Tyres & Rubber Products",
+    logo: "images/client22.jpeg",
   },
   {
     name: "UFLEX",
     work: "Flexible Packaging Solutions",
-    logo: "/images/client23.jpeg",
+    logo: "images/client23.jpeg",
   },
   {
-    name: "GROZ - BECKERT",
+    name: "GROZ-BECKERT",
     work: "Textile Machinery & Needles",
-    logo: "/images/client24.jpeg",
+    logo: "images/client24.jpeg",
   },
   {
-    name: "SURE-SAFETY",
-    work: "Personal Protective Equipment",
-    logo: "/images/client25.jpeg",
+    name: "SURE SAFETY",
+    work: "Industrial Safety Equipment",
+    logo: "images/client25.jpeg",
   },
   {
     name: "INDIAN OIL",
-    work: "Refining & Petrochemicals",
-    logo: "/images/client26.jpeg",
+    work: "Oil, Gas & Energy",
+    logo: "images/client26.jpeg",
   },
   {
     name: "ACC",
-    work: "Building Materials & Solutions",
-    logo: "/images/client27.jpeg",
+    work: "Cement & Building Materials",
+    logo: "images/client27.jpeg",
   },
   {
     name: "OPUS",
     work: "Industrial Solutions",
-    logo: "/images/client18.jpeg",
+    logo: "images/client28.jpeg",
   },
 ];
+
+/* =========================================================
+   VITE + GITHUB PAGES IMAGE PATH
+========================================================= */
+
+const getImagePath = (path) => {
+  return `${import.meta.env.BASE_URL}${path}`;
+};
 
 
 /* =========================================================
@@ -178,7 +186,7 @@ function ClientCard({ client }) {
 
         {client.logo ? (
           <img
-            src={client.logo}
+            src={getImagePath(client.logo)}
             alt={`${client.name} logo`}
             loading="lazy"
             onError={(e) => {
@@ -203,6 +211,7 @@ function ClientCard({ client }) {
 
         <div
           className="ts-client-placeholder"
+          aria-label={`${client.name} logo placeholder`}
           style={{
             display: client.logo ? "none" : "flex",
           }}
@@ -239,7 +248,9 @@ function ClientCard({ client }) {
       ========================================= */}
 
       <div className="ts-client-arrow">
+
         <i className="fa-solid fa-arrow-up-right"></i>
+
       </div>
 
     </article>
@@ -279,9 +290,13 @@ export default function Clients() {
           <div className="ts-clients-heading">
 
             <span className="ts-clients-eyebrow">
+
               <span></span>
+
               OUR CLIENTS
+
             </span>
+
 
             <h2>
               Trusted where{" "}
@@ -321,10 +336,12 @@ export default function Clients() {
         <div className="ts-client-track ts-client-track-forward">
 
           {topTrack.map((client, index) => (
+
             <ClientCard
               client={client}
               key={`top-${client.name}-${index}`}
             />
+
           ))}
 
         </div>
@@ -359,10 +376,12 @@ export default function Clients() {
         <div className="ts-client-track ts-client-track-reverse">
 
           {bottomTrack.map((client, index) => (
+
             <ClientCard
               client={client}
               key={`bottom-${client.name}-${index}`}
             />
+
           ))}
 
         </div>
@@ -379,7 +398,9 @@ export default function Clients() {
         <div className="ts-clients-footer">
 
           <div className="ts-clients-footer-icon">
+
             <i className="fa-solid fa-shield-halved"></i>
+
           </div>
 
 
@@ -414,5 +435,4 @@ export default function Clients() {
     </section>
   );
 }
- 
  
