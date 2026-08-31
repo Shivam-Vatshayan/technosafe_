@@ -1,45 +1,43 @@
+ 
 /* =========================================================
-   TECHNOSAFE VIDEO SECTION
-   UNIQUE PREFIX: ts-video-
+   TECHNOSAFE — VIDEO SECTION
+   Premium Fire Safety / Operations Section
 ========================================================= */
 
 .ts-video-section {
   position: relative;
-
   width: 100%;
-
-  padding: 115px 0;
-
+  padding: 120px 0;
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 85% 50%,
-      rgba(240, 68, 46, 0.055),
+      circle at 8% 30%,
+      rgba(255, 70, 45, 0.07),
       transparent 32%
     ),
-    #090d11;
-
-  color: #ffffff;
+    radial-gradient(
+      circle at 92% 70%,
+      rgba(20, 80, 180, 0.07),
+      transparent 32%
+    ),
+    #ffffff;
 }
 
 
 /* =========================================================
-   CONTAINER
+   MAIN CONTAINER
 ========================================================= */
 
-.ts-video-section .ts-video-container {
-  width: min(1200px, calc(100% - 48px));
-
+.ts-video-container {
+  width: min(1280px, calc(100% - 80px));
   margin: 0 auto;
 
   display: grid;
-
   grid-template-columns: 0.82fr 1.18fr;
-
   align-items: center;
 
-  gap: 75px;
+  gap: 80px;
 }
 
 
@@ -47,9 +45,8 @@
    LEFT CONTENT
 ========================================================= */
 
-.ts-video-section .ts-video-copy {
+.ts-video-copy {
   position: relative;
-
   z-index: 2;
 
   max-width: 500px;
@@ -60,38 +57,51 @@
    EYEBROW
 ========================================================= */
 
-.ts-video-section .ts-video-eyebrow {
+.ts-video-eyebrow {
   display: inline-flex;
-
   align-items: center;
+  gap: 10px;
 
-  gap: 9px;
+  margin-bottom: 22px;
 
-  margin-bottom: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
 
-  color: #f0442e;
-
-  font-size: 11px;
-
-  font-weight: 800;
-
-  letter-spacing: 2.2px;
-
+  letter-spacing: 2.5px;
   text-transform: uppercase;
+
+  color: #ff4b2b;
 }
 
 
-.ts-video-section .ts-video-eyebrow-dot {
-  width: 6px;
-
-  height: 6px;
+.ts-video-eyebrow-dot {
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
 
-  background: #f0442e;
+  background: #ff4b2b;
 
   box-shadow:
-    0 0 0 5px rgba(240, 68, 46, 0.09);
+    0 0 0 5px rgba(255, 75, 43, 0.10),
+    0 0 18px rgba(255, 75, 43, 0.35);
+
+  animation: tsVideoPulse 2s infinite;
+}
+
+
+@keyframes tsVideoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.75);
+    opacity: 0.65;
+  }
 }
 
 
@@ -99,68 +109,73 @@
    HEADING
 ========================================================= */
 
-.ts-video-section .ts-video-copy h2 {
-  margin: 0;
+.ts-video-copy h2 {
+  margin: 0 0 24px;
 
-  color: #ffffff;
+  font-family: "Sora", "Inter", sans-serif;
 
-  font-size: clamp(38px, 4.2vw, 58px);
+  font-size: clamp(38px, 4vw, 62px);
+  line-height: 1.08;
+  font-weight: 700;
 
-  line-height: 1.05;
+  letter-spacing: -2.5px;
 
-  font-weight: 750;
-
-  letter-spacing: -1.8px;
+  color: #071b4a;
 }
 
 
-.ts-video-section .ts-video-copy h2 span {
-  display: block;
+.ts-video-copy h2 span {
+  display: inline;
 
-  color: #f0442e;
+  color: #ff4b2b;
 }
 
 
 /* =========================================================
-   DESCRIPTION
+   MAIN DESCRIPTION
 ========================================================= */
 
-.ts-video-section .ts-video-copy > p {
-  margin: 25px 0 0;
+.ts-video-copy > p {
+  margin: 0 0 18px;
 
-  color: rgba(255, 255, 255, 0.67);
+  max-width: 490px;
 
-  font-size: 15px;
+  font-family: "Inter", sans-serif;
 
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 400;
+
+  color: #53617a;
+}
+
+
+/* =========================================================
+   SMALL DESCRIPTION
+========================================================= */
+
+.ts-video-copy .ts-video-copy-small {
+  margin-top: 4px;
+
+  font-size: 14px;
   line-height: 1.75;
-}
 
-
-.ts-video-section .ts-video-copy .ts-video-copy-small {
-  margin-top: 13px;
-
-  color: rgba(255, 255, 255, 0.43);
-
-  font-size: 13px;
-
-  line-height: 1.7;
+  color: #7b879d;
 }
 
 
 /* =========================================================
-   ACTIONS
+   ACTION AREA
 ========================================================= */
 
-.ts-video-section .ts-video-actions {
+.ts-video-actions {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
 
-  gap: 25px;
+  gap: 28px;
 
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 
@@ -168,76 +183,106 @@
    DISCOVER LINK
 ========================================================= */
 
-.ts-video-section .ts-video-link {
+.ts-video-link {
   display: inline-flex;
-
   align-items: center;
+  gap: 12px;
 
-  gap: 9px;
+  min-height: 50px;
 
-  color: #ffffff;
+  padding: 0 22px;
 
+  border: 1px solid rgba(255, 75, 43, 0.25);
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-family: "Inter", sans-serif;
   font-size: 13px;
-
   font-weight: 700;
 
   text-decoration: none;
 
+  color: #071b4a;
+
   transition:
+    background 0.3s ease,
     color 0.3s ease,
-    gap 0.3s ease;
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
-.ts-video-section .ts-video-link i {
-  color: #f0442e;
+.ts-video-link i {
+  font-size: 12px;
 
-  transition:
-    transform 0.3s ease;
+  color: #ff4b2b;
+
+  transition: transform 0.3s ease;
 }
 
 
-.ts-video-section .ts-video-link:hover {
-  color: #f0442e;
+.ts-video-link:hover {
+  color: #ffffff;
 
-  gap: 13px;
+  background: #ff4b2b;
+  border-color: #ff4b2b;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(255, 75, 43, 0.20);
 }
 
 
-.ts-video-section .ts-video-link:hover i {
-  transform: translateX(4px);
+.ts-video-link:hover i {
+  color: #ffffff;
+
+  transform: translateX(5px);
 }
 
 
 /* =========================================================
-   TRUST
+   TRUST BADGE
 ========================================================= */
 
-.ts-video-section .ts-video-trust {
-  display: flex;
-
+.ts-video-trust {
+  display: inline-flex;
   align-items: center;
+  gap: 9px;
 
-  gap: 8px;
-
-  color: rgba(255, 255, 255, 0.4);
-
-  font-size: 11px;
-
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
   font-weight: 600;
+
+  color: #66748b;
 }
 
 
-.ts-video-section .ts-video-trust i {
-  color: #f0442e;
+.ts-video-trust i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 75, 43, 0.08);
+
+  font-size: 13px;
+
+  color: #ff4b2b;
 }
 
 
 /* =========================================================
-   RIGHT VIDEO
+   RIGHT VIDEO AREA
 ========================================================= */
 
-.ts-video-section .ts-video-media {
+.ts-video-media {
   position: relative;
 
   width: 100%;
@@ -248,51 +293,47 @@
    VIDEO FRAME
 ========================================================= */
 
-.ts-video-section .ts-video-frame {
+.ts-video-frame {
   position: relative;
 
   width: 100%;
-
   aspect-ratio: 16 / 10;
 
   overflow: hidden;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
-  background: #11161b;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #071b4a;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.45),
-    0 0 50px rgba(240, 68, 46, 0.055);
-
-  isolation: isolate;
+    0 30px 70px rgba(7, 27, 74, 0.18),
+    0 10px 25px rgba(7, 27, 74, 0.08);
 }
 
 
 /* =========================================================
-   VIDEO
+   VIDEO PLAYER
 ========================================================= */
 
-.ts-video-section .ts-video-player {
-  width: 100%;
-
-  height: 100%;
-
+.ts-video-player {
   display: block;
+
+  width: 100%;
+  height: 100%;
 
   object-fit: cover;
 
-  background: #080b0e;
+  background: #071b4a;
+
+  cursor: pointer;
 }
 
 
 /* =========================================================
-   VIDEO OVERLAY
+   VIDEO DARK OVERLAY
 ========================================================= */
 
-.ts-video-section .ts-video-frame-overlay {
+.ts-video-frame-overlay {
   position: absolute;
 
   inset: 0;
@@ -304,17 +345,18 @@
   background:
     linear-gradient(
       180deg,
-      rgba(4, 7, 9, 0.18) 0%,
-      rgba(4, 7, 9, 0.08) 40%,
-      rgba(4, 7, 9, 0.55) 100%
+      rgba(7, 27, 74, 0.28) 0%,
+      rgba(7, 27, 74, 0.04) 40%,
+      rgba(7, 27, 74, 0.48) 100%
     );
 
+  opacity: 1;
+
   transition:
-    opacity 0.4s ease;
+    opacity 0.45s ease;
 }
 
 
-.ts-video-section
 .ts-video-frame-overlay-hidden {
   opacity: 0;
 }
@@ -324,124 +366,112 @@
    PLAY BUTTON
 ========================================================= */
 
-.ts-video-section .ts-video-play {
+.ts-video-play {
   position: absolute;
 
   top: 50%;
-
   left: 50%;
 
   z-index: 5;
 
   width: 92px;
-
   height: 92px;
 
   padding: 0;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
 
   border: 0;
 
   background: transparent;
 
   cursor: pointer;
-}
 
-
-/* =========================================================
-   PLAY RING
-========================================================= */
-
-.ts-video-section .ts-video-play-ring {
-  position: absolute;
-
-  inset: 0;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(240, 68, 46, 0.55);
-
-  animation:
-    ts-video-pulse 2s ease-out infinite;
-}
-
-
-/* =========================================================
-   PLAY CIRCLE
-========================================================= */
-
-.ts-video-section .ts-video-play-circle {
-  width: 62px;
-
-  height: 62px;
+  transform: translate(-50%, -50%);
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
+}
 
-  padding-left: 3px;
+
+.ts-video-play-ring {
+  position: absolute;
+
+  width: 92px;
+  height: 92px;
 
   border-radius: 50%;
 
-  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.60);
 
-  background: #f0442e;
-
-  box-shadow:
-    0 10px 35px rgba(240, 68, 46, 0.38);
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  animation: tsVideoRing 2.2s ease-out infinite;
 }
 
 
-.ts-video-section .ts-video-play-circle i {
-  font-size: 18px;
-}
-
-
-.ts-video-section .ts-video-play:hover
-.ts-video-play-circle {
-  transform: scale(1.08);
-
-  background: #ff553e;
-}
-
-
-/* =========================================================
-   PLAY ANIMATION
-========================================================= */
-
-@keyframes ts-video-pulse {
-
+@keyframes tsVideoRing {
   0% {
-    transform: scale(0.82);
-
+    transform: scale(0.9);
     opacity: 0.9;
   }
 
   70% {
-    transform: scale(1.2);
-
+    transform: scale(1.25);
     opacity: 0;
   }
 
   100% {
-    transform: scale(1.2);
-
+    transform: scale(1.25);
     opacity: 0;
   }
+}
 
+
+.ts-video-play-circle {
+  position: relative;
+
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff4b2b;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    0 0 0 8px rgba(255, 255, 255, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.ts-video-play-circle i {
+  margin-left: 4px;
+
+  font-size: 18px;
+
+  color: #ffffff;
+}
+
+
+.ts-video-play:hover .ts-video-play-circle {
+  transform: scale(1.10);
+
+  background: #ff5d40;
+
+  box-shadow:
+    0 16px 42px rgba(255, 75, 43, 0.38),
+    0 0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+
+.ts-video-play:active .ts-video-play-circle {
+  transform: scale(0.96);
 }
 
 
@@ -449,225 +479,411 @@
    VIDEO LABEL
 ========================================================= */
 
-.ts-video-section .ts-video-label {
+.ts-video-label {
   position: absolute;
 
-  left: 18px;
-
-  bottom: 18px;
+  left: 22px;
+  bottom: 22px;
 
   z-index: 6;
 
-  display: flex;
-
+  display: inline-flex;
   align-items: center;
+  gap: 9px;
 
-  gap: 8px;
+  padding: 10px 14px;
 
-  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
 
-  border-radius: 8px;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  background: rgba(7, 10, 12, 0.65);
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 27, 74, 0.72);
 
   backdrop-filter: blur(12px);
-
   -webkit-backdrop-filter: blur(12px);
 
+  font-family: "Inter", sans-serif;
   font-size: 10px;
-
   font-weight: 700;
 
-  letter-spacing: 0.8px;
-
+  letter-spacing: 1.4px;
   text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 
-.ts-video-section .ts-video-label-dot {
-  width: 5px;
-
-  height: 5px;
+.ts-video-label-dot {
+  width: 6px;
+  height: 6px;
 
   border-radius: 50%;
 
-  background: #f0442e;
+  background: #ff4b2b;
+
+  box-shadow:
+    0 0 10px rgba(255, 75, 43, 0.8);
 }
 
 
 /* =========================================================
-   CORNER ICON
+   VIDEO CORNER ICON
 ========================================================= */
 
-.ts-video-section .ts-video-corner {
+.ts-video-corner {
   position: absolute;
 
-  top: 18px;
-
-  right: 18px;
+  top: 20px;
+  right: 20px;
 
   z-index: 6;
 
-  width: 34px;
-
-  height: 34px;
+  width: 38px;
+  height: 38px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
 
-  color: rgba(255, 255, 255, 0.65);
-
-  background: rgba(7, 10, 12, 0.55);
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 27, 74, 0.62);
 
   backdrop-filter: blur(10px);
-
   -webkit-backdrop-filter: blur(10px);
 
-  font-size: 11px;
+  color: #ffffff;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.ts-video-corner i {
+  font-size: 12px;
+}
+
+
+.ts-video-corner:hover {
+  background: rgba(255, 75, 43, 0.90);
+
+  transform: scale(1.06);
 }
 
 
 /* =========================================================
-   DECORATIVE EDGE
+   DECORATIVE FRAME
 ========================================================= */
 
-.ts-video-section .ts-video-frame::after {
+.ts-video-frame::before {
   content: "";
 
   position: absolute;
 
+  top: -1px;
+  left: -1px;
   right: -1px;
 
-  bottom: -1px;
+  height: 1px;
 
-  width: 100px;
+  z-index: 8;
 
-  height: 100px;
-
-  border-right: 2px solid rgba(240, 68, 46, 0.65);
-
-  border-bottom: 2px solid rgba(240, 68, 46, 0.65);
-
-  border-radius: 0 0 24px 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 75, 43, 0.8),
+      transparent
+    );
 
   pointer-events: none;
 }
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE — LARGE TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+
+  .ts-video-section {
+    padding: 100px 0;
+  }
+
+  .ts-video-container {
+    width: min(100% - 50px, 1100px);
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 50px;
+  }
+
+  .ts-video-copy h2 {
+    font-size: clamp(36px, 4.5vw, 52px);
+  }
+
+  .ts-video-copy > p {
+    font-size: 15px;
+  }
+
+  .ts-video-frame {
+    border-radius: 18px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
 
   .ts-video-section {
     padding: 85px 0;
   }
 
-  .ts-video-section .ts-video-container {
+  .ts-video-container {
+    width: min(100% - 40px, 700px);
+
     grid-template-columns: 1fr;
 
-    gap: 45px;
+    gap: 55px;
   }
 
-  .ts-video-section .ts-video-copy {
-    max-width: 700px;
+  .ts-video-copy {
+    max-width: 680px;
   }
 
-  .ts-video-section .ts-video-frame {
+  .ts-video-copy h2 {
+    max-width: 650px;
+
+    font-size: clamp(38px, 7vw, 54px);
+  }
+
+  .ts-video-copy > p {
+    max-width: 650px;
+  }
+
+  .ts-video-media {
+    width: 100%;
+  }
+
+  .ts-video-frame {
     aspect-ratio: 16 / 9;
-  }
 
+    border-radius: 18px;
+  }
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE — MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
   .ts-video-section {
-    padding: 65px 0;
+    padding: 70px 0;
   }
 
-  .ts-video-section .ts-video-container {
-    width: calc(100% - 32px);
+  .ts-video-container {
+    width: calc(100% - 30px);
 
-    gap: 35px;
+    gap: 40px;
   }
 
-  .ts-video-section .ts-video-copy h2 {
-    font-size: 36px;
+  /* EYEBROW */
 
-    letter-spacing: -1px;
+  .ts-video-eyebrow {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
   }
 
-  .ts-video-section .ts-video-copy > p {
+  .ts-video-eyebrow-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+
+  /* HEADING */
+
+  .ts-video-copy h2 {
+    margin-bottom: 20px;
+
+    font-size: clamp(32px, 10vw, 44px);
+
+    line-height: 1.10;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .ts-video-copy > p {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .ts-video-copy .ts-video-copy-small {
     font-size: 13px;
+
+    line-height: 1.7;
   }
 
-  .ts-video-section .ts-video-copy-small {
-    display: none;
+
+  /* ACTIONS */
+
+  .ts-video-actions {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 28px;
   }
 
-  .ts-video-section .ts-video-actions {
-    margin-top: 24px;
 
-    gap: 17px;
+  /* LINK */
+
+  .ts-video-link {
+    min-height: 48px;
+
+    padding: 0 18px;
+
+    font-size: 12px;
   }
 
-  .ts-video-section .ts-video-trust {
-    display: none;
+
+  /* VIDEO */
+
+  .ts-video-frame {
+    aspect-ratio: 16 / 10;
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 20px 45px rgba(7, 27, 74, 0.16);
   }
 
-  .ts-video-section .ts-video-frame {
-    border-radius: 18px;
+
+  /* PLAY */
+
+  .ts-video-play {
+    width: 75px;
+    height: 75px;
   }
 
-  .ts-video-section .ts-video-play {
-    width: 76px;
-
-    height: 76px;
+  .ts-video-play-ring {
+    width: 75px;
+    height: 75px;
   }
 
-  .ts-video-section .ts-video-play-circle {
-    width: 53px;
-
-    height: 53px;
+  .ts-video-play-circle {
+    width: 56px;
+    height: 56px;
   }
 
-  .ts-video-section .ts-video-play-circle i {
+  .ts-video-play-circle i {
     font-size: 15px;
   }
 
-  .ts-video-section .ts-video-label {
-    left: 12px;
 
-    bottom: 12px;
+  /* LABEL */
 
-    padding: 7px 10px;
+  .ts-video-label {
+    left: 13px;
+    bottom: 13px;
+
+    padding: 8px 10px;
 
     font-size: 8px;
+
+    letter-spacing: 1px;
   }
 
-  .ts-video-section .ts-video-corner {
-    top: 12px;
 
-    right: 12px;
+  .ts-video-label-dot {
+    width: 5px;
+    height: 5px;
   }
 
+
+  /* CORNER */
+
+  .ts-video-corner {
+    top: 13px;
+    right: 13px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 6px;
+  }
+
+  .ts-video-corner i {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .ts-video-section {
+    padding: 60px 0;
+  }
+
+  .ts-video-container {
+    width: calc(100% - 24px);
+  }
+
+  .ts-video-copy h2 {
+    font-size: 30px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .ts-video-copy > p {
+    font-size: 13px;
+  }
+
+  .ts-video-play-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ts-video-play-ring {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ts-video-play {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.ts-video-link:focus-visible,
+.ts-video-play:focus-visible {
+  outline: 3px solid rgba(255, 75, 43, 0.45);
+  outline-offset: 4px;
 }
 
 
@@ -677,8 +893,16 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .ts-video-section .ts-video-play-ring {
+  .ts-video-eyebrow-dot,
+  .ts-video-play-ring {
     animation: none;
   }
 
+  .ts-video-link,
+  .ts-video-link i,
+  .ts-video-play-circle,
+  .ts-video-corner {
+    transition: none;
+  }
 }
+ 
