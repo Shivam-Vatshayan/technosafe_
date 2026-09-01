@@ -1,15 +1,19 @@
+ 
 /* =========================================================
    TECHNOSAFE SERVICES SECTION
+   FINAL OVERRIDE COLOR SYSTEM
+   DARK GRAY + BRIGHT RED
+   BACKGROUND UNCHANGED
 ========================================================= */
 
 .ts-services-section {
   width: 100%;
-
   padding: 100px 0;
 
-  background: #080c10;
+  /* ORIGINAL BACKGROUND — UNCHANGED */
+  background: #faf7f0 !important;
 
-  color: #ffffff;
+  color: #252A2F !important;
 
   overflow: hidden;
 }
@@ -21,11 +25,9 @@
 
 .ts-services-container {
   width: 100%;
-
   max-width: 1400px;
 
   margin: 0 auto;
-
   padding: 0 45px;
 }
 
@@ -36,7 +38,6 @@
 
 .ts-services-heading {
   width: 100%;
-
   max-width: 850px;
 
   margin: 0 auto 60px;
@@ -53,17 +54,15 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 11px;
 
   margin-bottom: 20px;
 
-  color: #f0442e;
+  color: #FF2D25 !important;
 
   font-size: 12px;
-
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -74,49 +73,52 @@
 
 .ts-services-eyebrow span {
   width: 34px;
-
   height: 2px;
 
   display: block;
 
-  background: #f0442e;
+  background: #FF2D25 !important;
 
-  box-shadow:
-    0 0 8px rgba(240, 68, 46, 0.35);
+  box-shadow: none !important;
 }
 
 
 /* =========================================================
-   MAIN HEADING
+   SECTION TITLE
 ========================================================= */
 
 .ts-services-heading h2 {
   margin: 0;
 
-  color: #ffffff;
+  color: #252A2F !important;
 
   font-size: clamp(42px, 5vw, 64px);
 
   line-height: 1.05;
 
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: -2.2px;
-}
 
-
-.ts-services-heading h2 span {
-  color: #f0442e;
-
-  font-weight: 600;
-
-  text-shadow:
-    0 0 25px rgba(240, 68, 46, 0.12);
+  text-shadow: none !important;
 }
 
 
 /* =========================================================
-   DESCRIPTION
+   SECTION TITLE HIGHLIGHT
+========================================================= */
+
+.ts-services-heading h2 span {
+  color: #FF2D25 !important;
+
+  font-weight: 700;
+
+  text-shadow: none !important;
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
 ========================================================= */
 
 .ts-services-heading p {
@@ -124,13 +126,15 @@
 
   margin: 23px auto 0;
 
-  color: rgba(255, 255, 255, 0.58);
+  color: #555D64 !important;
 
   font-size: 15px;
 
   line-height: 1.7;
 
-  font-weight: 400;
+  font-weight: 500;
+
+  text-shadow: none !important;
 }
 
 
@@ -164,9 +168,9 @@
 
   border-radius: 18px;
 
-  background: #10151a;
+  background: #292E33 !important;
 
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid #3D444A !important;
 
   transition:
     transform 0.35s ease,
@@ -175,15 +179,17 @@
 }
 
 
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
 .ts-service-card:hover {
   transform: translateY(-7px);
 
-  border-color:
-    rgba(240, 68, 46, 0.45);
+  border-color: #FF2D25 !important;
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.35),
-    0 0 30px rgba(240, 68, 46, 0.06);
+    0 20px 50px rgba(0, 0, 0, 0.30) !important;
 }
 
 
@@ -197,7 +203,6 @@
   inset: 0;
 
   width: 100%;
-
   height: 100%;
 
   overflow: hidden;
@@ -206,13 +211,11 @@
 
 .ts-service-image img {
   width: 100%;
-
   height: 100%;
 
   display: block;
 
   object-fit: cover;
-
   object-position: center;
 
   transition:
@@ -237,11 +240,11 @@
   background:
     linear-gradient(
       180deg,
-      rgba(4, 7, 10, 0.35) 0%,
-      rgba(4, 7, 10, 0.25) 35%,
-      rgba(4, 7, 10, 0.88) 72%,
-      rgba(4, 7, 10, 0.98) 100%
-    );
+      rgba(37, 42, 47, 0.20) 0%,
+      rgba(37, 42, 47, 0.32) 35%,
+      rgba(37, 42, 47, 0.88) 72%,
+      rgba(37, 42, 47, 0.98) 100%
+    ) !important;
 }
 
 
@@ -257,68 +260,89 @@
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   padding: 25px;
 }
 
 
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
 .ts-service-number {
-  color: rgba(255, 255, 255, 0.55);
+  color: #B8BEC3 !important;
 
   font-size: 12px;
-
   font-weight: 600;
 
   letter-spacing: 1.5px;
 }
 
 
+/* =========================================================
+   CARD ICON
+   NORMAL = BRIGHT RED
+========================================================= */
+
 .ts-service-icon {
   width: 50px;
-
   height: 50px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   border-radius: 13px;
 
-  background: rgba(240, 68, 46, 0.10);
+  background: rgba(255, 45, 37, 0.14) !important;
 
-  border: 1px solid rgba(240, 68, 46, 0.32);
+  border: 1px solid rgba(255, 45, 37, 0.55) !important;
 
-  color: #f0442e;
+  color: #FF2D25 !important;
 
   backdrop-filter: blur(8px);
-
   -webkit-backdrop-filter: blur(8px);
 
   transition:
-    all 0.3s ease;
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
-.ts-service-icon i {
+.ts-service-icon i,
+.ts-service-icon svg {
+  color: #FF2D25 !important;
+
   font-size: 18px;
 }
 
 
+/* =========================================================
+   CARD ICON HOVER
+   BG = RED
+   ICON = DARK GRAY
+========================================================= */
+
 .ts-service-card:hover .ts-service-icon {
-  background: #f0442e;
+  background: #FF2D25 !important;
 
-  border-color: #f0442e;
+  border-color: #FF2D25 !important;
 
-  color: #ffffff;
+  color: #252A2F !important;
 
   transform: scale(1.05);
 
-  box-shadow:
-    0 8px 25px rgba(240, 68, 46, 0.25);
+  box-shadow: none !important;
+}
+
+
+.ts-service-card:hover .ts-service-icon i,
+.ts-service-card:hover .ts-service-icon svg {
+  color: #252A2F !important;
 }
 
 
@@ -338,38 +362,42 @@
 
 
 /* =========================================================
-   TITLE
+   CARD TITLE
 ========================================================= */
 
 .ts-service-body h3 {
   margin: 0 0 11px;
 
-  color: #ffffff;
+  color: #F1F3F4 !important;
 
   font-size: 21px;
 
   line-height: 1.25;
 
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: -0.4px;
+
+  text-shadow: none !important;
 }
 
 
 /* =========================================================
-   COPY
+   CARD DESCRIPTION
 ========================================================= */
 
 .ts-service-body p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.62);
+  color: #C7CDD2 !important;
 
   font-size: 13px;
 
   line-height: 1.65;
 
   font-weight: 400;
+
+  text-shadow: none !important;
 }
 
 
@@ -386,11 +414,11 @@
 
   margin-top: 22px;
 
-  color: #f0442e;
+  color: #FF2D25 !important;
 
   font-size: 13px;
 
-  font-weight: 600;
+  font-weight: 700;
 
   text-decoration: none;
 
@@ -399,7 +427,10 @@
 }
 
 
-.ts-service-link i {
+.ts-service-link i,
+.ts-service-link svg {
+  color: #FF2D25 !important;
+
   font-size: 11px;
 
   transition:
@@ -408,11 +439,14 @@
 
 
 .ts-service-link:hover {
-  color: #ff5a45;
+  color: #D9211B !important;
 }
 
 
-.ts-service-link:hover i {
+.ts-service-link:hover i,
+.ts-service-link:hover svg {
+  color: #D9211B !important;
+
   transform: translateX(5px);
 }
 
@@ -427,11 +461,9 @@
     padding: 80px 0;
   }
 
-
   .ts-services-container {
     padding: 0 30px;
   }
-
 
   .ts-services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -439,16 +471,13 @@
     gap: 20px;
   }
 
-
   .ts-service-card {
     min-height: 480px;
   }
 
-
   .ts-services-heading h2 {
     font-size: clamp(40px, 6vw, 58px);
   }
-
 }
 
 
@@ -462,16 +491,13 @@
     padding: 65px 0;
   }
 
-
   .ts-services-container {
     padding: 0 18px;
   }
 
-
   .ts-services-heading {
     margin-bottom: 40px;
   }
-
 
   .ts-services-eyebrow {
     margin-bottom: 16px;
@@ -481,11 +507,9 @@
     letter-spacing: 1.5px;
   }
 
-
   .ts-services-eyebrow span {
     width: 27px;
   }
-
 
   .ts-services-heading h2 {
     font-size: clamp(34px, 10vw, 46px);
@@ -495,7 +519,6 @@
     letter-spacing: -1.3px;
   }
 
-
   .ts-services-heading p {
     margin-top: 18px;
 
@@ -504,13 +527,11 @@
     line-height: 1.6;
   }
 
-
   .ts-services-grid {
     grid-template-columns: 1fr;
 
     gap: 18px;
   }
-
 
   .ts-service-card {
     min-height: 460px;
@@ -518,35 +539,29 @@
     border-radius: 16px;
   }
 
-
   .ts-service-top {
     padding: 20px;
   }
 
-
   .ts-service-icon {
     width: 46px;
-
     height: 46px;
 
     border-radius: 12px;
   }
 
-
-  .ts-service-icon i {
+  .ts-service-icon i,
+  .ts-service-icon svg {
     font-size: 17px;
   }
-
 
   .ts-service-body {
     padding: 25px 20px 20px;
   }
 
-
   .ts-service-body h3 {
     font-size: 18px;
   }
-
 
   .ts-service-body p {
     font-size: 12px;
@@ -554,13 +569,11 @@
     line-height: 1.6;
   }
 
-
   .ts-service-link {
     margin-top: 19px;
 
     font-size: 12px;
   }
-
 }
 
 
@@ -574,36 +587,29 @@
     padding: 0 14px;
   }
 
-
   .ts-services-heading h2 {
     font-size: 32px;
   }
-
 
   .ts-services-heading p {
     font-size: 12px;
   }
 
-
   .ts-service-card {
     min-height: 430px;
   }
-
 
   .ts-service-top {
     padding: 17px;
   }
 
-
   .ts-service-body {
     padding: 22px 17px 17px;
   }
 
-
   .ts-service-body h3 {
     font-size: 17px;
   }
-
 }
 
 
@@ -617,8 +623,9 @@
   .ts-service-image img,
   .ts-service-icon,
   .ts-service-link,
-  .ts-service-link i {
+  .ts-service-link i,
+  .ts-service-link svg {
     transition: none;
   }
-
 }
+ 

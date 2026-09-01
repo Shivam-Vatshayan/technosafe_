@@ -1,5 +1,8 @@
+ 
 /* =========================================================
-   HERO
+   TECHNOSAFE — HERO
+   PREMIUM DARK VIDEO HERO
+   HIGH CONTRAST TEXT VERSION
 ========================================================= */
 
 .hero {
@@ -15,7 +18,7 @@
   align-items: center;
   justify-content: center;
 
-  background: #111;
+  background: var(--bg);
 
   isolation: isolate;
 }
@@ -38,7 +41,7 @@
 
   z-index: -5;
 
-  background: #111;
+  background: var(--bg);
 
   pointer-events: none;
 }
@@ -46,6 +49,7 @@
 
 /* =========================================================
    DARK OVERLAY
+   HELPS WHITE TEXT STAY VISIBLE
 ========================================================= */
 
 .hero-overlay {
@@ -53,7 +57,7 @@
 
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(3, 6, 8, 0.52);
 
   z-index: -4;
 
@@ -62,7 +66,7 @@
 
 
 /* =========================================================
-   CINEMATIC GRADIENT
+   EXTRA CONTRAST LAYER
 ========================================================= */
 
 .hero-gradient {
@@ -70,13 +74,7 @@
 
   inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.18) 0%,
-      rgba(0, 0, 0, 0.08) 45%,
-      rgba(0, 0, 0, 0.48) 100%
-    );
+  background: rgba(3, 6, 8, 0.26);
 
   z-index: -3;
 
@@ -143,31 +141,43 @@
 
   padding: 8px 16px;
 
-  border: 1px solid rgba(240, 68, 46, 0.35);
+  border: 1px solid rgba(255, 107, 97, 0.60);
 
   border-radius: 50px;
 
-  background: rgba(240, 68, 46, 0.10);
+  background: rgba(5, 9, 12, 0.82);
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  color: #ffffff;
+  color: #F3F4F6;
 
   font-size: 11px;
 
-  font-weight: 500;
+  font-weight: 600;
 
   letter-spacing: 1.1px;
+
+  /* Makes badge readable over video */
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.25);
 }
 
+
+/* =========================================================
+   BADGE ICON
+========================================================= */
 
 .hero-badge svg {
   font-size: 13px;
 
-  color: #f0442e;
+  color: #FF8A82;
+
+  filter:
+    drop-shadow(0 0 5px rgba(255, 107, 97, 0.35));
 }
 
+
+/* =========================================================
+   BADGE DOT
+========================================================= */
 
 .badge-dot {
   width: 6px;
@@ -175,10 +185,11 @@
 
   border-radius: 50%;
 
-  background: #f0442e;
+  background: #FF6B61;
 
   box-shadow:
-    0 0 10px rgba(240, 68, 46, 0.8);
+    0 0 0 4px rgba(255, 107, 97, 0.14),
+    0 0 12px rgba(255, 107, 97, 0.35);
 
   animation: badgePulse 2s infinite;
 }
@@ -193,7 +204,7 @@
   }
 
   50% {
-    opacity: 0.45;
+    opacity: 0.5;
     transform: scale(0.8);
   }
 }
@@ -201,6 +212,7 @@
 
 /* =========================================================
    MAIN HEADING
+   PURE WHITE FOR MAXIMUM CONTRAST
 ========================================================= */
 
 .hero h1 {
@@ -208,7 +220,7 @@
 
   max-width: 850px;
 
-  color: #ffffff;
+  color: #FFFFFF;
 
   font-size: clamp(42px, 5vw, 68px);
 
@@ -220,23 +232,30 @@
 
   text-align: center;
 
+  /*
+     Strong black shadow keeps text visible
+     even when video contains bright areas.
+  */
   text-shadow:
-    0 3px 18px rgba(0, 0, 0, 0.35);
+    0 2px 4px rgba(0, 0, 0, 0.90),
+    0 6px 20px rgba(0, 0, 0, 0.70),
+    0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 
 /* =========================================================
-   HIGHLIGHTED HEADING
-   Matched with primary button color
+   HEADING HIGHLIGHT
 ========================================================= */
 
 .hero h1 span {
-  color: #f0442e;
+  color: #FF766D;
 
   font-weight: 600;
 
   text-shadow:
-    0 3px 18px rgba(240, 68, 46, 0.18);
+    0 2px 4px rgba(0, 0, 0, 0.90),
+    0 5px 18px rgba(255, 70, 60, 0.30),
+    0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
 
@@ -250,7 +269,11 @@
 
   margin: 22px auto 0;
 
-  color: rgba(255, 255, 255, 0.88);
+  /*
+     Light silver instead of muted grey.
+     This gives much better contrast over video.
+  */
+  color: #E7EAED;
 
   font-size: 16px;
 
@@ -261,7 +284,9 @@
   text-align: center;
 
   text-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.45);
+    0 2px 4px rgba(0, 0, 0, 0.95),
+    0 5px 14px rgba(0, 0, 0, 0.70),
+    0 10px 24px rgba(0, 0, 0, 0.40);
 }
 
 
@@ -299,16 +324,19 @@
 
   gap: 10px;
 
-  border-radius: 5px;
+  border-radius: 6px;
 
   text-decoration: none;
 
   font-size: 13px;
 
-  font-weight: 500;
+  font-weight: 600;
 
   transition:
-    all 0.3s ease;
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 
   cursor: pointer;
 }
@@ -319,24 +347,32 @@
 ========================================================= */
 
 .hero-btn-primary {
-  color: #ffffff;
+  color: #FFFFFF;
 
-  background: #f0442e;
+  background: #E1261C;
+
+  border: 1px solid #E1261C;
 
   box-shadow:
-    0 8px 25px rgba(240, 68, 46, 0.22);
+    0 8px 25px rgba(225, 38, 28, 0.32);
 }
 
 
 .hero-btn-primary:hover {
   transform: translateY(-2px);
 
-  background: #ff553e;
+  background: #FF4A40;
+
+  border-color: #FF4A40;
 
   box-shadow:
-    0 12px 30px rgba(240, 68, 46, 0.35);
+    0 12px 32px rgba(225, 38, 28, 0.42);
 }
 
+
+/* =========================================================
+   PRIMARY BUTTON ICON
+========================================================= */
 
 .hero-btn-primary svg {
   font-size: 12px;
@@ -356,24 +392,32 @@
 ========================================================= */
 
 .hero-btn-secondary {
-  color: #ffffff;
+  color: #FFFFFF;
 
-  background: rgba(30, 30, 30, 0.68);
+  /*
+     Very dark glass background
+     gives strong contrast over video.
+  */
+  background: rgba(4, 8, 11, 0.78);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.42);
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 
 .hero-btn-secondary:hover {
   transform: translateY(-2px);
 
-  background: rgba(45, 45, 45, 0.85);
+  background: rgba(8, 13, 17, 0.92);
 
-  border-color:
-    rgba(240, 68, 46, 0.55);
+  border-color: rgba(255, 107, 97, 0.75);
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -392,16 +436,19 @@
 
   border-radius: 50%;
 
-  background: rgba(240, 68, 46, 0.18);
+  background: rgba(255, 107, 97, 0.16);
 
-  border: 1px solid rgba(240, 68, 46, 0.30);
+  border: 1px solid rgba(255, 107, 97, 0.45);
+
+  box-shadow:
+    0 0 10px rgba(255, 107, 97, 0.12);
 }
 
 
 .play-icon svg {
   font-size: 9px;
 
-  color: #f0442e;
+  color: #FF8A82;
 }
 
 
@@ -423,6 +470,10 @@
 }
 
 
+/* =========================================================
+   TRUST ITEM
+========================================================= */
+
 .trust-item {
   display: flex;
 
@@ -430,23 +481,34 @@
 
   gap: 7px;
 
-  color: rgba(255, 255, 255, 0.82);
+  /*
+     Brighter than the previous text-soft.
+  */
+  color: #D9DEE3;
 
   font-size: 12px;
 
   font-weight: 400;
 
   white-space: nowrap;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.90),
+    0 4px 12px rgba(0, 0, 0, 0.55);
 }
 
 
+/* =========================================================
+   TRUST ICON
+========================================================= */
+
 .trust-item svg {
-  color: #f0442e;
+  color: #FF8A82;
 
   font-size: 13px;
 
   filter:
-    drop-shadow(0 0 5px rgba(240, 68, 46, 0.35));
+    drop-shadow(0 0 5px rgba(255, 107, 97, 0.35));
 }
 
 
@@ -501,18 +563,17 @@
 
 
   .hero-overlay {
-    background:
-      rgba(0, 0, 0, 0.42);
+    /*
+       Slightly stronger on mobile
+       because small screens have less space
+       for text to stand out.
+    */
+    background: rgba(3, 6, 8, 0.58);
   }
 
 
   .hero-gradient {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.20),
-        rgba(0, 0, 0, 0.55)
-      );
+    background: rgba(3, 6, 8, 0.30);
   }
 
 
@@ -550,6 +611,11 @@
     letter-spacing: -1px;
 
     font-weight: 600;
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.95),
+      0 6px 18px rgba(0, 0, 0, 0.75),
+      0 10px 25px rgba(0, 0, 0, 0.50);
   }
 
 
@@ -563,9 +629,15 @@
 
     margin-top: 18px;
 
+    color: #E5E7EB;
+
     font-size: 14px;
 
     line-height: 1.55;
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.95),
+      0 5px 12px rgba(0, 0, 0, 0.70);
   }
 
 
@@ -601,6 +673,8 @@
 
 
   .trust-item {
+    color: #D9DEE3;
+
     font-size: 10px;
   }
 
@@ -635,6 +709,8 @@
     font-size: 13px;
 
     line-height: 1.5;
+
+    color: #E5E7EB;
   }
 
 
@@ -670,3 +746,4 @@
   }
 
 }
+ 

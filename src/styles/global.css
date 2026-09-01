@@ -1,103 +1,827 @@
+/* =========================================================
+   TECHNOSAFE
+   GLOBAL COLOR SYSTEM
+
+   IMPORTANT:
+   Only BACKGROUNDS + SECTION TITLE are locked.
+   All other colors remain overridable by component CSS.
+========================================================= */
+
 :root {
-  --red: #e1261c;
-  --red-dark: #ad1710;
-  --orange: #ff6a00;
-  --ink: #101418;
-  --muted: #65707a;
-  --line: #e7eaed;
-  --soft: #f6f8f9;
-  --white: #fff;
-  --navy: #0a1720;
-  --green: #138a5b;
-  --shadow: 0 20px 60px rgba(16, 20, 24, .10);
-  --radius: 24px;
+
+  /* =======================================================
+     BACKGROUNDS — LOCKED
+  ======================================================= */
+
+  --bg: #faf7f0 !important;
+  --bg-2: #f6f1e6 !important;
+  --bg-3: #ffffff !important;
+
+
+  /* =======================================================
+     DARK GRAY
+     NOT LOCKED — COMPONENTS CAN OVERRIDE
+  ======================================================= */
+
+  --navy: #252A2F;
+
+  --black: #252A2F;
+
+  --text: #252A2F;
+
+  --heading: #252A2F;
+
+  --body-text: #252A2F;
+
+  --text-soft: #555D64;
+
+  --muted: #555D64;
+
+
+  /* =======================================================
+     CARD COLORS
+     BACKGROUNDS ONLY
+  ======================================================= */
+
+  --card: #ffffff;
+
+  --card-dark: #f6f1e6;
+
+  --card-light: #ffffff;
+
+
+  /* =======================================================
+     BRIGHT RED
+     NOT LOCKED — COMPONENTS CAN OVERRIDE
+  ======================================================= */
+
+  --red: #FF2D25;
+
+  --red-dark: #D9211B;
+
+  --red-light: #FF2D25;
+
+
+  /* =======================================================
+     OLD ORANGE VARIABLES
+     NOT LOCKED
+  ======================================================= */
+
+  --orange: #FF2D25;
+
+  --orange-dark: #D9211B;
+
+  --orange-light: #FF2D25;
+
+
+  /* =======================================================
+     BORDERS
+  ======================================================= */
+
+  --border: #e2dcc9;
+
+  --border-light: #cfc6ac;
+
+  --border-white: rgba(255, 45, 37, 0.18);
+
+  --line: #e2dcc9;
+
+
+  /* =======================================================
+     STATUS
+  ======================================================= */
+
+  --green: #20a56a;
+
+
+  /* =======================================================
+     SHADOWS
+  ======================================================= */
+
+  --shadow-sm:
+    0 8px 25px rgba(0, 0, 0, 0.20);
+
+  --shadow:
+    0 20px 60px rgba(0, 0, 0, 0.30);
+
+  --shadow-lg:
+    0 30px 80px rgba(0, 0, 0, 0.40);
+
+
+  /* =======================================================
+     RADIUS
+  ======================================================= */
+
+  --radius-sm: 8px;
+
+  --radius: 16px;
+
+  --radius-lg: 24px;
+
+  --radius-pill: 999px;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html,
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  color: var(--ink);
-  background: #fff;
-  line-height: 1.6;
+  padding: 0;
 }
-a { color: inherit; text-decoration: none; }
-button, input, textarea, select { font: inherit; }
-button { cursor: pointer; }
-img { max-width: 100%; display: block; }
-section { position: relative; }
 
-.container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
-.section { padding: 96px 0; }
-.section-sm { padding: 60px 0; }
-.section-dark { background: var(--navy); color: #fff; }
-.section-soft { background: var(--soft); }
+
+/* =========================================================
+   BODY
+   NOT LOCKED
+========================================================= */
+
+body {
+
+  background: var(--bg);
+
+  color: #252A2F;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   ROOT
+   BACKGROUND LOCKED
+========================================================= */
+
+#root {
+
+  min-height: 100vh;
+
+  background: var(--bg) !important;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   LINKS
+   NOT LOCKED
+========================================================= */
+
+a {
+
+  color: #252A2F;
+
+  text-decoration: none;
+}
+
+
+a:hover {
+
+  color: #FF2D25;
+}
+
+
+/* =========================================================
+   BUTTONS / FORMS
+========================================================= */
+
+button,
+input,
+textarea,
+select {
+
+  font: inherit;
+}
+
+
+button {
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+video {
+
+  max-width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+
+  position: relative;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+  width:
+    min(
+      1280px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   NORMAL SECTION
+   BACKGROUND LOCKED
+========================================================= */
+
+.section {
+
+  padding: 96px 0;
+
+  background: var(--bg) !important;
+
+  color: #252A2F;
+}
+
+
+.section-sm {
+
+  padding: 60px 0;
+
+  background: var(--bg) !important;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   DARK SECTION
+   BACKGROUND LOCKED
+========================================================= */
+
+.section-dark {
+
+  background: var(--bg) !important;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   SECONDARY SECTION
+   BACKGROUND LOCKED
+========================================================= */
+
+.section-soft {
+
+  background: var(--bg-2) !important;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card {
+
+  background: var(--card);
+
+  color: #252A2F;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   DARK CARD
+========================================================= */
+
+.dark-card {
+
+  background: var(--card-dark);
+
+  color: #252A2F;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: var(--radius);
+}
+
+
+/* =========================================================
+   HEADINGS
+   NOT LOCKED
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  margin-top: 0;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   NOT LOCKED
+========================================================= */
+
+p {
+
+  color: #555D64;
+}
+
+
+/* =========================================================
+   MUTED TEXT
+========================================================= */
+
+.text-muted {
+
+  color: #555D64;
+}
+
+
+/* =========================================================
+   EYEBROW
+   NOT LOCKED
+========================================================= */
 
 .eyebrow {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 9px;
-  color: var(--red);
-  font: 700 12px/1 "Space Grotesk", sans-serif;
-  letter-spacing: .14em;
+
+  color: #FF2D25;
+
+  font:
+    700 12px/1
+    "Inter",
+    sans-serif;
+
+  letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
+
+
 .eyebrow::before {
+
   content: "";
+
   width: 28px;
+
   height: 2px;
-  background: currentColor;
+
+  flex-shrink: 0;
+
+  background: #FF2D25;
 }
+
+
+/* =========================================================
+   SECTION TITLE
+   IMPORTANT — KEEP LOCKED
+========================================================= */
+
 .section-title {
+
   max-width: 760px;
+
   margin: 14px 0 18px;
-  font: 800 clamp(34px, 5vw, 60px)/1.04 "Manrope", sans-serif;
-  letter-spacing: -.045em;
+
+  color: #252A2F !important;
+
+  font:
+    800 clamp(34px, 5vw, 60px)/1.04
+    "Manrope",
+    "Inter",
+    sans-serif;
+
+  letter-spacing: -0.045em;
 }
-.section-title span { color: var(--red); }
-.section-copy { color: var(--muted); max-width: 680px; }
+
+
+/* =========================================================
+   TITLE HIGHLIGHT
+========================================================= */
+
+.section-title span {
+
+  color: #FF2D25;
+}
+
+
+/* =========================================================
+   SECTION COPY
+========================================================= */
+
+.section-copy {
+
+  max-width: 680px;
+
+  color: #555D64;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 50px;
-  padding: 0 22px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-weight: 700;
-  transition: .25s ease;
-}
-.btn-primary { background: var(--red); color: #fff; box-shadow: 0 10px 28px rgba(225,38,28,.24); }
-.btn-primary:hover { transform: translateY(-2px); background: var(--red-dark); }
-.btn-dark { background: var(--ink); color: #fff; }
-.btn-light { background: #fff; color: var(--ink); }
-.btn-outline { border-color: #cfd5d9; background: transparent; }
-.btn-outline:hover { border-color: var(--red); color: var(--red); }
 
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 50px;
+
+  padding: 0 22px;
+
+  border-radius: var(--radius-pill);
+
+  border: 1px solid transparent;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.btn-primary {
+
+  background: #FF2D25;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 10px 25px
+    rgba(255, 45, 37, 0.20);
+}
+
+
+.btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  background: #D9211B;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 14px 30px
+    rgba(255, 45, 37, 0.25);
+}
+
+
+/* =========================================================
+   DARK BUTTON
+========================================================= */
+
+.btn-dark {
+
+  background: var(--card-light);
+
+  color: #252A2F;
+
+  border:
+    1px solid var(--border);
+}
+
+
+.btn-dark:hover {
+
+  background: var(--card-light);
+
+  color: #FF2D25;
+
+  border-color: #FF2D25;
+}
+
+
+/* =========================================================
+   LIGHT BUTTON
+========================================================= */
+
+.btn-light {
+
+  background: var(--white);
+
+  color: #252A2F;
+
+  border-color: var(--white);
+}
+
+
+.btn-light:hover {
+
+  background: #e9edf1;
+
+  border-color: #e9edf1;
+
+  color: #252A2F;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.btn-outline {
+
+  background: transparent;
+
+  color: #252A2F;
+
+  border-color: var(--border-light);
+}
+
+
+.btn-outline:hover {
+
+  color: #FF2D25;
+
+  border-color: #FF2D25;
+
+  background:
+    rgba(255, 45, 37, 0.06);
+}
+
+
+/* =========================================================
+   GRID 2
+========================================================= */
+
+.grid-2 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   GRID 3
+========================================================= */
+
+.grid-3 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   GRID 4
+========================================================= */
+
+.grid-4 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+
+  background: #FF2D25;
+
+  color: #FFFFFF;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+
+  background: var(--bg);
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: #555D64;
+
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #FF2D25;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
 
 .reveal {
+
   opacity: 0;
-  transform: translateY(28px);
-  animation: reveal .8s ease forwards;
+
+  transform:
+    translateY(28px);
+
+  animation:
+    reveal 0.8s ease forwards;
 }
-.reveal:nth-child(2) { animation-delay: .08s; }
-.reveal:nth-child(3) { animation-delay: .16s; }
-.reveal:nth-child(4) { animation-delay: .24s; }
-@keyframes reveal { to { opacity: 1; transform: none; } }
+
+
+.reveal:nth-child(2) {
+
+  animation-delay: 0.08s;
+}
+
+
+.reveal:nth-child(3) {
+
+  animation-delay: 0.16s;
+}
+
+
+.reveal:nth-child(4) {
+
+  animation-delay: 0.24s;
+}
+
+
+@keyframes reveal {
+
+  to {
+
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
-  .section { padding: 72px 0; }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+
+  .section {
+
+    padding: 72px 0;
+  }
+
+
+  .grid-4 {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .grid-3,
+  .grid-2 {
+
+    grid-template-columns: 1fr;
+  }
+
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 560px) {
-  .container { width: min(100% - 28px, 1180px); }
-  .section { padding: 58px 0; }
-  .grid-4 { grid-template-columns: 1fr; }
+
+  .container {
+
+    width:
+      calc(100% - 28px);
+  }
+
+
+  .section {
+
+    padding: 58px 0;
+  }
+
+
+  .section-sm {
+
+    padding: 45px 0;
+  }
+
+
+  .grid-4 {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .btn {
+
+    min-height: 48px;
+
+    padding: 0 19px;
+  }
+
+
+  .eyebrow {
+
+    font-size: 10px;
+
+    color: #FF2D25;
+  }
+
 }

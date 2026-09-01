@@ -1,15 +1,25 @@
+ 
 /* =========================================================
-   TECHNOSAFE ABOUT PREVIEW
+   TECHNOSAFE — ABOUT PREVIEW
+   PREMIUM DARK GRAY + BRIGHT RED
+   BACKGROUND UNCHANGED
+   TEXT = DARK GRAY
+   ACCENT = BRIGHT RED
+========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
 ========================================================= */
 
 .ts-about-preview {
   width: 100%;
 
-  background: #080c10;
+  background: var(--bg);
 
   padding: 95px 0;
 
-  color: #ffffff;
+  color: #1B1F23;
 
   overflow: hidden;
 }
@@ -56,16 +66,16 @@
 
   margin: 0 auto;
 
-  border-radius: 26px;
+  border-radius: 20px;
 
   overflow: hidden;
 
-  background: #10151a;
+  background: var(--card);
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid #1B1F23;
 
   box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.45);
+    0 25px 60px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -99,13 +109,7 @@
 
   inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.08) 0%,
-      rgba(0, 0, 0, 0.02) 45%,
-      rgba(0, 0, 0, 0.65) 100%
-    );
+  background: rgba(3, 6, 8, 0.18);
 
   pointer-events: none;
 }
@@ -138,13 +142,12 @@
 
   gap: 2px;
 
-  background: rgba(15, 18, 21, 0.92);
+  background: #1B1F23;
 
-  border: 1px solid rgba(240, 68, 46, 0.75);
+  border: 1px solid #FF3B30;
 
   box-shadow:
-    0 10px 35px rgba(0, 0, 0, 0.35),
-    0 0 25px rgba(240, 68, 46, 0.08);
+    0 10px 30px rgba(0, 0, 0, 0.30);
 
   backdrop-filter: blur(10px);
 
@@ -154,17 +157,25 @@
 }
 
 
+/* =========================================================
+   STAMP ICON
+========================================================= */
+
 .ts-about-stamp i {
   margin-bottom: 3px;
 
-  color: #f0442e;
+  color: #FF3B30;
 
   font-size: 23px;
 }
 
 
+/* =========================================================
+   STAMP TITLE
+========================================================= */
+
 .ts-about-stamp strong {
-  color: #ffffff;
+  color: #D9DDE1;
 
   font-size: 20px;
 
@@ -174,8 +185,12 @@
 }
 
 
+/* =========================================================
+   STAMP SMALL TEXT
+========================================================= */
+
 .ts-about-stamp span {
-  color: rgba(255, 255, 255, 0.65);
+  color: #9AA1A8;
 
   font-size: 10px;
 
@@ -208,20 +223,20 @@
 
   gap: 12px;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
-  background: rgba(7, 10, 13, 0.88);
+  background: #1B1F23;
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid #2A3035;
 
-  color: #ffffff;
+  color: #D9DDE1;
 
   font-size: 14px;
 
   font-weight: 600;
 
   box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.35);
+    0 12px 30px rgba(0, 0, 0, 0.30);
 
   backdrop-filter: blur(12px);
 
@@ -231,10 +246,14 @@
 }
 
 
+/* =========================================================
+   MINI TRUST ICON
+========================================================= */
+
 .ts-about-mini i {
   flex-shrink: 0;
 
-  color: #f0442e;
+  color: #FF3B30;
 
   font-size: 18px;
 }
@@ -260,6 +279,10 @@
 }
 
 
+/* =========================================================
+   EYEBROW
+========================================================= */
+
 .section-eyebrow {
   display: flex;
 
@@ -269,7 +292,7 @@
 
   margin-bottom: 20px;
 
-  color: #f0442e;
+  color: #FF3B30;
 
   font-size: 13px;
 
@@ -281,6 +304,10 @@
 }
 
 
+/* =========================================================
+   EYEBROW LINE
+========================================================= */
+
 .section-eyebrow span {
   width: 35px;
 
@@ -288,10 +315,7 @@
 
   display: block;
 
-  background: #f0442e;
-
-  box-shadow:
-    0 0 8px rgba(240, 68, 46, 0.35);
+  background: #FF3B30;
 }
 
 
@@ -304,30 +328,35 @@
 
   max-width: 650px;
 
-  color: #ffffff;
+  color: #1B1F23;
 
   font-size: clamp(42px, 4.3vw, 66px);
 
   line-height: 1.03;
 
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: -2.5px;
-}
 
-
-.section-heading h2 span {
-  color: #f0442e;
-
-  font-weight: 600;
-
-  text-shadow:
-    0 0 25px rgba(240, 68, 46, 0.12);
+  text-shadow: none;
 }
 
 
 /* =========================================================
-   INTRO COPY
+   HEADING HIGHLIGHT
+========================================================= */
+
+.section-heading h2 span {
+  color: #FF3B30;
+
+  font-weight: 700;
+
+  text-shadow: none;
+}
+
+
+/* =========================================================
+   INTRO PARAGRAPH
 ========================================================= */
 
 .section-heading p {
@@ -335,13 +364,15 @@
 
   margin: 25px 0 0;
 
-  color: rgba(255, 255, 255, 0.58);
+  color: #1B1F23;
 
   font-size: 16px;
 
   line-height: 1.7;
 
-  font-weight: 400;
+  font-weight: 500;
+
+  text-shadow: none;
 }
 
 
@@ -353,6 +384,10 @@
   margin-top: 38px;
 }
 
+
+/* =========================================================
+   FEATURE
+========================================================= */
 
 .ts-about-feature {
   position: relative;
@@ -367,7 +402,7 @@
 
   margin-bottom: 27px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  border-bottom: 1px solid #2A3035;
 }
 
 
@@ -397,35 +432,45 @@
 
   justify-content: center;
 
-  border-radius: 15px;
+  border-radius: 13px;
 
-  background: rgba(240, 68, 46, 0.08);
+  background: #1B1F23;
 
-  border: 1px solid rgba(240, 68, 46, 0.28);
+  border: 1px solid #2A3035;
 
-  color: #f0442e;
+  color: #FF3B30;
 
   transition:
-    all 0.3s ease;
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
 
 .ts-about-feature-icon i {
   font-size: 21px;
 }
 
 
+/* =========================================================
+   FEATURE HOVER
+========================================================= */
+
 .ts-about-feature:hover .ts-about-feature-icon {
-  background: #f0442e;
+  background: #FF3B30;
 
-  border-color: #f0442e;
+  border-color: #FF3B30;
 
-  color: #ffffff;
+  color: #1B1F23;
 
   transform: translateY(-2px);
 
-  box-shadow:
-    0 10px 25px rgba(240, 68, 46, 0.22);
+  box-shadow: none;
 }
 
 
@@ -438,33 +483,41 @@
 }
 
 
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
 .ts-about-feature-content h3 {
   margin: 0 0 7px;
 
-  color: #ffffff;
+  color: #1B1F23;
 
   font-size: 19px;
 
   line-height: 1.3;
 
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: -0.3px;
 }
 
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
 
 .ts-about-feature-content p {
   margin: 0;
 
   max-width: 630px;
 
-  color: rgba(255, 255, 255, 0.57);
+  color: #1B1F23;
 
   font-size: 14px;
 
   line-height: 1.65;
 
-  font-weight: 400;
+  font-weight: 500;
 }
 
 
@@ -481,18 +534,22 @@
 
   margin-top: 38px;
 
-  color: #f0442e;
+  color: #FF3B30;
 
   font-size: 15px;
 
-  font-weight: 600;
+  font-weight: 700;
 
   text-decoration: none;
 
   transition:
-    all 0.3s ease;
+    color 0.3s ease;
 }
 
+
+/* =========================================================
+   CTA ICON
+========================================================= */
 
 .ts-about-link i {
   font-size: 13px;
@@ -502,8 +559,12 @@
 }
 
 
+/* =========================================================
+   CTA HOVER
+========================================================= */
+
 .ts-about-link:hover {
-  color: #ff5a45;
+  color: #1B1F23;
 }
 
 
@@ -614,7 +675,7 @@
 
 
   .ts-about-image-wrap {
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
 
@@ -664,7 +725,7 @@
 
     gap: 9px;
 
-    border-radius: 11px;
+    border-radius: 10px;
 
     font-size: 11px;
   }
@@ -703,6 +764,8 @@
   .section-heading p {
     margin-top: 18px;
 
+    color: #1B1F23;
+
     font-size: 13px;
 
     line-height: 1.65;
@@ -728,7 +791,7 @@
 
     height: 47px;
 
-    border-radius: 12px;
+    border-radius: 11px;
   }
 
 
@@ -745,6 +808,8 @@
 
 
   .ts-about-feature-content p {
+    color: #1B1F23;
+
     font-size: 12px;
 
     line-height: 1.55;
@@ -840,3 +905,4 @@
   }
 
 }
+ 

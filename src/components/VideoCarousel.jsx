@@ -1,4 +1,3 @@
- 
 import React, { useEffect, useRef, useState } from "react";
 import "./VideoCarousel.css";
 
@@ -6,6 +5,18 @@ import "./VideoCarousel.css";
    TECHNOSAFE — VIDEO CAROUSEL
    GitHub Pages + Vite Compatible
 ========================================================= */
+
+/*
+  Videos must be inside:
+
+  public/
+  └── videos/
+      ├── video1.mp4
+      ├── video2.mp4
+      ├── video3.mp4
+      ├── ...
+      └── video10.mp4
+*/
 
 const videos = [
   `${import.meta.env.BASE_URL}videos/video1.mp4`,
@@ -22,7 +33,7 @@ const videos = [
 
 
 /* =========================================================
-   VIDEO CAROUSEL
+   VIDEO CAROUSEL COMPONENT
 ========================================================= */
 
 const VideoCarousel = () => {
@@ -37,9 +48,12 @@ const VideoCarousel = () => {
   ======================================================= */
 
   const nextVideo = () => {
+
     setActiveIndex(
-      (current) => (current + 1) % videos.length
+      (current) =>
+        (current + 1) % videos.length
     );
+
   };
 
 
@@ -48,10 +62,13 @@ const VideoCarousel = () => {
   ======================================================= */
 
   const previousVideo = () => {
+
     setActiveIndex(
       (current) =>
-        (current - 1 + videos.length) % videos.length
+        (current - 1 + videos.length) %
+        videos.length
     );
+
   };
 
 
@@ -70,6 +87,7 @@ const VideoCarousel = () => {
     });
 
     setActiveIndex(index);
+
   };
 
 
@@ -79,13 +97,18 @@ const VideoCarousel = () => {
 
   useEffect(() => {
 
-    videoRefs.current.forEach((video, index) => {
+    videoRefs.current.forEach(
+      (video, index) => {
 
-      if (video && index !== activeIndex) {
-        video.pause();
+        if (
+          video &&
+          index !== activeIndex
+        ) {
+          video.pause();
+        }
+
       }
-
-    });
+    );
 
   }, [activeIndex]);
 
@@ -98,20 +121,44 @@ const VideoCarousel = () => {
 
     const handleKeyDown = (event) => {
 
-      if (event.key === "ArrowLeft") {
-        previousVideo();
+      /*
+        Don't change slide when user is typing
+        inside an input or textarea.
+      */
+
+      const tag =
+        event.target.tagName?.toLowerCase();
+
+      if (
+        tag === "input" ||
+        tag === "textarea" ||
+        tag === "select"
+      ) {
+        return;
       }
 
+
+      if (event.key === "ArrowLeft") {
+
+        previousVideo();
+
+      }
+
+
       if (event.key === "ArrowRight") {
+
         nextVideo();
+
       }
 
     };
+
 
     window.addEventListener(
       "keydown",
       handleKeyDown
     );
+
 
     return () => {
 
@@ -130,16 +177,12 @@ const VideoCarousel = () => {
   ======================================================= */
 
   return (
+
     <section className="ts-video-section">
 
-      {/* BACKGROUND GLOW */}
-
-      <div className="ts-video-glow ts-video-glow-one"></div>
-
-      <div className="ts-video-glow ts-video-glow-two"></div>
-
-
-      {/* MAIN CONTAINER */}
+      {/* ===================================================
+          MAIN CONTAINER
+      =================================================== */}
 
       <div className="container">
 
@@ -160,15 +203,22 @@ const VideoCarousel = () => {
 
 
           <h2>
+
             See What We{" "}
-            <span>Have to Say.</span>
+
+            <span>
+              Have to Say.
+            </span>
+
           </h2>
 
 
           <p>
+
             Explore our latest videos and discover more
             about TechnoSafe, our fire safety solutions,
             services and expertise.
+
           </p>
 
         </div>
@@ -181,7 +231,9 @@ const VideoCarousel = () => {
         <div className="ts-video-carousel-wrapper">
 
 
-          {/* PREVIOUS BUTTON */}
+          {/* ===============================================
+              PREVIOUS BUTTON
+          =============================================== */}
 
           <button
             type="button"
@@ -189,113 +241,126 @@ const VideoCarousel = () => {
             onClick={previousVideo}
             aria-label="Previous video"
           >
+
             <i className="fa-solid fa-arrow-left"></i>
+
           </button>
 
 
-          {/* VIDEO LIST */}
+          {/* ===============================================
+              VIDEO LIST
+          =============================================== */}
 
           <div className="ts-video-carousel">
 
-            {videos.map((video, index) => {
+            {videos.map(
+              (video, index) => {
 
-              let position = "ts-video-hidden";
+                let position =
+                  "ts-video-hidden";
 
 
-              /* ACTIVE */
+                /* ACTIVE */
 
-              if (index === activeIndex) {
+                if (
+                  index === activeIndex
+                ) {
 
-                position = "ts-video-active";
+                  position =
+                    "ts-video-active";
+
+                }
+
+
+                /* PREVIOUS */
+
+                else if (
+                  index ===
+                  (
+                    activeIndex -
+                    1 +
+                    videos.length
+                  ) %
+                    videos.length
+                ) {
+
+                  position =
+                    "ts-video-prev-card";
+
+                }
+
+
+                /* NEXT */
+
+                else if (
+                  index ===
+                  (
+                    activeIndex +
+                    1
+                  ) %
+                    videos.length
+                ) {
+
+                  position =
+                    "ts-video-next-card";
+
+                }
+
+
+                return (
+
+                  <article
+                    className={`ts-video-card ${position}`}
+                    key={`${video}-${index}`}
+                  >
+
+                    <div className="ts-video-frame">
+
+                      <video
+                        ref={(element) => {
+
+                          videoRefs.current[index] =
+                            element;
+
+                        }}
+                        src={video}
+                        controls
+                        playsInline
+                        preload={
+                          index === activeIndex
+                            ? "auto"
+                            : "metadata"
+                        }
+                        onPlay={() =>
+                          handleVideoPlay(index)
+                        }
+                        onError={(event) => {
+
+                          console.error(
+                            `Unable to load video ${
+                              index + 1
+                            }:`,
+                            event.currentTarget.src
+                          );
+
+                        }}
+                      />
+
+                    </div>
+
+                  </article>
+
+                );
 
               }
-
-
-              /* PREVIOUS */
-
-              else if (
-                index ===
-                (activeIndex - 1 + videos.length) %
-                  videos.length
-              ) {
-
-                position = "ts-video-prev-card";
-
-              }
-
-
-              /* NEXT */
-
-              else if (
-                index ===
-                (activeIndex + 1) % videos.length
-              ) {
-
-                position = "ts-video-next-card";
-
-              }
-
-
-              return (
-
-                <article
-                  className={`ts-video-card ${position}`}
-                  key={`${video}-${index}`}
-                >
-
-                  <div className="ts-video-frame">
-
-                    <video
-                      ref={(element) => {
-                        videoRefs.current[index] =
-                          element;
-                      }}
-                      src={video}
-                      controls
-                      playsInline
-                      preload={
-                        index === activeIndex
-                          ? "auto"
-                          : "metadata"
-                      }
-                      onPlay={() =>
-                        handleVideoPlay(index)
-                      }
-                      onError={(event) => {
-
-                        console.error(
-                          `Unable to load video ${
-                            index + 1
-                          }:`,
-                          event.currentTarget.src
-                        );
-
-                      }}
-                    />
-
-                    {/* VIDEO NUMBER */}
-
-                    <span className="ts-video-number">
-
-                      {String(index + 1).padStart(
-                        2,
-                        "0"
-                      )}
-
-                    </span>
-
-                  </div>
-
-                </article>
-
-              );
-
-            })}
+            )}
 
           </div>
 
 
-          {/* NEXT BUTTON */}
+          {/* ===============================================
+              NEXT BUTTON
+          =============================================== */}
 
           <button
             type="button"
@@ -303,7 +368,9 @@ const VideoCarousel = () => {
             onClick={nextVideo}
             aria-label="Next video"
           >
+
             <i className="fa-solid fa-arrow-right"></i>
+
           </button>
 
         </div>
@@ -311,9 +378,10 @@ const VideoCarousel = () => {
       </div>
 
     </section>
+
   );
+
 };
 
 
 export default VideoCarousel;
-

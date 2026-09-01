@@ -1,19 +1,28 @@
-/* =========================================
+ /* =========================================
    TECHNOSAFE STATS BAR
+   PREMIUM LIGHT CONTRAST THEME
 ========================================= */
 
 .statsbar {
   width: 100%;
 
-  background: #07131f;
+  /*
+     Warm light background
+     matches the existing section.
+  */
+  background: #faf7f0;
 
   padding: 34px 0;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
 }
 
+
+/* =========================================
+   GRID
+========================================= */
 
 .stats-grid {
   display: grid;
@@ -34,8 +43,15 @@
   text-align: center;
 
   padding: 10px 25px;
+
+  transition:
+    transform 0.3s ease;
 }
 
+
+/* =========================================
+   VERTICAL DIVIDER
+========================================= */
 
 .stat-card:not(:last-child)::after {
   content: "";
@@ -50,7 +66,7 @@
 
   height: 70%;
 
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(17, 24, 39, 0.12);
 }
 
 
@@ -61,26 +77,42 @@
 .stat-card h2 {
   margin: 0;
 
-  color: #ffffff;
+  /*
+     Deep navy gives very strong contrast
+     against #faf7f0.
+  */
+  color: #111827;
 
   font-size: 38px;
 
-  font-weight: 600;
+  font-weight: 700;
 
   line-height: 1.1;
 
   letter-spacing: -1px;
 
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease;
 }
 
 
+/* =========================================
+   NUMBER ACCENT
+========================================= */
+
 .stat-card h2 span {
-  color: #f0442e;
+  /*
+     Red matches TechnoSafe accent
+     and is highly visible on cream.
+  */
+  color: #E1261C;
 
   margin-left: 2px;
 
-  transition: color 0.3s ease;
+  font-weight: 700;
+
+  transition:
+    color 0.3s ease;
 }
 
 
@@ -91,34 +123,57 @@
 .stat-card p {
   margin: 8px 0 0;
 
-  color: rgba(255, 255, 255, 0.65);
+  /*
+     Dark slate instead of transparent gold.
+  */
+  color: #4B5563;
 
   font-size: 13px;
 
-  font-weight: 400;
+  font-weight: 500;
 
   letter-spacing: 0.3px;
 
-  transition: color 0.3s ease;
+  line-height: 1.4;
+
+  transition:
+    color 0.3s ease;
 }
 
 
 /* =========================================
-   HOVER
+   HOVER CARD
+========================================= */
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOVER NUMBER
 ========================================= */
 
 .stat-card:hover h2 {
-  color: #f0442e;
+  color: #E1261C;
 }
 
+
+/* =========================================
+   HOVER ACCENT
+========================================= */
 
 .stat-card:hover h2 span {
-  color: #ffffff;
+  color: #111827;
 }
 
 
+/* =========================================
+   HOVER LABEL
+========================================= */
+
 .stat-card:hover p {
-  color: rgba(255, 255, 255, 0.85);
+  color: #1F2937;
 }
 
 
@@ -135,6 +190,10 @@
   }
 
 
+  /*
+     Remove divider after second item
+     because grid becomes 2 columns.
+  */
   .stat-card:nth-child(2)::after {
     display: none;
   }
@@ -174,20 +233,30 @@
   .stat-card h2 {
     font-size: 30px;
 
-    font-weight: 600;
+    font-weight: 700;
   }
 
 
   .stat-card p {
+    color: #4B5563;
+
     font-size: 11px;
 
     line-height: 1.4;
+
+    font-weight: 500;
   }
 
 
+  /*
+     Vertical dividers between
+     left and right columns.
+  */
   .stat-card:nth-child(1)::after,
   .stat-card:nth-child(3)::after {
     display: block;
+
+    background: rgba(17, 24, 39, 0.12);
   }
 
 
@@ -200,11 +269,40 @@
 
 
 /* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .statsbar {
+    padding: 25px 0;
+  }
+
+
+  .stat-card {
+    padding: 7px 10px;
+  }
+
+
+  .stat-card h2 {
+    font-size: 27px;
+  }
+
+
+  .stat-card p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
    REDUCED MOTION
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
+  .stat-card,
   .stat-card h2,
   .stat-card h2 span,
   .stat-card p {
@@ -212,3 +310,4 @@
   }
 
 }
+ 

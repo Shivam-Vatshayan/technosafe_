@@ -1,7 +1,8 @@
-
+ 
 /* =========================================================
    TECHNOSAFE — CLIENTS
    Premium Dual Infinite Carousel
+   UPDATED — FIRE ORANGE + LIGHT PREMIUM THEME
 ========================================================= */
 
 .ts-clients {
@@ -9,20 +10,18 @@
   width: 100%;
   padding: 115px 0 100px;
   overflow: hidden;
-
   background:
     radial-gradient(
       circle at 15% 20%,
-      rgba(255, 70, 45, 0.08),
+      rgba(255, 90, 65, 0.08),
       transparent 32%
     ),
     radial-gradient(
       circle at 85% 75%,
-      rgba(255, 70, 45, 0.055),
+      rgba(255, 90, 65, 0.055),
       transparent 30%
     ),
-    #070707;
-
+    #faf7f0 !important;
   isolation: isolate;
 }
 
@@ -33,19 +32,18 @@
 
 .ts-clients::before {
   content: "";
-
   position: absolute;
   inset: 0;
   z-index: -3;
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.018) 1px,
+      rgba(255, 90, 65, 0.018) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.018) 1px,
+      rgba(255, 90, 65, 0.018) 1px,
       transparent 1px
     );
 
@@ -70,36 +68,26 @@
 
 .ts-clients-glow {
   position: absolute;
-
   border-radius: 50%;
-
   filter: blur(100px);
-
   pointer-events: none;
-
   z-index: -2;
 }
-
 
 .ts-clients-glow-one {
   width: 500px;
   height: 500px;
-
   left: -250px;
   top: 25%;
-
-  background: rgba(255, 70, 45, 0.07);
+  background: rgba(255, 90, 65, 0.07);
 }
-
 
 .ts-clients-glow-two {
   width: 450px;
   height: 450px;
-
   right: -220px;
   bottom: 10%;
-
-  background: rgba(255, 70, 45, 0.055);
+  background: rgba(255, 90, 65, 0.055);
 }
 
 
@@ -112,15 +100,12 @@
   z-index: 3;
 
   display: grid;
-
   grid-template-columns:
     minmax(0, 1.1fr)
     minmax(300px, 0.9fr);
 
   gap: 80px;
-
   align-items: end;
-
   margin-bottom: 65px;
 }
 
@@ -131,35 +116,27 @@
 
 .ts-clients-eyebrow {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   margin-bottom: 18px;
 
-  color: #ff674d;
+  color: #ff5a41 !important;
 
   font-size: 11px;
-
   font-weight: 750;
-
   letter-spacing: 0.18em;
-
   line-height: 1;
-
   text-transform: uppercase;
 }
-
 
 .ts-clients-eyebrow span {
   width: 28px;
   height: 2px;
 
-  background: #ff5038;
+  background: #ff5a41 !important;
 
   box-shadow:
-    0 0 12px rgba(255, 80, 56, 0.5);
+    0 0 12px rgba(255, 90, 65, 0.5);
 }
 
 
@@ -173,20 +150,16 @@
 
   max-width: 700px;
 
-  color: #ffffff !important;
+  color: #12203a !important;
 
   font-size: clamp(40px, 5vw, 68px) !important;
-
   font-weight: 700 !important;
-
   line-height: 1.02 !important;
-
   letter-spacing: -0.045em;
 }
 
-
 .ts-clients-heading h2 span {
-  color: #ff674d !important;
+  color: #ff5a41 !important;
 }
 
 
@@ -198,17 +171,15 @@
   padding-bottom: 5px;
 }
 
-
 .ts-clients-description p {
   max-width: 470px;
 
   margin: 0 0 25px !important;
   padding: 0 !important;
 
-  color: rgba(255, 255, 255, 0.52) !important;
+  color: #53617a !important;
 
   font-size: 14px !important;
-
   line-height: 1.8 !important;
 }
 
@@ -219,35 +190,28 @@
 
 .ts-clients-stat {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
 
   padding-top: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top:
+    1px solid rgba(255, 90, 65, 0.14) !important;
 }
 
-
 .ts-clients-stat strong {
-  color: #ff674d;
+  color: #ff5a41 !important;
 
   font-size: 28px;
-
   font-weight: 750;
-
   line-height: 1;
 }
 
-
 .ts-clients-stat span {
-  color: rgba(255, 255, 255, 0.42);
+  color: #718096 !important;
 
   font-size: 11px;
-
   line-height: 1.4;
-
   letter-spacing: 0.03em;
 }
 
@@ -258,9 +222,7 @@
 
 .ts-client-carousel {
   position: relative;
-
   width: 100%;
-
   overflow: hidden;
 }
 
@@ -273,7 +235,6 @@
   content: "";
 
   position: absolute;
-
   z-index: 10;
 
   top: 0;
@@ -285,19 +246,17 @@
   background:
     linear-gradient(
       to right,
-      #070707,
+      #faf7f0,
       transparent
-    );
+    ) !important;
 
   pointer-events: none;
 }
-
 
 .ts-client-carousel::after {
   content: "";
 
   position: absolute;
-
   z-index: 10;
 
   top: 0;
@@ -309,9 +268,9 @@
   background:
     linear-gradient(
       to left,
-      #070707,
+      #faf7f0,
       transparent
-    );
+    ) !important;
 
   pointer-events: none;
 }
@@ -323,9 +282,7 @@
 
 .ts-client-track {
   display: flex;
-
   align-items: stretch;
-
   gap: 20px;
 
   width: max-content;
@@ -368,22 +325,19 @@
 
 /* =========================================================
    CLIENT CARD
-   Logo + Content + Arrow
+   VISIBLE PREMIUM LIGHT CARD
 ========================================================= */
 
 .ts-client-card {
   position: relative;
 
   width: 390px;
-
   min-width: 390px;
-
   min-height: 180px;
 
   flex: 0 0 390px;
 
   display: flex;
-
   align-items: center;
 
   gap: 18px;
@@ -391,22 +345,23 @@
   padding: 20px;
 
   box-sizing: border-box;
-
   overflow: hidden;
 
-  border: 1px solid rgba(255, 255, 255, 0.075);
+  border:
+    1px solid rgba(18, 32, 58, 0.09) !important;
 
   border-radius: 20px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.018)
-    );
+      #ffffff 0%,
+      #fffdf9 100%
+    ) !important;
 
   box-shadow:
-    0 15px 45px rgba(0, 0, 0, 0.22);
+    0 15px 45px rgba(18, 32, 58, 0.10),
+    0 4px 14px rgba(18, 32, 58, 0.05);
 
   transition:
     transform 0.4s ease,
@@ -425,15 +380,15 @@
 
   position: absolute;
 
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
 
-  right: -70px;
-  top: -70px;
+  right: -80px;
+  top: -80px;
 
   border-radius: 50%;
 
-  background: rgba(255, 70, 45, 0.12);
+  background: rgba(255, 90, 65, 0.14);
 
   filter: blur(45px);
 
@@ -450,22 +405,22 @@
 ========================================================= */
 
 .ts-client-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-7px);
 
-  border-color: rgba(255, 80, 55, 0.32);
+  border-color:
+    rgba(255, 90, 65, 0.35) !important;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 70, 45, 0.07),
-      rgba(255, 255, 255, 0.025)
-    );
+      #ffffff 0%,
+      #fff8f5 100%
+    ) !important;
 
   box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.35),
-    0 0 35px rgba(255, 70, 45, 0.06);
+    0 22px 55px rgba(18, 32, 58, 0.14),
+    0 0 35px rgba(255, 90, 65, 0.10);
 }
-
 
 .ts-client-card:hover::before {
   opacity: 1;
@@ -481,19 +436,15 @@
   position: relative;
 
   width: 262px;
-
   height: 131px;
 
   min-width: 262px;
-
   min-height: 131px;
 
   flex: 0 0 262px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   overflow: hidden;
@@ -502,32 +453,31 @@
 
   border-radius: 16px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border:
+    1px solid rgba(18, 32, 58, 0.08) !important;
 
   box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.18);
+    0 8px 25px rgba(18, 32, 58, 0.10);
 }
 
 
 /* =========================================================
    ACTUAL CLIENT IMAGE
+   ORIGINAL LOGO — FULL COLOR
 ========================================================= */
 
 .ts-client-logo img {
   display: block;
 
   width: 100%;
-
   height: 100%;
 
   max-width: 100%;
-
   max-height: 100%;
 
   object-fit: contain;
-
   object-position: center;
 
   padding: 0;
@@ -536,13 +486,11 @@
 
   border-radius: 16px;
 
-  filter: grayscale(100%);
-
-  opacity: 0.72;
+  /* ORIGINAL LOGO VISIBLE */
+  filter: none !important;
+  opacity: 1 !important;
 
   transition:
-    filter 0.35s ease,
-    opacity 0.35s ease,
     transform 0.35s ease;
 }
 
@@ -553,9 +501,8 @@
 
 .ts-client-card:hover
 .ts-client-logo img {
-  filter: grayscale(0%);
-
-  opacity: 1;
+  filter: none !important;
+  opacity: 1 !important;
 
   transform: scale(1.035);
 }
@@ -567,29 +514,27 @@
 
 .ts-client-placeholder {
   width: 100%;
-
   height: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   box-sizing: border-box;
 
   border-radius: 16px;
 
-  color: #ff674d;
+  color: #ff5a41 !important;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 80, 55, 0.08),
-      rgba(255, 80, 55, 0.03)
-    );
+      rgba(255, 90, 65, 0.08),
+      rgba(255, 90, 65, 0.025)
+    ) !important;
 
-  border: 1px solid rgba(255, 80, 55, 0.12);
+  border:
+    1px solid rgba(255, 90, 65, 0.14) !important;
 
   font-size: 22px;
 
@@ -599,12 +544,12 @@
     transform 0.35s ease;
 }
 
-
 .ts-client-card:hover
 .ts-client-placeholder {
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: #ff5038;
+  background:
+    #ff5a41 !important;
 
   transform: scale(1.02);
 }
@@ -616,80 +561,79 @@
 
 .ts-client-info {
   position: relative;
-
   z-index: 2;
 
   min-width: 0;
-
   flex: 1;
 }
 
+
+/* =========================================================
+   CLIENT TYPE
+========================================================= */
 
 .ts-client-type {
   display: block;
 
   margin-bottom: 7px;
 
-  color: #ff674d;
+  color: #ff5a41 !important;
 
   font-size: 8px;
-
   font-weight: 750;
-
   letter-spacing: 0.18em;
-
   line-height: 1;
 }
 
 
+/* =========================================================
+   CLIENT TITLE
+========================================================= */
+
 .ts-client-info h3 {
   margin: 0 0 7px !important;
-
   padding: 0 !important;
 
   overflow: hidden;
 
-  color: #ffffff !important;
+  color: #12203a !important;
 
   font-size: 15px !important;
-
   font-weight: 650 !important;
-
   line-height: 1.3 !important;
 
   letter-spacing: -0.015em;
 
   text-overflow: ellipsis;
-
   white-space: nowrap;
 
   transition: color 0.3s ease;
 }
 
-
 .ts-client-card:hover
 .ts-client-info h3 {
-  color: #ff765f !important;
+  color: #ff5a41 !important;
 }
 
+
+/* =========================================================
+   CLIENT DESCRIPTION
+========================================================= */
 
 .ts-client-info p {
   display: -webkit-box;
 
   margin: 0 !important;
-
   padding: 0 !important;
 
   overflow: hidden;
 
-  color: rgba(255, 255, 255, 0.42) !important;
+  color: #68758a !important;
 
   font-size: 11px !important;
-
   line-height: 1.55 !important;
 
   -webkit-line-clamp: 2;
-
   -webkit-box-orient: vertical;
 }
 
@@ -708,14 +652,13 @@
   height: 28px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   border-radius: 50%;
 
-  color: rgba(255, 255, 255, 0.3);
+  color:
+    rgba(255, 90, 65, 0.35) !important;
 
   font-size: 10px;
 
@@ -725,14 +668,15 @@
     transform 0.3s ease;
 }
 
-
 .ts-client-card:hover
 .ts-client-arrow {
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: rgba(255, 80, 55, 0.15);
+  background:
+    #ff5a41 !important;
 
-  transform: translate(2px, -2px);
+  transform:
+    translate(2px, -2px);
 }
 
 
@@ -746,14 +690,11 @@
   margin: 30px auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   gap: 18px;
 }
-
 
 .ts-clients-middle-line {
   flex: 1;
@@ -764,26 +705,24 @@
     linear-gradient(
       to right,
       transparent,
-      rgba(255, 80, 55, 0.25)
-    );
+      rgba(255, 90, 65, 0.25)
+    ) !important;
 }
-
 
 .ts-clients-middle-line:last-child {
   background:
     linear-gradient(
       to left,
       transparent,
-      rgba(255, 80, 55, 0.25)
-    );
+      rgba(255, 90, 65, 0.25)
+    ) !important;
 }
 
-
 .ts-clients-middle-text {
-  color: rgba(255, 255, 255, 0.22);
+  color:
+    rgba(255, 90, 65, 0.45) !important;
 
   font-size: 8px;
-
   font-weight: 700;
 
   letter-spacing: 0.22em;
@@ -800,7 +739,6 @@
   position: relative;
 
   display: flex;
-
   align-items: center;
 
   gap: 18px;
@@ -809,15 +747,24 @@
 
   padding: 22px 25px;
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border:
+    1px solid rgba(18, 32, 58, 0.08) !important;
 
   border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.025);
+  background:
+    rgba(255, 255, 255, 0.75) !important;
 
   backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 35px rgba(18, 32, 58, 0.06);
 }
 
+
+/* =========================================================
+   FOOTER ICON
+========================================================= */
 
 .ts-clients-footer-icon {
   width: 48px;
@@ -826,50 +773,49 @@
   flex-shrink: 0;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   border-radius: 13px;
 
-  color: #ff674d;
+  color: #ff5a41 !important;
 
-  background: rgba(255, 80, 55, 0.08);
+  background:
+    rgba(255, 90, 65, 0.08) !important;
 
-  border: 1px solid rgba(255, 80, 55, 0.12);
+  border:
+    1px solid rgba(255, 90, 65, 0.14) !important;
 
   font-size: 17px;
 }
 
 
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
 .ts-clients-footer-content {
   min-width: 0;
 }
-
 
 .ts-clients-footer-content strong {
   display: block;
 
   margin-bottom: 5px;
 
-  color: #ffffff;
+  color: #12203a !important;
 
   font-size: 14px;
-
   font-weight: 650;
-
   line-height: 1.4;
 }
-
 
 .ts-clients-footer-content p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.42);
+  color: #68758a !important;
 
   font-size: 12px;
-
   line-height: 1.6;
 }
 
@@ -882,36 +828,34 @@
   margin-left: auto;
 
   display: flex;
-
   align-items: center;
 
   gap: 12px;
 
   flex-shrink: 0;
 
-  color: #ff674d;
+  color: #ff5a41 !important;
 
   font-size: 9px;
-
   font-weight: 750;
 
   letter-spacing: 0.15em;
 }
-
 
 .ts-clients-footer-badge i {
   width: 34px;
   height: 34px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  border: 1px solid rgba(255, 80, 55, 0.15);
+  border:
+    1px solid rgba(255, 90, 65, 0.18) !important;
 
   border-radius: 50%;
+
+  color: #ff5a41 !important;
 
   font-size: 10px;
 
@@ -921,14 +865,15 @@
     transform 0.3s ease;
 }
 
-
 .ts-clients-footer:hover
 .ts-clients-footer-badge i {
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: #ff5038;
+  background:
+    #ff5a41 !important;
 
-  transform: translateX(4px);
+  transform:
+    translateX(4px);
 }
 
 
@@ -937,7 +882,6 @@
 ========================================================= */
 
 @keyframes tsClientsForward {
-
   0% {
     transform: translateX(-50%);
   }
@@ -945,12 +889,9 @@
   100% {
     transform: translateX(0);
   }
-
 }
 
-
 @keyframes tsClientsReverse {
-
   0% {
     transform: translateX(0);
   }
@@ -958,7 +899,6 @@
   100% {
     transform: translateX(-50%);
   }
-
 }
 
 
@@ -972,38 +912,28 @@
     padding: 90px 0 80px;
   }
 
-
   .ts-clients-head {
     grid-template-columns: 1fr;
-
     gap: 30px;
-
     margin-bottom: 50px;
   }
 
-
   .ts-client-card {
     width: 360px;
-
     min-width: 360px;
-
     flex-basis: 360px;
 
     min-height: 165px;
 
     padding: 17px;
-
     gap: 16px;
   }
 
-
   .ts-client-logo {
     width: 230px;
-
     height: 115px;
 
     min-width: 230px;
-
     min-height: 115px;
 
     flex-basis: 230px;
@@ -1011,22 +941,18 @@
     border-radius: 14px;
   }
 
-
   .ts-client-logo img {
     border-radius: 14px;
   }
-
 
   .ts-client-placeholder {
     border-radius: 14px;
   }
 
-
   .ts-client-carousel::before,
   .ts-client-carousel::after {
     width: 100px;
   }
-
 }
 
 
@@ -1040,31 +966,23 @@
     padding: 75px 0 65px;
   }
 
-
   .ts-clients-head {
     gap: 25px;
-
     margin-bottom: 40px;
   }
 
-
   .ts-clients-eyebrow {
     font-size: 9px;
-
     margin-bottom: 14px;
   }
 
-
   .ts-clients-heading h2 {
     font-size: 38px !important;
-
     line-height: 1.04 !important;
   }
 
-
   .ts-clients-description p {
     font-size: 13px !important;
-
     line-height: 1.7 !important;
   }
 
@@ -1075,15 +993,12 @@
 
   .ts-client-card {
     width: 330px;
-
     min-width: 330px;
-
     flex-basis: 330px;
 
     min-height: 145px;
 
     padding: 15px;
-
     gap: 13px;
 
     border-radius: 16px;
@@ -1096,11 +1011,9 @@
 
   .ts-client-logo {
     width: 150px;
-
     height: 75px;
 
     min-width: 150px;
-
     min-height: 75px;
 
     flex-basis: 150px;
@@ -1108,34 +1021,40 @@
     border-radius: 11px;
   }
 
-
   .ts-client-logo img {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
 
     border-radius: 11px;
-  }
 
+    filter: none !important;
+    opacity: 1 !important;
+  }
 
   .ts-client-placeholder {
     border-radius: 11px;
-
     font-size: 18px;
   }
 
+
+  /* -----------------------------------------
+     CLIENT INFO
+  ----------------------------------------- */
 
   .ts-client-info h3 {
     font-size: 13px !important;
   }
 
-
   .ts-client-info p {
     font-size: 10px !important;
   }
 
+
+  /* -----------------------------------------
+     CAROUSEL FADE
+  ----------------------------------------- */
 
   .ts-client-carousel::before,
   .ts-client-carousel::after {
@@ -1149,14 +1068,11 @@
 
   .ts-clients-middle {
     margin: 24px auto;
-
     gap: 12px;
   }
 
-
   .ts-clients-middle-text {
     font-size: 7px;
-
     letter-spacing: 0.15em;
   }
 
@@ -1173,30 +1089,24 @@
     margin-top: 45px;
   }
 
-
   .ts-clients-footer-badge {
     display: none;
   }
 
-
   .ts-clients-footer-icon {
     width: 42px;
-
     height: 42px;
 
     font-size: 15px;
   }
 
-
   .ts-clients-footer-content strong {
     font-size: 13px;
   }
 
-
   .ts-clients-footer-content p {
     font-size: 11px;
   }
-
 }
 
 
@@ -1208,26 +1118,20 @@
 
   .ts-client-card {
     width: 300px;
-
     min-width: 300px;
-
     flex-basis: 300px;
 
     min-height: 135px;
 
     padding: 14px;
-
     gap: 10px;
   }
 
-
   .ts-client-logo {
     width: 125px;
-
     height: 63px;
 
     min-width: 125px;
-
     min-height: 63px;
 
     flex-basis: 125px;
@@ -1235,26 +1139,36 @@
     border-radius: 10px;
   }
 
-
   .ts-client-logo img {
     border-radius: 10px;
-  }
 
+    filter: none !important;
+    opacity: 1 !important;
+  }
 
   .ts-client-info h3 {
     font-size: 12px !important;
   }
 
-
   .ts-client-info p {
     font-size: 9px !important;
   }
 
-
   .ts-clients-heading h2 {
     font-size: 34px !important;
   }
+}
 
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.ts-client-card:focus-visible {
+  outline:
+    3px solid rgba(255, 90, 65, 0.40) !important;
+
+  outline-offset: 4px;
 }
 
 
@@ -1268,26 +1182,11 @@
     animation: none !important;
   }
 
-}
-```
-
-### Bhai, ek cheez specially fix ki hai
-
-Aapki image files ka ratio **262 × 131 = 2:1** hai, isliye desktop par:
-
-```css
-.ts-client-logo {
-  width: 262px;
-  height: 131px;
-}
-```
-
-aur:
-
-```css
-.ts-client-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  .ts-client-card,
+  .ts-client-logo img,
+  .ts-client-arrow,
+  .ts-client-footer-badge i {
+    transition: none !important;
+  }
 }
  

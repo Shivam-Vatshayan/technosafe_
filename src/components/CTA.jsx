@@ -1,3 +1,4 @@
+ 
 import React, { useState } from "react";
 import "./CTA.css";
 
@@ -10,10 +11,12 @@ export default function CTA() {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -21,8 +24,9 @@ export default function CTA() {
 
     console.log("Enquiry submitted:", formData);
 
-    // Backend/API yaha connect kar sakte ho
-    alert("Thank you! Our safety expert will contact you shortly.");
+    alert(
+      "Thank you! Our safety expert will contact you shortly."
+    );
 
     setFormData({
       name: "",
@@ -35,13 +39,26 @@ export default function CTA() {
   return (
     <section className="ts-cta">
 
-      {/* Background Effects */}
+      {/* =========================================
+          BACKGROUND EFFECTS
+      ========================================= */}
+
+      <div className="ts-cta-grid"></div>
+
       <div className="ts-cta-glow ts-cta-glow-one"></div>
       <div className="ts-cta-glow ts-cta-glow-two"></div>
+
 
       <div className="container">
 
         <div className="ts-cta-box">
+
+          {/* =========================================
+              TOP ACCENT
+          ========================================= */}
+
+          <div className="ts-cta-accent-line"></div>
+
 
           {/* =========================================
               LEFT CONTENT
@@ -54,11 +71,13 @@ export default function CTA() {
               FIRE SAFETY CONSULTATION
             </span>
 
-            <h2>
+
+            <h2 className="ts-cta-title">
               Protect what
               <br />
               <span>matters most.</span>
             </h2>
+
 
             <p className="ts-cta-description">
               Every facility has different risks. Our fire safety
@@ -68,7 +87,9 @@ export default function CTA() {
             </p>
 
 
-            {/* Benefits */}
+            {/* =========================================
+                BENEFITS
+            ========================================= */}
 
             <div className="ts-cta-benefits">
 
@@ -78,8 +99,9 @@ export default function CTA() {
                   <i className="fa-solid fa-shield-halved"></i>
                 </div>
 
-                <div>
+                <div className="ts-cta-benefit-content">
                   <strong>Risk Assessment</strong>
+
                   <span>
                     Identify critical fire risks
                   </span>
@@ -94,8 +116,9 @@ export default function CTA() {
                   <i className="fa-solid fa-fire-extinguisher"></i>
                 </div>
 
-                <div>
+                <div className="ts-cta-benefit-content">
                   <strong>Safety Solutions</strong>
+
                   <span>
                     Systems designed for your facility
                   </span>
@@ -110,8 +133,9 @@ export default function CTA() {
                   <i className="fa-solid fa-screwdriver-wrench"></i>
                 </div>
 
-                <div>
+                <div className="ts-cta-benefit-content">
                   <strong>Ongoing Support</strong>
+
                   <span>
                     AMC, testing & maintenance
                   </span>
@@ -122,7 +146,9 @@ export default function CTA() {
             </div>
 
 
-            {/* Trust */}
+            {/* =========================================
+                TRUST
+            ========================================= */}
 
             <div className="ts-cta-trust">
 
@@ -147,7 +173,9 @@ export default function CTA() {
 
             <div className="ts-cta-form-head">
 
-              <span>GET STARTED</span>
+              <span className="ts-cta-form-label">
+                GET STARTED
+              </span>
 
               <h3>
                 Request a consultation
@@ -165,7 +193,7 @@ export default function CTA() {
               onSubmit={handleSubmit}
             >
 
-              {/* Name */}
+              {/* NAME */}
 
               <div className="ts-cta-field">
 
@@ -184,6 +212,7 @@ export default function CTA() {
                     placeholder="Enter your name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     required
                   />
 
@@ -192,7 +221,7 @@ export default function CTA() {
               </div>
 
 
-              {/* Company */}
+              {/* COMPANY */}
 
               <div className="ts-cta-field">
 
@@ -211,6 +240,7 @@ export default function CTA() {
                     placeholder="Company name"
                     value={formData.company}
                     onChange={handleChange}
+                    autoComplete="organization"
                   />
 
                 </div>
@@ -218,7 +248,7 @@ export default function CTA() {
               </div>
 
 
-              {/* Phone */}
+              {/* PHONE */}
 
               <div className="ts-cta-field">
 
@@ -237,6 +267,7 @@ export default function CTA() {
                     placeholder="+91 XXXXX XXXXX"
                     value={formData.phone}
                     onChange={handleChange}
+                    autoComplete="tel"
                     required
                   />
 
@@ -245,7 +276,7 @@ export default function CTA() {
               </div>
 
 
-              {/* Requirement */}
+              {/* REQUIREMENT */}
 
               <div className="ts-cta-field">
 
@@ -304,7 +335,7 @@ export default function CTA() {
               </div>
 
 
-              {/* Submit */}
+              {/* SUBMIT */}
 
               <button
                 type="submit"
@@ -320,9 +351,16 @@ export default function CTA() {
               </button>
 
 
+              {/* CONFIDENTIAL NOTE */}
+
               <p className="ts-cta-form-note">
+
                 <i className="fa-solid fa-lock"></i>
-                Your information is kept confidential.
+
+                <span>
+                  Your information is kept confidential.
+                </span>
+
               </p>
 
             </form>
@@ -336,3 +374,4 @@ export default function CTA() {
     </section>
   );
 }
+ 

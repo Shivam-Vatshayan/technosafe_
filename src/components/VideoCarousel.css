@@ -1,6 +1,6 @@
- 
 /* =========================================================
-   TECHNOSAFE — DARK VIDEO CAROUSEL
+   TECHNOSAFE — VIDEO CAROUSEL
+   PREMIUM DARK PLAIN COLOR THEME
 ========================================================= */
 
 .ts-video-section {
@@ -8,76 +8,12 @@
   width: 100%;
   overflow: hidden;
 
-  padding: 120px 0 100px;
+  padding: 100px 0 90px;
 
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(255, 70, 45, 0.12),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(20, 70, 170, 0.14),
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #020914 0%,
-      #06152d 50%,
-      #020914 100%
-    );
+  /* PLAIN DARK BACKGROUND */
+  background: var(--bg);
 
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
-.ts-video-section .container {
-  position: relative;
-
-  width: min(1280px, calc(100% - 80px));
-
-  margin: 0 auto;
-
-  z-index: 5;
-}
-
-
-/* =========================================================
-   BACKGROUND GLOW
-========================================================= */
-
-.ts-video-glow {
-  position: absolute;
-
-  width: 450px;
-  height: 450px;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-  filter: blur(100px);
-
-  opacity: 0.35;
-}
-
-.ts-video-glow-one {
-  top: -220px;
-  left: -180px;
-
-  background: rgba(255, 69, 40, 0.18);
-}
-
-.ts-video-glow-two {
-  right: -200px;
-  bottom: -220px;
-
-  background: rgba(25, 80, 190, 0.16);
+  color: var(--text);
 }
 
 
@@ -86,7 +22,8 @@
 ========================================================= */
 
 .ts-video-heading {
-  max-width: 700px;
+  width: 100%;
+  max-width: 720px;
 
   margin: 0 auto 55px;
 
@@ -94,69 +31,49 @@
 }
 
 
-/* =========================================================
-   EYEBROW
-========================================================= */
+/* EYEBROW */
 
 .ts-video-eyebrow {
   display: inline-flex;
-
   align-items: center;
+  justify-content: center;
 
   gap: 10px;
-
   margin-bottom: 18px;
 
+  color: var(--red);
+
   font-family: "Inter", Arial, sans-serif;
-
   font-size: 11px;
-
   font-weight: 800;
 
-  letter-spacing: 2.8px;
-
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-
-  color: #ff4b2b;
 }
 
-.ts-video-eyebrow > span {
-  display: block;
 
+.ts-video-eyebrow > span {
   width: 7px;
   height: 7px;
 
+  flex-shrink: 0;
+
   border-radius: 50%;
 
-  background: #ff4b2b;
+  background: var(--red);
 
-  box-shadow:
-    0 0 0 5px rgba(255, 75, 43, 0.10),
-    0 0 18px rgba(255, 75, 43, 0.5);
-
-  animation: tsVideoPulse 2s ease-in-out infinite;
-}
-
-@keyframes tsVideoPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(0.7);
-    opacity: 0.55;
-  }
+  display: block;
 }
 
 
 /* =========================================================
-   MAIN TITLE
+   TITLE
 ========================================================= */
 
 .ts-video-heading h2 {
   margin: 0 0 18px;
+
+  color: var(--text);
 
   font-family:
     "Sora",
@@ -164,19 +81,20 @@
     Arial,
     sans-serif;
 
-  font-size: clamp(40px, 5vw, 66px);
-
-  line-height: 1.05;
+  font-size: clamp(38px, 5vw, 64px);
 
   font-weight: 700;
 
-  letter-spacing: -2.8px;
+  line-height: 1.05;
 
-  color: #ffffff;
+  letter-spacing: -2.5px;
 }
 
+
+/* HIGHLIGHT */
+
 .ts-video-heading h2 span {
-  color: #ff4b2b;
+  color: var(--red);
 }
 
 
@@ -189,6 +107,8 @@
 
   margin: 0 auto;
 
+  color: var(--muted);
+
   font-family:
     "Inter",
     Arial,
@@ -197,13 +117,11 @@
   font-size: 15px;
 
   line-height: 1.8;
-
-  color: rgba(255, 255, 255, 0.62);
 }
 
 
 /* =========================================================
-   CAROUSEL WRAPPER
+   CAROUSEL
 ========================================================= */
 
 .ts-video-carousel-wrapper {
@@ -212,28 +130,19 @@
   width: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
-
-/* =========================================================
-   CAROUSEL
-========================================================= */
 
 .ts-video-carousel {
   position: relative;
 
   width: 100%;
-
-  height: 470px;
+  height: 500px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 
@@ -248,20 +157,16 @@
   top: 50%;
   left: 50%;
 
-  width: min(720px, 62vw);
+  width: min(760px, 62vw);
 
   aspect-ratio: 16 / 9;
+
+  pointer-events: none;
 
   transition:
     transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.5s ease,
     filter 0.5s ease;
-
-  will-change:
-    transform,
-    opacity;
-
-  pointer-events: none;
 }
 
 
@@ -269,7 +174,7 @@
    VIDEO FRAME
 ========================================================= */
 
-.ts-video-card .ts-video-frame {
+.ts-video-frame {
   position: relative;
 
   width: 100%;
@@ -277,15 +182,15 @@
 
   overflow: hidden;
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
 
-  border-radius: 20px;
+  /* CARD COLOR */
+  background: var(--card);
 
-  background: #020914;
+  border: 1px solid var(--border);
 
   box-shadow:
-    0 35px 80px rgba(0, 0, 0, 0.55),
-    0 10px 30px rgba(0, 0, 0, 0.35);
+    0 30px 70px rgba(0, 0, 0, 0.55);
 }
 
 
@@ -301,10 +206,10 @@
 
   object-fit: cover;
 
+  background: var(--black);
+
   border: 0;
   outline: none;
-
-  background: #020914;
 }
 
 
@@ -317,13 +222,13 @@
 
   opacity: 1;
 
+  pointer-events: auto;
+
   transform:
     translate(-50%, -50%)
     scale(1);
 
   filter: none;
-
-  pointer-events: auto;
 }
 
 
@@ -334,11 +239,11 @@
 .ts-video-prev-card {
   z-index: 4;
 
-  opacity: 0.38;
+  opacity: 0.35;
 
   transform:
-    translate(calc(-50% - 400px), -50%)
-    scale(0.78);
+    translate(calc(-50% - 410px), -50%)
+    scale(0.76);
 
   filter:
     brightness(0.45)
@@ -353,11 +258,11 @@
 .ts-video-next-card {
   z-index: 4;
 
-  opacity: 0.38;
+  opacity: 0.35;
 
   transform:
-    translate(calc(-50% + 400px), -50%)
-    scale(0.78);
+    translate(calc(-50% + 410px), -50%)
+    scale(0.76);
 
   filter:
     brightness(0.45)
@@ -374,53 +279,13 @@
 
   opacity: 0;
 
+  pointer-events: none;
+
   transform:
     translate(-50%, -50%)
     scale(0.55);
 
   filter: blur(5px);
-}
-
-
-/* =========================================================
-   VIDEO NUMBER
-========================================================= */
-
-.ts-video-number {
-  position: absolute;
-
-  top: 18px;
-  left: 20px;
-
-  z-index: 5;
-
-  min-width: 43px;
-  height: 30px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 10px;
-
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  border-radius: 6px;
-
-  background: rgba(0, 0, 0, 0.55);
-
-  backdrop-filter: blur(10px);
-
-  font-family: "Inter", Arial, sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-
-  color: #ffffff;
 }
 
 
@@ -432,71 +297,122 @@
   position: absolute;
 
   top: 50%;
-
   z-index: 30;
 
-  width: 56px;
-  height: 56px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+  width: 58px;
+  height: 58px;
 
   padding: 0;
 
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-light);
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.06);
+  /* PLAIN CARD COLOR */
+  background: var(--card);
 
-  backdrop-filter: blur(12px);
-
-  color: #ffffff;
+  color: var(--text);
 
   cursor: pointer;
 
   transform: translateY(-50%);
 
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.35);
-
   transition:
-    all 0.3s ease;
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
 
 .ts-video-prev {
   left: 25px;
 }
 
+
 .ts-video-next {
   right: 25px;
 }
 
+
 .ts-video-arrow i {
-  font-size: 14px;
+  font-size: 15px;
 }
+
+
+/* =========================================================
+   HOVER
+========================================================= */
 
 .ts-video-arrow:hover {
-  background: #ff4b2b;
+  background: var(--red);
 
-  border-color: #ff4b2b;
+  border-color: var(--red);
 
   box-shadow:
-    0 15px 35px rgba(255, 75, 43, 0.35);
+    0 12px 30px rgba(225, 38, 28, 0.30);
 }
+
 
 .ts-video-prev:hover {
   transform:
     translateY(-50%)
-    translateX(-3px);
+    translateX(-4px);
 }
+
 
 .ts-video-next:hover {
   transform:
     translateY(-50%)
-    translateX(3px);
+    translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ts-video-section {
+    padding: 85px 0 80px;
+  }
+
+  .ts-video-section .container {
+    width: calc(100% - 50px);
+  }
+
+  .ts-video-carousel {
+    height: 430px;
+  }
+
+  .ts-video-card {
+    width: min(680px, 68vw);
+  }
+
+  .ts-video-prev-card {
+    transform:
+      translate(calc(-50% - 320px), -50%)
+      scale(0.72);
+  }
+
+  .ts-video-next-card {
+    transform:
+      translate(calc(-50% + 320px), -50%)
+      scale(0.72);
+  }
+
+  .ts-video-prev {
+    left: 5px;
+  }
+
+  .ts-video-next {
+    right: 5px;
+  }
 }
 
 
@@ -507,7 +423,7 @@
 @media (max-width: 650px) {
 
   .ts-video-section {
-    padding: 70px 0 65px;
+    padding: 65px 0 60px;
   }
 
   .ts-video-section .container {
@@ -515,30 +431,43 @@
   }
 
   .ts-video-heading {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+  }
+
+  .ts-video-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
   }
 
   .ts-video-heading h2 {
-    font-size: clamp(32px, 10vw, 43px);
+    font-size: clamp(31px, 9vw, 42px);
 
+    line-height: 1.08;
     letter-spacing: -1.5px;
+
+    margin-bottom: 15px;
   }
 
   .ts-video-heading p {
     font-size: 13px;
+    line-height: 1.7;
   }
 
   .ts-video-carousel {
-    height: 235px;
+    height: auto;
+    min-height: 225px;
   }
 
   .ts-video-card {
     width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .ts-video-prev-card,
   .ts-video-next-card {
     opacity: 0;
+    pointer-events: none;
   }
 
   .ts-video-arrow {
@@ -546,22 +475,20 @@
     height: 42px;
   }
 
+  .ts-video-arrow i {
+    font-size: 12px;
+  }
+
   .ts-video-prev {
-    left: -8px;
+    left: -7px;
   }
 
   .ts-video-next {
-    right: -8px;
+    right: -7px;
   }
 
-  .ts-video-number {
-    top: 10px;
-    left: 11px;
-
-    min-width: 35px;
-    height: 25px;
-
-    font-size: 8px;
+  .ts-video-frame {
+    border-radius: 12px;
   }
 }
 
@@ -573,7 +500,7 @@
 @media (max-width: 400px) {
 
   .ts-video-section {
-    padding: 60px 0;
+    padding: 55px 0;
   }
 
   .ts-video-section .container {
@@ -581,11 +508,16 @@
   }
 
   .ts-video-heading h2 {
-    font-size: 30px;
+    font-size: 29px;
+    letter-spacing: -1.2px;
+  }
+
+  .ts-video-heading p {
+    font-size: 12px;
   }
 
   .ts-video-carousel {
-    height: 205px;
+    min-height: 190px;
   }
 
   .ts-video-arrow {
@@ -602,3 +534,26 @@
   }
 }
 
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.ts-video-arrow:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ts-video-card,
+  .ts-video-arrow {
+    transition: none;
+  }
+
+}

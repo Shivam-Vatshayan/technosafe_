@@ -1,29 +1,44 @@
  
 /* =========================================================
    TECHNOSAFE FOOTER
-   Premium Dark Fire-Safety Theme
-   Fully Scoped CSS
+   UPDATED GLOBAL COLOR SYSTEM
+
+   COLORS:
+   BACKGROUND  : #faf7f0 / #f6f1e6 / #ffffff
+   DARK GRAY   : #252A2F
+   SOFT GRAY   : #555D64
+   BRIGHT RED  : #FF2D25
+
+   FULLY SCOPED
+========================================================= */
+
+
+/* =========================================================
+   FOOTER
 ========================================================= */
 
 .ts-footer {
+
   position: relative;
+
   width: 100%;
+
   overflow: hidden;
 
-  color: #ffffff;
+  color: #252A2F;
 
   background:
     radial-gradient(
       circle at 10% 20%,
-      rgba(255, 80, 55, 0.07),
+      rgba(255, 45, 37, 0.055),
       transparent 28%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(255, 80, 55, 0.055),
+      rgba(255, 45, 37, 0.045),
       transparent 30%
     ),
-    #050505;
+    #faf7f0;
 
   border: none;
 }
@@ -34,9 +49,11 @@
 ========================================================= */
 
 .ts-footer-glow {
+
   position: absolute;
 
   width: 420px;
+
   height: 420px;
 
   border-radius: 50%;
@@ -45,25 +62,31 @@
 
   pointer-events: none;
 
-  opacity: 0.5;
+  opacity: 0.45;
+
+  z-index: 0;
 }
 
 
 .ts-footer-glow-left {
+
   top: -220px;
+
   left: -220px;
 
   background:
-    rgba(255, 70, 45, 0.10);
+    rgba(255, 45, 37, 0.075);
 }
 
 
 .ts-footer-glow-right {
+
   right: -220px;
+
   bottom: -220px;
 
   background:
-    rgba(255, 70, 45, 0.08);
+    rgba(255, 45, 37, 0.06);
 }
 
 
@@ -72,12 +95,15 @@
 ========================================================= */
 
 .ts-footer > .container {
+
   position: relative;
+
   z-index: 2;
 }
 
 
 .ts-footer-main {
+
   display: grid;
 
   grid-template-columns:
@@ -98,26 +124,25 @@
 ========================================================= */
 
 .ts-footer-brand {
+
   min-width: 0;
 }
 
 
 /* =========================================================
    LOGO WRAPPER
-   LARGE + PREMIUM
 ========================================================= */
 
 .ts-footer-logo-wrap {
+
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
-  /*
-    Increased width and height
-    so the logo gets more visual space.
-  */
   width: 245px;
+
   height: 82px;
 
   margin-bottom: 24px;
@@ -132,13 +157,10 @@
 
   border: none;
 
-  /*
-    Reduced radius for sharper premium look.
-  */
   border-radius: 9px;
 
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.38);
+    0 8px 28px rgba(0, 0, 0, 0.20);
 
   transition:
     transform 0.3s ease,
@@ -147,28 +169,25 @@
 
 
 /* =========================================================
-   ACTUAL LOGO IMAGE
-   LARGE + ZOOMED
+   LOGO
 ========================================================= */
 
 .ts-footer-logo {
+
   display: block;
 
-  /*
-    Fill the entire wrapper.
-  */
   width: 100%;
+
   height: 100%;
 
   max-width: none;
+
   max-height: none;
 
   margin: 0;
+
   padding: 0;
 
-  /*
-    contain keeps the logo proportions.
-  */
   object-fit: contain;
 
   object-position: center center;
@@ -181,9 +200,6 @@
 
   box-shadow: none;
 
-  /*
-    Strong visual zoom.
-  */
   transform: scale(1.28);
 
   transform-origin: center center;
@@ -199,14 +215,16 @@
 ========================================================= */
 
 .ts-footer-logo-wrap:hover {
+
   transform: translateY(-2px);
 
   box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.48);
+    0 12px 32px rgba(0, 0, 0, 0.25);
 }
 
 
 .ts-footer-logo-wrap:hover .ts-footer-logo {
+
   transform: scale(1.33);
 
   opacity: 0.97;
@@ -218,12 +236,12 @@
 ========================================================= */
 
 .ts-footer-description {
+
   max-width: 350px;
 
   margin: 0 0 22px;
 
-  color:
-    rgba(255, 255, 255, 0.52);
+  color: #555D64;
 
   font-size: 13px;
 
@@ -236,6 +254,7 @@
 ========================================================= */
 
 .ts-footer-trust {
+
   display: inline-flex;
 
   align-items: center;
@@ -246,14 +265,13 @@
 
   margin-bottom: 25px;
 
-  color:
-    rgba(255, 255, 255, 0.62);
+  color: #555D64;
 
   background:
-    rgba(255, 255, 255, 0.035);
+    rgba(255, 255, 255, 0.72);
 
   border:
-    1px solid rgba(255, 255, 255, 0.08);
+    1px solid #e2dcc9;
 
   border-radius: 9px;
 
@@ -262,24 +280,27 @@
 
 
 .ts-footer-trust-icon {
+
   width: 26px;
+
   height: 26px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  color: #ff5038;
+  color: #ffffff;
 
-  background:
-    rgba(255, 80, 55, 0.10);
+  background: #FF2D25;
 
   border-radius: 7px;
 }
 
 
 .ts-footer-trust-icon i {
+
   font-size: 11px;
 }
 
@@ -289,6 +310,7 @@
 ========================================================= */
 
 .ts-footer-socials {
+
   display: flex;
 
   align-items: center;
@@ -298,22 +320,24 @@
 
 
 .ts-footer-social {
+
   width: 38px;
+
   height: 38px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  color:
-    rgba(255, 255, 255, 0.48);
+  color: #555D64;
 
   background:
-    rgba(255, 255, 255, 0.035);
+    rgba(255, 255, 255, 0.72);
 
   border:
-    1px solid rgba(255, 255, 255, 0.08);
+    1px solid #e2dcc9;
 
   border-radius: 10px;
 
@@ -328,11 +352,12 @@
 
 
 .ts-footer-social:hover {
+
   color: #ffffff;
 
-  background: #ff5038;
+  background: #FF2D25;
 
-  border-color: #ff5038;
+  border-color: #FF2D25;
 
   transform:
     translateY(-3px);
@@ -340,6 +365,7 @@
 
 
 .ts-footer-social i {
+
   font-size: 13px;
 }
 
@@ -349,18 +375,24 @@
 ========================================================= */
 
 .ts-footer-column {
+
   min-width: 0;
 }
 
 
+/* =========================================================
+   COLUMN HEADING
+========================================================= */
+
 .ts-footer-column h4 {
+
   position: relative;
 
   margin: 5px 0 24px;
 
   padding-bottom: 12px;
 
-  color: #ffffff;
+  color: #252A2F;
 
   font-size: 13px;
 
@@ -375,19 +407,22 @@
 ========================================================= */
 
 .ts-footer-column h4::after {
+
   content: "";
 
   position: absolute;
 
   left: 0;
+
   bottom: 0;
 
   width: 25px;
+
   height: 2px;
 
   border-radius: 10px;
 
-  background: #ff5038;
+  background: #FF2D25;
 }
 
 
@@ -396,6 +431,7 @@
 ========================================================= */
 
 .ts-footer-links {
+
   display: flex;
 
   flex-direction: column;
@@ -405,12 +441,12 @@
 
 
 .ts-footer-links a {
+
   position: relative;
 
   width: fit-content;
 
-  color:
-    rgba(255, 255, 255, 0.48);
+  color: #555D64;
 
   font-size: 12px;
 
@@ -423,7 +459,8 @@
 
 
 .ts-footer-links a:hover {
-  color: #ff6048;
+
+  color: #FF2D25;
 
   transform:
     translateX(4px);
@@ -435,6 +472,7 @@
 ========================================================= */
 
 .ts-footer-contact-list {
+
   display: flex;
 
   flex-direction: column;
@@ -444,14 +482,14 @@
 
 
 .ts-footer-contact-list > a {
+
   display: flex;
 
   align-items: flex-start;
 
   gap: 12px;
 
-  color:
-    rgba(255, 255, 255, 0.52);
+  color: #555D64;
 
   font-size: 11px;
 
@@ -465,7 +503,8 @@
 
 
 .ts-footer-contact-list > a:hover {
-  color: #ffffff;
+
+  color: #252A2F;
 }
 
 
@@ -474,7 +513,9 @@
 ========================================================= */
 
 .ts-footer-contact-icon {
+
   width: 34px;
+
   height: 34px;
 
   flex-shrink: 0;
@@ -482,15 +523,16 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  color: #ff5038;
+  color: #FF2D25;
 
   background:
-    rgba(255, 80, 55, 0.08);
+    rgba(255, 45, 37, 0.07);
 
   border:
-    1px solid rgba(255, 80, 55, 0.12);
+    1px solid rgba(255, 45, 37, 0.16);
 
   border-radius: 9px;
 
@@ -503,9 +545,12 @@
 
 .ts-footer-contact-list > a:hover
 .ts-footer-contact-icon {
+
   color: #ffffff;
 
-  background: #ff5038;
+  background: #FF2D25;
+
+  border-color: #FF2D25;
 
   transform:
     translateY(-2px);
@@ -513,6 +558,7 @@
 
 
 .ts-footer-contact-icon i {
+
   font-size: 11px;
 }
 
@@ -522,6 +568,7 @@
 ========================================================= */
 
 .ts-footer-strip {
+
   display: flex;
 
   align-items: center;
@@ -534,6 +581,7 @@
 
 
 .ts-footer-strip-line {
+
   flex: 1;
 
   height: 1px;
@@ -542,15 +590,15 @@
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 80, 55, 0.35),
+      rgba(255, 45, 37, 0.30),
       transparent
     );
 }
 
 
 .ts-footer-strip-text {
-  color:
-    rgba(255, 255, 255, 0.25);
+
+  color: #777F86;
 
   font-size: 8px;
 
@@ -569,19 +617,21 @@
 ========================================================= */
 
 .ts-footer-bottom {
+
   position: relative;
 
   z-index: 3;
 
   border-top:
-    1px solid rgba(255, 255, 255, 0.07);
+    1px solid #e2dcc9;
 
   background:
-    rgba(0, 0, 0, 0.28);
+    #f6f1e6;
 }
 
 
 .ts-footer-bottom-inner {
+
   min-height: 58px;
 
   display: flex;
@@ -596,10 +646,10 @@
 
 .ts-footer-bottom p,
 .ts-footer-bottom span {
+
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.35);
+  color: #777F86;
 
   font-size: 9px;
 
@@ -608,8 +658,8 @@
 
 
 .ts-footer-bottom span {
-  color:
-    rgba(255, 80, 55, 0.70);
+
+  color: #252A2F;
 
   font-weight: 600;
 }
@@ -622,6 +672,7 @@
 @media (max-width: 1000px) {
 
   .ts-footer-main {
+
     grid-template-columns:
       1.5fr
       1fr
@@ -635,19 +686,21 @@
 
 
   .ts-footer-brand {
+
     grid-column: 1 / -1;
   }
 
 
   .ts-footer-description {
+
     max-width: 500px;
   }
 
 
-  /* TABLET LOGO */
-
   .ts-footer-logo-wrap {
+
     width: 225px;
+
     height: 76px;
 
     border-radius: 8px;
@@ -655,6 +708,7 @@
 
 
   .ts-footer-logo {
+
     border-radius: 8px;
 
     transform: scale(1.26);
@@ -662,6 +716,7 @@
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
+
     transform: scale(1.30);
   }
 
@@ -675,6 +730,7 @@
 @media (max-width: 700px) {
 
   .ts-footer-main {
+
     grid-template-columns: 1fr;
 
     gap: 40px;
@@ -685,16 +741,15 @@
 
 
   .ts-footer-brand {
+
     grid-column: auto;
   }
 
 
-  /* =====================================================
-     MOBILE LOGO
-  ===================================================== */
-
   .ts-footer-logo-wrap {
+
     width: 210px;
+
     height: 70px;
 
     margin-bottom: 20px;
@@ -704,6 +759,7 @@
 
 
   .ts-footer-logo {
+
     border-radius: 8px;
 
     transform: scale(1.25);
@@ -711,26 +767,31 @@
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
+
     transform: scale(1.29);
   }
 
 
   .ts-footer-description {
+
     font-size: 12px;
   }
 
 
   .ts-footer-column h4 {
+
     margin-bottom: 20px;
   }
 
 
   .ts-footer-strip {
+
     gap: 10px;
   }
 
 
   .ts-footer-strip-text {
+
     font-size: 7px;
 
     letter-spacing: 0.14em;
@@ -738,6 +799,7 @@
 
 
   .ts-footer-bottom-inner {
+
     min-height: auto;
 
     padding:
@@ -760,6 +822,7 @@
 @media (max-width: 420px) {
 
   .ts-footer-main {
+
     padding:
       50px 0 30px;
 
@@ -767,12 +830,10 @@
   }
 
 
-  /* =====================================================
-     SMALL MOBILE LOGO
-  ===================================================== */
-
   .ts-footer-logo-wrap {
+
     width: 190px;
+
     height: 64px;
 
     border-radius: 7px;
@@ -780,6 +841,7 @@
 
 
   .ts-footer-logo {
+
     border-radius: 7px;
 
     transform: scale(1.24);
@@ -787,11 +849,13 @@
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
+
     transform: scale(1.28);
   }
 
 
   .ts-footer-description {
+
     font-size: 11px;
 
     line-height: 1.7;
@@ -799,27 +863,33 @@
 
 
   .ts-footer-trust {
+
     font-size: 9px;
   }
 
 
   .ts-footer-social {
+
     width: 36px;
+
     height: 36px;
   }
 
 
   .ts-footer-contact-list {
+
     gap: 15px;
   }
 
 
   .ts-footer-strip-line {
+
     display: none;
   }
 
 
   .ts-footer-strip {
+
     justify-content: center;
 
     padding:
@@ -828,6 +898,7 @@
 
 
   .ts-footer-strip-text {
+
     font-size: 6.5px;
   }
 
