@@ -44,7 +44,7 @@ const partners = [
     logo: "images/partner10.jpeg",
   },
   {
-    name: "Fuel",
+    name: "uvex",
     logo: "images/partner4.jpeg",
   },
 ];

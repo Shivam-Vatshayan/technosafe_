@@ -1,15 +1,15 @@
- 
 /* =========================================================
    TECHNOSAFE FOOTER
    UPDATED GLOBAL COLOR SYSTEM
 
    COLORS:
    BACKGROUND  : #faf7f0 / #f6f1e6 / #ffffff
-   DARK GRAY   : #252A2F
-   SOFT GRAY   : #555D64
-   BRIGHT RED  : #FF2D25
+   DARK NAVY   : #12203A
+   LIGHT RED   : #FF6B6B
 
    FULLY SCOPED
+   LOGO SIZE REDUCED
+   STRONG !IMPORTANT OVERRIDE
 ========================================================= */
 
 
@@ -19,13 +19,13 @@
 
 .ts-footer {
 
-  position: relative;
+  position: relative !important;
 
-  width: 100%;
+  width: 100% !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 
-  color: #252A2F;
+  color: #12203A !important;
 
   background:
     radial-gradient(
@@ -38,9 +38,9 @@
       rgba(255, 45, 37, 0.045),
       transparent 30%
     ),
-    #faf7f0;
+    #faf7f0 !important;
 
-  border: none;
+  border: none !important;
 }
 
 
@@ -50,43 +50,43 @@
 
 .ts-footer-glow {
 
-  position: absolute;
+  position: absolute !important;
 
-  width: 420px;
+  width: 420px !important;
 
-  height: 420px;
+  height: 420px !important;
 
-  border-radius: 50%;
+  border-radius: 50% !important;
 
-  filter: blur(110px);
+  filter: blur(110px) !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 
-  opacity: 0.45;
+  opacity: 0.45 !important;
 
-  z-index: 0;
+  z-index: 0 !important;
 }
 
 
 .ts-footer-glow-left {
 
-  top: -220px;
+  top: -220px !important;
 
-  left: -220px;
+  left: -220px !important;
 
   background:
-    rgba(255, 45, 37, 0.075);
+    rgba(255, 45, 37, 0.075) !important;
 }
 
 
 .ts-footer-glow-right {
 
-  right: -220px;
+  right: -220px !important;
 
-  bottom: -220px;
+  bottom: -220px !important;
 
   background:
-    rgba(255, 45, 37, 0.06);
+    rgba(255, 45, 37, 0.06) !important;
 }
 
 
@@ -96,26 +96,26 @@
 
 .ts-footer > .container {
 
-  position: relative;
+  position: relative !important;
 
-  z-index: 2;
+  z-index: 2 !important;
 }
 
 
 .ts-footer-main {
 
-  display: grid;
+  display: grid !important;
 
   grid-template-columns:
     1.7fr
     0.8fr
     1fr
-    1.45fr;
+    1.45fr !important;
 
-  gap: 55px;
+  gap: 55px !important;
 
   padding:
-    80px 0 55px;
+    80px 0 55px !important;
 }
 
 
@@ -125,88 +125,90 @@
 
 .ts-footer-brand {
 
-  min-width: 0;
+  min-width: 0 !important;
 }
 
 
 /* =========================================================
    LOGO WRAPPER
+   REDUCED SIZE
 ========================================================= */
 
 .ts-footer-logo-wrap {
 
-  display: inline-flex;
+  display: inline-flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  width: 245px;
+  width: 220px !important;
 
-  height: 82px;
+  height: 74px !important;
 
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 
-  padding: 0;
+  padding: 0 !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
-  border: none;
+  border: none !important;
 
-  border-radius: 9px;
+  border-radius: 9px !important;
 
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.20);
+    0 8px 28px rgba(18, 32, 58, 0.20) !important;
 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease !important;
 }
 
 
 /* =========================================================
    LOGO
+   REDUCED SCALE TO PREVENT CROPPING
 ========================================================= */
 
 .ts-footer-logo {
 
-  display: block;
+  display: block !important;
 
-  width: 100%;
+  width: 100% !important;
 
-  height: 100%;
+  height: 100% !important;
 
-  max-width: none;
+  max-width: none !important;
 
-  max-height: none;
+  max-height: none !important;
 
-  margin: 0;
+  margin: 0 !important;
 
-  padding: 0;
+  padding: 0 !important;
 
-  object-fit: contain;
+  object-fit: contain !important;
 
-  object-position: center center;
+  object-position: center center !important;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
-  border: none;
+  border: none !important;
 
-  border-radius: 9px;
+  border-radius: 9px !important;
 
-  box-shadow: none;
+  box-shadow: none !important;
 
-  transform: scale(1.28);
+  transform: scale(1.08) !important;
 
-  transform-origin: center center;
+  transform-origin: center center !important;
 
   transition:
     transform 0.3s ease,
-    opacity 0.3s ease;
+    opacity 0.3s ease !important;
 }
 
 
@@ -216,18 +218,18 @@
 
 .ts-footer-logo-wrap:hover {
 
-  transform: translateY(-2px);
+  transform: translateY(-2px) !important;
 
   box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.25);
+    0 12px 32px rgba(18, 32, 58, 0.25) !important;
 }
 
 
 .ts-footer-logo-wrap:hover .ts-footer-logo {
 
-  transform: scale(1.33);
+  transform: scale(1.11) !important;
 
-  opacity: 0.97;
+  opacity: 0.97 !important;
 }
 
 
@@ -237,15 +239,15 @@
 
 .ts-footer-description {
 
-  max-width: 350px;
+  max-width: 350px !important;
 
-  margin: 0 0 22px;
+  margin: 0 0 22px !important;
 
-  color: #555D64;
+  color: #555D64 !important;
 
-  font-size: 13px;
+  font-size: 13px !important;
 
-  line-height: 1.8;
+  line-height: 1.8 !important;
 }
 
 
@@ -255,53 +257,53 @@
 
 .ts-footer-trust {
 
-  display: inline-flex;
+  display: inline-flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 10px;
+  gap: 10px !important;
 
-  padding: 9px 13px;
+  padding: 9px 13px !important;
 
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 
-  color: #555D64;
+  color: #555D64 !important;
 
   background:
-    rgba(255, 255, 255, 0.72);
+    rgba(255, 255, 255, 0.72) !important;
 
   border:
-    1px solid #e2dcc9;
+    1px solid #e2dcc9 !important;
 
-  border-radius: 9px;
+  border-radius: 9px !important;
 
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 
 .ts-footer-trust-icon {
 
-  width: 26px;
+  width: 26px !important;
 
-  height: 26px;
+  height: 26px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: #FF2D25;
+  background: #FF6B6B !important;
 
-  border-radius: 7px;
+  border-radius: 7px !important;
 }
 
 
 .ts-footer-trust-icon i {
 
-  font-size: 11px;
+  font-size: 11px !important;
 }
 
 
@@ -311,62 +313,62 @@
 
 .ts-footer-socials {
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 9px;
+  gap: 9px !important;
 }
 
 
 .ts-footer-social {
 
-  width: 38px;
+  width: 38px !important;
 
-  height: 38px;
+  height: 38px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  color: #555D64;
+  color: #555D64 !important;
 
   background:
-    rgba(255, 255, 255, 0.72);
+    rgba(255, 255, 255, 0.72) !important;
 
   border:
-    1px solid #e2dcc9;
+    1px solid #e2dcc9 !important;
 
-  border-radius: 10px;
+  border-radius: 10px !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   transition:
     color 0.3s ease,
     background 0.3s ease,
     border-color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-footer-social:hover {
 
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: #FF2D25;
+  background: #FF6B6B !important;
 
-  border-color: #FF2D25;
+  border-color: #FF6B6B !important;
 
   transform:
-    translateY(-3px);
+    translateY(-3px) !important;
 }
 
 
 .ts-footer-social i {
 
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 
@@ -376,7 +378,7 @@
 
 .ts-footer-column {
 
-  min-width: 0;
+  min-width: 0 !important;
 }
 
 
@@ -386,19 +388,19 @@
 
 .ts-footer-column h4 {
 
-  position: relative;
+  position: relative !important;
 
-  margin: 5px 0 24px;
+  margin: 5px 0 24px !important;
 
-  padding-bottom: 12px;
+  padding-bottom: 12px !important;
 
-  color: #252A2F;
+  color: #12203A !important;
 
-  font-size: 13px;
+  font-size: 13px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em !important;
 }
 
 
@@ -408,21 +410,21 @@
 
 .ts-footer-column h4::after {
 
-  content: "";
+  content: "" !important;
 
-  position: absolute;
+  position: absolute !important;
 
-  left: 0;
+  left: 0 !important;
 
-  bottom: 0;
+  bottom: 0 !important;
 
-  width: 25px;
+  width: 25px !important;
 
-  height: 2px;
+  height: 2px !important;
 
-  border-radius: 10px;
+  border-radius: 10px !important;
 
-  background: #FF2D25;
+  background: #FF6B6B !important;
 }
 
 
@@ -432,38 +434,38 @@
 
 .ts-footer-links {
 
-  display: flex;
+  display: flex !important;
 
-  flex-direction: column;
+  flex-direction: column !important;
 
-  gap: 13px;
+  gap: 13px !important;
 }
 
 
 .ts-footer-links a {
 
-  position: relative;
+  position: relative !important;
 
-  width: fit-content;
+  width: fit-content !important;
 
-  color: #555D64;
+  color: #555D64 !important;
 
-  font-size: 12px;
+  font-size: 12px !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   transition:
     color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-footer-links a:hover {
 
-  color: #FF2D25;
+  color: #FF6B6B !important;
 
   transform:
-    translateX(4px);
+    translateX(4px) !important;
 }
 
 
@@ -473,38 +475,38 @@
 
 .ts-footer-contact-list {
 
-  display: flex;
+  display: flex !important;
 
-  flex-direction: column;
+  flex-direction: column !important;
 
-  gap: 17px;
+  gap: 17px !important;
 }
 
 
 .ts-footer-contact-list > a {
 
-  display: flex;
+  display: flex !important;
 
-  align-items: flex-start;
+  align-items: flex-start !important;
 
-  gap: 12px;
+  gap: 12px !important;
 
-  color: #555D64;
+  color: #555D64 !important;
 
-  font-size: 11px;
+  font-size: 11px !important;
 
-  line-height: 1.65;
+  line-height: 1.65 !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   transition:
-    color 0.3s ease;
+    color 0.3s ease !important;
 }
 
 
 .ts-footer-contact-list > a:hover {
 
-  color: #252A2F;
+  color: #12203A !important;
 }
 
 
@@ -514,52 +516,52 @@
 
 .ts-footer-contact-icon {
 
-  width: 34px;
+  width: 34px !important;
 
-  height: 34px;
+  height: 34px !important;
 
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  color: #FF2D25;
+  color: #FF6B6B !important;
 
   background:
-    rgba(255, 45, 37, 0.07);
+    rgba(255, 107, 107, 0.07) !important;
 
   border:
-    1px solid rgba(255, 45, 37, 0.16);
+    1px solid rgba(255, 107, 107, 0.16) !important;
 
-  border-radius: 9px;
+  border-radius: 9px !important;
 
   transition:
     background 0.3s ease,
     color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-footer-contact-list > a:hover
 .ts-footer-contact-icon {
 
-  color: #ffffff;
+  color: #ffffff !important;
 
-  background: #FF2D25;
+  background: #FF6B6B !important;
 
-  border-color: #FF2D25;
+  border-color: #FF6B6B !important;
 
   transform:
-    translateY(-2px);
+    translateY(-2px) !important;
 }
 
 
 .ts-footer-contact-icon i {
 
-  font-size: 11px;
+  font-size: 11px !important;
 }
 
 
@@ -569,46 +571,46 @@
 
 .ts-footer-strip {
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 18px;
+  gap: 18px !important;
 
   padding:
-    20px 0 25px;
+    20px 0 25px !important;
 }
 
 
 .ts-footer-strip-line {
 
-  flex: 1;
+  flex: 1 !important;
 
-  height: 1px;
+  height: 1px !important;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 45, 37, 0.30),
+      rgba(255, 107, 107, 0.30),
       transparent
-    );
+    ) !important;
 }
 
 
 .ts-footer-strip-text {
 
-  color: #777F86;
+  color: #777F86 !important;
 
-  font-size: 8px;
+  font-size: 8px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.22em;
+  letter-spacing: 0.22em !important;
 
-  text-align: center;
+  text-align: center !important;
 
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 
@@ -618,50 +620,50 @@
 
 .ts-footer-bottom {
 
-  position: relative;
+  position: relative !important;
 
-  z-index: 3;
+  z-index: 3 !important;
 
   border-top:
-    1px solid #e2dcc9;
+    1px solid #e2dcc9 !important;
 
   background:
-    #f6f1e6;
+    #f6f1e6 !important;
 }
 
 
 .ts-footer-bottom-inner {
 
-  min-height: 58px;
+  min-height: 58px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: space-between;
+  justify-content: space-between !important;
 
-  gap: 20px;
+  gap: 20px !important;
 }
 
 
 .ts-footer-bottom p,
 .ts-footer-bottom span {
 
-  margin: 0;
+  margin: 0 !important;
 
-  color: #777F86;
+  color: #777F86 !important;
 
-  font-size: 9px;
+  font-size: 9px !important;
 
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 
 
 .ts-footer-bottom span {
 
-  color: #252A2F;
+  color: #12203A !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 
@@ -676,48 +678,50 @@
     grid-template-columns:
       1.5fr
       1fr
-      1fr;
+      1fr !important;
 
-    gap: 45px;
+    gap: 45px !important;
 
     padding:
-      70px 0 45px;
+      70px 0 45px !important;
   }
 
 
   .ts-footer-brand {
 
-    grid-column: 1 / -1;
+    grid-column: 1 / -1 !important;
   }
 
 
   .ts-footer-description {
 
-    max-width: 500px;
+    max-width: 500px !important;
   }
 
 
+  /* REDUCED TABLET LOGO */
+
   .ts-footer-logo-wrap {
 
-    width: 225px;
+    width: 210px !important;
 
-    height: 76px;
+    height: 70px !important;
 
-    border-radius: 8px;
+    border-radius: 8px !important;
   }
 
 
   .ts-footer-logo {
 
-    border-radius: 8px;
+    border-radius: 8px !important;
 
-    transform: scale(1.26);
+    transform: scale(1.06) !important;
   }
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
 
-    transform: scale(1.30);
+    transform: scale(1.09) !important;
   }
 
 }
@@ -731,85 +735,87 @@
 
   .ts-footer-main {
 
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
 
-    gap: 40px;
+    gap: 40px !important;
 
     padding:
-      60px 0 35px;
+      60px 0 35px !important;
   }
 
 
   .ts-footer-brand {
 
-    grid-column: auto;
+    grid-column: auto !important;
   }
 
 
+  /* REDUCED MOBILE LOGO */
+
   .ts-footer-logo-wrap {
 
-    width: 210px;
+    width: 195px !important;
 
-    height: 70px;
+    height: 65px !important;
 
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 
-    border-radius: 8px;
+    border-radius: 8px !important;
   }
 
 
   .ts-footer-logo {
 
-    border-radius: 8px;
+    border-radius: 8px !important;
 
-    transform: scale(1.25);
+    transform: scale(1.05) !important;
   }
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
 
-    transform: scale(1.29);
+    transform: scale(1.08) !important;
   }
 
 
   .ts-footer-description {
 
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
 
   .ts-footer-column h4 {
 
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
 
 
   .ts-footer-strip {
 
-    gap: 10px;
+    gap: 10px !important;
   }
 
 
   .ts-footer-strip-text {
 
-    font-size: 7px;
+    font-size: 7px !important;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.14em !important;
   }
 
 
   .ts-footer-bottom-inner {
 
-    min-height: auto;
+    min-height: auto !important;
 
     padding:
-      17px 0;
+      17px 0 !important;
 
-    flex-direction: column;
+    flex-direction: column !important;
 
-    align-items: flex-start;
+    align-items: flex-start !important;
 
-    gap: 7px;
+    gap: 7px !important;
   }
 
 }
@@ -824,83 +830,84 @@
   .ts-footer-main {
 
     padding:
-      50px 0 30px;
+      50px 0 30px !important;
 
-    gap: 35px;
+    gap: 35px !important;
   }
 
 
+  /* REDUCED SMALL MOBILE LOGO */
+
   .ts-footer-logo-wrap {
 
-    width: 190px;
+    width: 180px !important;
 
-    height: 64px;
+    height: 60px !important;
 
-    border-radius: 7px;
+    border-radius: 7px !important;
   }
 
 
   .ts-footer-logo {
 
-    border-radius: 7px;
+    border-radius: 7px !important;
 
-    transform: scale(1.24);
+    transform: scale(1.04) !important;
   }
 
 
   .ts-footer-logo-wrap:hover .ts-footer-logo {
 
-    transform: scale(1.28);
+    transform: scale(1.07) !important;
   }
 
 
   .ts-footer-description {
 
-    font-size: 11px;
+    font-size: 11px !important;
 
-    line-height: 1.7;
+    line-height: 1.7 !important;
   }
 
 
   .ts-footer-trust {
 
-    font-size: 9px;
+    font-size: 9px !important;
   }
 
 
   .ts-footer-social {
 
-    width: 36px;
+    width: 36px !important;
 
-    height: 36px;
+    height: 36px !important;
   }
 
 
   .ts-footer-contact-list {
 
-    gap: 15px;
+    gap: 15px !important;
   }
 
 
   .ts-footer-strip-line {
 
-    display: none;
+    display: none !important;
   }
 
 
   .ts-footer-strip {
 
-    justify-content: center;
+    justify-content: center !important;
 
     padding:
-      18px 0 22px;
+      18px 0 22px !important;
   }
 
 
   .ts-footer-strip-text {
 
-    font-size: 6.5px;
+    font-size: 6.5px !important;
   }
 
 }
- 

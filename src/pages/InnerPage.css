@@ -1,6 +1,12 @@
+ 
 /* =========================================================
    TECHNOSAFE — ABOUT PAGE
    Fully Scoped CSS
+   ---------------------------------------------------------
+   COLOR SYSTEM
+   DARK NAVY  : #071B4A
+   LIGHT RED  : #FF6B6B
+   WHITE      : #FFFFFF
 ========================================================= */
 
 .ts-about {
@@ -8,7 +14,7 @@
   position: relative;
   overflow: hidden;
   background: #faf7f0;
-  color: #12203a;
+  color: #071B4A;
 }
 
 
@@ -28,17 +34,17 @@
   background:
     radial-gradient(
       circle at 82% 35%,
-      rgba(212, 160, 23, 0.10),
+      rgba(255, 107, 107, 0.10),
       transparent 30%
     ),
     radial-gradient(
       circle at 5% 85%,
-      rgba(212, 160, 23, 0.055),
+      rgba(255, 107, 107, 0.055),
       transparent 28%
     ),
     #faf7f0;
 
-  border-bottom: 1px solid rgba(212, 160, 23, 0.07);
+  border-bottom: 1px solid rgba(7, 27, 74, 0.07);
 }
 
 
@@ -56,7 +62,7 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(212, 160, 23, 0.25),
+    rgba(7, 27, 74, 0.25),
     transparent
   );
 
@@ -77,7 +83,7 @@
 
   border-radius: 50%;
 
-  background: rgba(212, 160, 23, 0.06);
+  background: rgba(255, 107, 107, 0.06);
 
   filter: blur(90px);
 
@@ -100,7 +106,7 @@
 
   margin-bottom: 20px;
 
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-size: 10px !important;
   font-weight: 700 !important;
@@ -117,7 +123,7 @@
   margin: 0 !important;
   padding: 0 !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: clamp(44px, 6vw, 76px) !important;
 
@@ -130,7 +136,7 @@
 
 
 .ts-about-hero h1 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -140,7 +146,7 @@
   margin: 27px 0 0 !important;
   padding: 0 !important;
 
-  color: rgba(212, 160, 23, 0.56) !important;
+  color: rgba(7, 27, 74, 0.62) !important;
 
   font-size: 15px !important;
 
@@ -171,7 +177,7 @@
   padding-right: 28px;
   margin-right: 28px;
 
-  border-right: 1px solid rgba(212, 160, 23, 0.10);
+  border-right: 1px solid rgba(7, 27, 74, 0.10);
 }
 
 
@@ -181,7 +187,7 @@
 
 
 .ts-about-hero-meta strong {
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: 25px !important;
   font-weight: 700 !important;
@@ -193,7 +199,7 @@
 .ts-about-hero-meta span {
   margin-top: 7px;
 
-  color: rgba(212, 160, 23, 0.42) !important;
+  color: rgba(7, 27, 74, 0.50) !important;
 
   font-size: 9px !important;
 
@@ -253,12 +259,12 @@
 
   background: #f3ede0;
 
-  border: 1px solid rgba(212, 160, 23, 0.11);
+  border: 1px solid rgba(7, 27, 74, 0.11);
 
   border-radius: 30px 9px 30px 9px;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.48);
+    0 30px 80px rgba(7, 27, 74, 0.28);
 }
 
 
@@ -271,7 +277,7 @@
 
   z-index: 3;
 
-  border: 1px solid rgba(212, 160, 23, 0.20);
+  border: 1px solid rgba(255, 107, 107, 0.20);
 
   border-radius: inherit;
 
@@ -320,8 +326,8 @@
   background:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.02),
-      rgba(0, 0, 0, 0.35)
+      rgba(7, 27, 74, 0.02),
+      rgba(7, 27, 74, 0.35)
     );
 
   pointer-events: none;
@@ -349,16 +355,16 @@
 
   padding: 16px 18px;
 
-  background: rgba(18, 32, 58, 0.95);
+  background: rgba(7, 27, 74, 0.95);
 
-  border: 1px solid rgba(212, 160, 23, 0.10);
+  border: 1px solid rgba(255, 107, 107, 0.10);
 
-  border-left: 2px solid #d4a017;
+  border-left: 2px solid #FF6B6B;
 
   border-radius: 14px;
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.48);
+    0 20px 50px rgba(7, 27, 74, 0.35);
 
   backdrop-filter: blur(14px);
 }
@@ -374,11 +380,11 @@
 
   flex-shrink: 0;
 
-  color: #d4a017;
+  color: #FF6B6B;
 
-  background: rgba(212, 160, 23, 0.10);
+  background: rgba(255, 107, 107, 0.10);
 
-  border: 1px solid rgba(212, 160, 23, 0.12);
+  border: 1px solid rgba(255, 107, 107, 0.12);
 
   border-radius: 10px;
 }
@@ -386,6 +392,7 @@
 
 .ts-about-experience-icon i {
   font-size: 16px;
+  color: #FF6B6B !important;
 }
 
 
@@ -396,7 +403,7 @@
 
 
 .ts-about-experience strong {
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 
   font-size: 22px !important;
 
@@ -407,7 +414,7 @@
 .ts-about-experience div span {
   margin-top: 5px;
 
-  color: rgba(212, 160, 23, 0.44) !important;
+  color: rgba(255, 255, 255, 0.62) !important;
 
   font-size: 9px !important;
 }
@@ -428,9 +435,9 @@
 
   z-index: 0;
 
-  border-left: 2px solid rgba(212, 160, 23, 0.42);
+  border-left: 2px solid rgba(255, 107, 107, 0.42);
 
-  border-bottom: 2px solid rgba(212, 160, 23, 0.42);
+  border-bottom: 2px solid rgba(255, 107, 107, 0.42);
 
   border-radius: 0 0 0 22px;
 
@@ -444,21 +451,23 @@
 
 .ts-about-content {
   min-width: 0;
+
+  color: #071B4A !important;
 }
 
 
 .ts-about-content .eyebrow {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
 .ts-about-content h2 {
-  color: #12203a !important;
+  color: #071B4A !important;
 }
 
 
 .ts-about-content h2 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -467,7 +476,7 @@
 
   margin: 25px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.50) !important;
+  color: rgba(7, 27, 74, 0.60) !important;
 
   font-size: 13px !important;
 
@@ -499,9 +508,9 @@
 
   padding: 17px;
 
-  background: rgba(212, 160, 23, 0.025);
+  background: rgba(7, 27, 74, 0.035);
 
-  border: 1px solid rgba(212, 160, 23, 0.075);
+  border: 1px solid rgba(7, 27, 74, 0.075);
 
   border-radius: 13px;
 
@@ -515,9 +524,9 @@
 .ts-about-check:hover {
   transform: translateY(-3px);
 
-  background: rgba(212, 160, 23, 0.045);
+  background: rgba(255, 107, 107, 0.055);
 
-  border-color: rgba(212, 160, 23, 0.27);
+  border-color: rgba(255, 107, 107, 0.27);
 }
 
 
@@ -531,15 +540,16 @@
 
   flex-shrink: 0;
 
-  color: #12203a;
+  color: #FFFFFF;
 
-  background: #d4a017;
+  background: #FF6B6B;
 
   border-radius: 7px;
 }
 
 
 .ts-about-check > span i {
+  color: #FFFFFF !important;
   font-size: 10px;
 }
 
@@ -547,7 +557,7 @@
 .ts-about-check strong {
   display: block;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: 11px !important;
 
@@ -558,7 +568,7 @@
 .ts-about-check p {
   margin: 5px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.38) !important;
+  color: rgba(7, 27, 74, 0.48) !important;
 
   font-size: 9px !important;
 
@@ -578,12 +588,12 @@
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(212, 160, 23, 0.065),
+      rgba(255, 107, 107, 0.065),
       transparent 35%
     ),
     #faf7f0;
 
-  border-top: 1px solid rgba(212, 160, 23, 0.055);
+  border-top: 1px solid rgba(7, 27, 74, 0.055);
 }
 
 
@@ -599,7 +609,7 @@
 
   margin-bottom: 15px;
 
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-size: 9px !important;
 
@@ -614,7 +624,7 @@
 .ts-about-process-heading h2 {
   margin: 0 !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: clamp(34px, 4vw, 52px) !important;
 
@@ -625,7 +635,7 @@
 
 
 .ts-about-process-heading h2 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -634,7 +644,7 @@
 
   margin: 18px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.43) !important;
+  color: rgba(7, 27, 74, 0.50) !important;
 
   font-size: 12px !important;
 
@@ -656,6 +666,10 @@
 }
 
 
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
 .ts-about-process-card {
   position: relative;
 
@@ -666,10 +680,10 @@
   overflow: hidden;
 
   background:
-    rgba(212, 160, 23, 0.025);
+    rgba(7, 27, 74, 0.035);
 
   border:
-    1px solid rgba(212, 160, 23, 0.075);
+    1px solid rgba(7, 27, 74, 0.075);
 
   border-radius: 18px;
 
@@ -684,10 +698,10 @@
   transform: translateY(-7px);
 
   background:
-    rgba(212, 160, 23, 0.045);
+    rgba(255, 107, 107, 0.055);
 
   border-color:
-    rgba(212, 160, 23, 0.28);
+    rgba(255, 107, 107, 0.28);
 }
 
 
@@ -702,7 +716,7 @@
   width: 100%;
   height: 2px;
 
-  background: #d4a017;
+  background: #FF6B6B;
 
   transform: scaleX(0);
 
@@ -723,7 +737,7 @@
   top: 18px;
   right: 20px;
 
-  color: rgba(212, 160, 23, 0.055);
+  color: rgba(7, 27, 74, 0.09);
 
   font-size: 48px;
 
@@ -743,19 +757,20 @@
 
   margin-bottom: 35px;
 
-  color: #d4a017;
+  color: #FF6B6B;
 
   background:
-    rgba(212, 160, 23, 0.08);
+    rgba(255, 107, 107, 0.10);
 
   border:
-    1px solid rgba(212, 160, 23, 0.12);
+    1px solid rgba(255, 107, 107, 0.15);
 
   border-radius: 13px;
 }
 
 
 .ts-about-process-icon i {
+  color: #FF6B6B !important;
   font-size: 17px;
 }
 
@@ -763,7 +778,7 @@
 .ts-about-process-card h3 {
   margin: 0 0 10px !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: 20px !important;
 
@@ -774,7 +789,7 @@
 .ts-about-process-card p {
   margin: 0 !important;
 
-  color: rgba(212, 160, 23, 0.40) !important;
+  color: rgba(7, 27, 74, 0.50) !important;
 
   font-size: 10px !important;
 
@@ -793,7 +808,7 @@
 
   background: #f3ede0;
 
-  border-top: 1px solid rgba(212, 160, 23, 0.055);
+  border-top: 1px solid rgba(7, 27, 74, 0.055);
 }
 
 
@@ -809,7 +824,7 @@
 
   margin-bottom: 15px;
 
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-size: 9px !important;
 
@@ -824,7 +839,7 @@
 .ts-about-values-heading h2 {
   margin: 0 !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: clamp(34px, 4vw, 52px) !important;
 
@@ -835,7 +850,7 @@
 
 
 .ts-about-values-heading h2 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -853,6 +868,10 @@
 }
 
 
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
 .ts-about-value-card {
   position: relative;
 
@@ -863,10 +882,10 @@
   overflow: hidden;
 
   background:
-    rgba(212, 160, 23, 0.025);
+    rgba(7, 27, 74, 0.035);
 
   border:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(7, 27, 74, 0.08);
 
   border-radius: 20px;
 
@@ -881,10 +900,10 @@
   transform: translateY(-7px);
 
   background:
-    rgba(212, 160, 23, 0.045);
+    rgba(255, 107, 107, 0.055);
 
   border-color:
-    rgba(212, 160, 23, 0.28);
+    rgba(255, 107, 107, 0.28);
 }
 
 
@@ -902,7 +921,7 @@
   border-radius: 50%;
 
   background:
-    rgba(212, 160, 23, 0.075);
+    rgba(255, 107, 107, 0.075);
 
   filter: blur(45px);
 
@@ -924,7 +943,7 @@
   right: 25px;
 
   color:
-    rgba(212, 160, 23, 0.055);
+    rgba(7, 27, 74, 0.09);
 
   font-size: 52px;
 
@@ -944,19 +963,20 @@
 
   margin-bottom: 32px;
 
-  color: #d4a017;
+  color: #FF6B6B;
 
   background:
-    rgba(212, 160, 23, 0.08);
+    rgba(255, 107, 107, 0.10);
 
   border:
-    1px solid rgba(212, 160, 23, 0.12);
+    1px solid rgba(255, 107, 107, 0.15);
 
   border-radius: 14px;
 }
 
 
 .ts-about-value-icon i {
+  color: #FF6B6B !important;
   font-size: 18px;
 }
 
@@ -964,7 +984,7 @@
 .ts-about-value-card h3 {
   margin: 0 0 10px !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: 21px !important;
 
@@ -978,7 +998,7 @@
   margin: 0 !important;
 
   color:
-    rgba(212, 160, 23, 0.43) !important;
+    rgba(7, 27, 74, 0.50) !important;
 
   font-size: 11px !important;
 
@@ -1019,12 +1039,12 @@
   background:
     linear-gradient(
       135deg,
-      rgba(212, 160, 23, 0.085),
-      rgba(212, 160, 23, 0.025)
+      rgba(7, 27, 74, 0.085),
+      rgba(255, 107, 107, 0.035)
     );
 
   border:
-    1px solid rgba(212, 160, 23, 0.09);
+    1px solid rgba(7, 27, 74, 0.09);
 
   border-radius: 25px;
 }
@@ -1044,7 +1064,7 @@
   border-radius: 50%;
 
   background:
-    rgba(212, 160, 23, 0.10);
+    rgba(255, 107, 107, 0.10);
 
   filter: blur(80px);
 
@@ -1064,7 +1084,7 @@
 
   margin-bottom: 15px;
 
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-size: 9px !important;
 
@@ -1081,7 +1101,7 @@
 
   margin: 0 !important;
 
-  color: #12203a !important;
+  color: #071B4A !important;
 
   font-size: clamp(30px, 4vw, 48px) !important;
 
@@ -1092,7 +1112,7 @@
 
 
 .ts-about-commitment-content h2 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -1101,7 +1121,7 @@
 
   margin: 18px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.46) !important;
+  color: rgba(7, 27, 74, 0.52) !important;
 
   font-size: 12px !important;
 
@@ -1137,13 +1157,13 @@
 
   padding: 13px;
 
-  color: rgba(212, 160, 23, 0.72);
+  color: #FFFFFF;
 
   background:
-    rgba(0, 0, 0, 0.22);
+    #071B4A;
 
   border:
-    1px solid rgba(212, 160, 23, 0.075);
+    1px solid rgba(255, 107, 107, 0.14);
 
   border-radius: 11px;
 
@@ -1154,7 +1174,7 @@
 
 
 .ts-about-commitment-points i {
-  color: #d4a017;
+  color: #FF6B6B;
 
   font-size: 13px;
 }
@@ -1405,18 +1425,19 @@
   }
 
 }
-
+ 
 /* =========================================================
    TECHNOSAFE SERVICES
-   PREMIUM DARK CORPORATE DESIGN
+   PREMIUM NAVY + LIGHT RED CORPORATE DESIGN
    FULLY SCOPED
+   HARD COLOR OVERRIDE — IMPORTANT
 ========================================================= */
 
 .ts-services-page {
   width: 100%;
   overflow: hidden;
-  background: #faf7f0;
-  color: #12203a;
+  background: #faf7f0 !important;
+  color: #12203a !important;
 }
 
 
@@ -1434,7 +1455,7 @@
   background:
     radial-gradient(
       circle at 75% 50%,
-      rgba(255, 72, 48, 0.10),
+      rgba(255, 107, 107, 0.10),
       transparent 30%
     ),
     linear-gradient(
@@ -1442,9 +1463,9 @@
       #faf7f0 0%,
       #f3ede0 55%,
       #f3ede0 100%
-    );
+    ) !important;
 
-  border-bottom: 1px solid rgba(212, 160, 23, 0.07);
+  border-bottom: 1px solid rgba(18, 32, 58, 0.08) !important;
 }
 
 
@@ -1461,7 +1482,7 @@
 
   border-radius: 50%;
 
-  background: rgba(212, 160, 23, 0.045);
+  background: rgba(255, 107, 107, 0.045) !important;
 
   filter: blur(90px);
 
@@ -1482,14 +1503,14 @@
 
   background-image:
     linear-gradient(
-      rgba(212, 160, 23, 0.025) 1px,
+      rgba(18, 32, 58, 0.025) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(212, 160, 23, 0.025) 1px,
+      rgba(18, 32, 58, 0.025) 1px,
       transparent 1px
-    );
+    ) !important;
 
   background-size: 70px 70px;
 
@@ -1545,7 +1566,7 @@
 
   margin-bottom: 19px;
 
-  color: #e8b445;
+  color: #ff6b6b !important;
 
   font-size: 9px;
 
@@ -1561,7 +1582,7 @@
   width: 24px;
   height: 1px;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
 }
 
 
@@ -1587,9 +1608,9 @@
 
 
 .ts-services-hero h1 strong {
-  color: #d4a017;
+  color: #ff6b6b !important;
 
-  font-weight: 650;
+  font-weight: 650 !important;
 }
 
 
@@ -1598,7 +1619,7 @@
 
   margin: 25px 0 0;
 
-  color: rgba(212, 160, 23, 0.50) !important;
+  color: rgba(18, 32, 58, 0.65) !important;
 
   font-size: 13px !important;
 
@@ -1640,48 +1661,50 @@
 
   font-size: 10px;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
   transition: all 0.3s ease;
 }
 
 
 .ts-services-btn-primary {
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
 
-  border: 1px solid #d4a017;
+  border: 1px solid #ff6b6b !important;
 }
 
 
 .ts-services-btn-primary:hover {
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #e8b445;
+  background: #12203a !important;
+
+  border-color: #12203a !important;
 
   transform: translateY(-3px);
 
   box-shadow:
-    0 12px 30px rgba(212, 160, 23, 0.20);
+    0 12px 30px rgba(18, 32, 58, 0.20) !important;
 }
 
 
 .ts-services-btn-outline {
-  color: rgba(212, 160, 23, 0.70);
+  color: #12203a !important;
 
-  border: 1px solid rgba(212, 160, 23, 0.11);
+  border: 1px solid rgba(18, 32, 58, 0.18) !important;
 
-  background: rgba(212, 160, 23, 0.025);
+  background: rgba(18, 32, 58, 0.025) !important;
 }
 
 
 .ts-services-btn-outline:hover {
-  color: #12203a;
+  color: #ffffff !important;
 
-  border-color: rgba(212, 160, 23, 0.30);
+  border-color: #ff6b6b !important;
 
-  background: rgba(212, 160, 23, 0.06);
+  background: #ff6b6b !important;
 
   transform: translateY(-3px);
 }
@@ -1711,7 +1734,7 @@
 
   border-radius: 50%;
 
-  border: 1px solid rgba(212, 160, 23, 0.12);
+  border: 1px solid rgba(18, 32, 58, 0.15) !important;
 }
 
 
@@ -1727,8 +1750,7 @@
   width: 250px;
   height: 250px;
 
-  border-color:
-    rgba(212, 160, 23, 0.08);
+  border-color: rgba(255, 107, 107, 0.20) !important;
 
   animation:
     tsRotateReverse 14s linear infinite;
@@ -1755,29 +1777,29 @@
   background:
     radial-gradient(
       circle,
-      rgba(212, 160, 23, 0.17),
-      rgba(212, 160, 23, 0.025) 60%
-    );
+      rgba(255, 107, 107, 0.17),
+      rgba(18, 32, 58, 0.025) 60%
+    ) !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.25);
+    1px solid rgba(255, 107, 107, 0.30) !important;
 
   box-shadow:
-    0 0 70px rgba(212, 160, 23, 0.10);
+    0 0 70px rgba(255, 107, 107, 0.10) !important;
 }
 
 
 .ts-services-hero-center i {
   margin-bottom: 7px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 27px;
 }
 
 
 .ts-services-hero-center span {
-  color: rgba(212, 160, 23, 0.48);
+  color: rgba(18, 32, 58, 0.58) !important;
 
   font-size: 7px;
 
@@ -1788,7 +1810,7 @@
 
 
 .ts-services-hero-center strong {
-  color: #12203a;
+  color: #12203a !important;
 
   font-size: 16px;
 
@@ -1813,12 +1835,12 @@
 
   padding: 10px 13px;
 
-  color: rgba(212, 160, 23, 0.65);
+  color: #ffffff !important;
 
-  background: rgba(18, 32, 58, 0.78);
+  background: #12203a !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(255, 107, 107, 0.18) !important;
 
   border-radius: 9px;
 
@@ -1827,12 +1849,12 @@
   font-size: 9px;
 
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.25);
+    0 12px 30px rgba(18, 32, 58, 0.25) !important;
 }
 
 
 .ts-services-floating i {
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 12px;
 }
@@ -1879,7 +1901,7 @@
 
 
 /* =========================================================
-   SERVICES SECTION
+   SERVICES SECTION — OUR CAPABILITIES
 ========================================================= */
 
 .ts-services-section {
@@ -1887,7 +1909,9 @@
 
   padding: 110px 0;
 
-  background: #f3ede0;
+  background: #f3ede0 !important;
+
+  color: #12203a !important;
 }
 
 
@@ -1904,7 +1928,7 @@
 
   border-radius: 50%;
 
-  background: rgba(212, 160, 23, 0.035);
+  background: rgba(255, 107, 107, 0.035) !important;
 
   filter: blur(100px);
 
@@ -1916,6 +1940,8 @@
   position: relative;
 
   z-index: 2;
+
+  color: #12203a !important;
 }
 
 
@@ -1956,15 +1982,17 @@
 
   overflow: hidden;
 
+  color: #12203a !important;
+
   background:
     linear-gradient(
       145deg,
-      rgba(212, 160, 23, 0.045),
-      rgba(212, 160, 23, 0.018)
-    );
+      rgba(18, 32, 58, 0.045),
+      rgba(18, 32, 58, 0.018)
+    ) !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.075);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
   border-radius: 17px;
 
@@ -1987,7 +2015,7 @@
   width: 100%;
   height: 2px;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
 
   transform: scaleX(0);
 
@@ -2000,14 +2028,16 @@
 .ts-service-card:hover {
   transform: translateY(-6px);
 
+  color: #12203a !important;
+
   border-color:
-    rgba(212, 160, 23, 0.28);
+    rgba(255, 107, 107, 0.45) !important;
 
   background:
-    rgba(212, 160, 23, 0.055);
+    rgba(255, 107, 107, 0.055) !important;
 
   box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.35);
+    0 18px 45px rgba(18, 32, 58, 0.18) !important;
 }
 
 
@@ -2026,7 +2056,7 @@
   right: -7px;
   bottom: -19px;
 
-  color: rgba(212, 160, 23, 0.025);
+  color: rgba(18, 32, 58, 0.055) !important;
 
   font-size: 100px;
 
@@ -2045,7 +2075,7 @@
 
 
 .ts-service-card:hover .ts-service-bg-number {
-  color: rgba(212, 160, 23, 0.045);
+  color: rgba(255, 107, 107, 0.09) !important;
 
   transform: translateY(-5px);
 }
@@ -2065,8 +2095,14 @@
   align-items: center;
 
   justify-content: space-between;
+
+  color: #12203a !important;
 }
 
+
+/* =========================================================
+   CARD ICON
+========================================================= */
 
 .ts-service-icon {
   width: 48px;
@@ -2077,13 +2113,13 @@
   align-items: center;
   justify-content: center;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   background:
-    rgba(212, 160, 23, 0.075);
+    rgba(255, 107, 107, 0.075) !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.14);
+    1px solid rgba(255, 107, 107, 0.20) !important;
 
   border-radius: 12px;
 
@@ -2092,24 +2128,37 @@
 
 
 .ts-service-icon i {
+  color: #ff6b6b !important;
+
   font-size: 16px;
 }
 
 
 .ts-service-card:hover .ts-service-icon {
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
+
+  border-color: #ff6b6b !important;
 
   transform: scale(1.05);
 
   box-shadow:
-    0 8px 22px rgba(212, 160, 23, 0.18);
+    0 8px 22px rgba(255, 107, 107, 0.18) !important;
 }
 
 
+.ts-service-card:hover .ts-service-icon i {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
 .ts-service-number {
-  color: rgba(212, 160, 23, 0.27);
+  color: rgba(18, 32, 58, 0.45) !important;
 
   font-size: 9px;
 
@@ -2131,8 +2180,14 @@
   margin-top: auto;
 
   padding-top: 45px;
+
+  color: #12203a !important;
 }
 
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
 
 .ts-service-card-content h3 {
   margin: 0 0 9px !important;
@@ -2149,22 +2204,36 @@
 }
 
 
-.ts-service-card:hover
-.ts-service-card-content h3 {
-  color: #e8b445 !important;
-}
-
+/* =========================================================
+   CARD PARAGRAPH
+========================================================= */
 
 .ts-service-card-content p {
   max-width: 320px;
 
   margin: 0 !important;
 
-  color: rgba(212, 160, 23, 0.43) !important;
+  color: rgba(18, 32, 58, 0.65) !important;
 
   font-size: 11px !important;
 
   line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   CARD HOVER CONTENT
+========================================================= */
+
+.ts-service-card:hover
+.ts-service-card-content h3 {
+  color: #ff6b6b !important;
+}
+
+
+.ts-service-card:hover
+.ts-service-card-content p {
+  color: rgba(18, 32, 58, 0.78) !important;
 }
 
 
@@ -2188,9 +2257,9 @@
   padding-top: 14px;
 
   border-top:
-    1px solid rgba(212, 160, 23, 0.07);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
-  color: rgba(212, 160, 23, 0.28);
+  color: rgba(18, 32, 58, 0.55) !important;
 
   font-size: 7px;
 
@@ -2201,7 +2270,7 @@
 
 
 .ts-service-card-footer i {
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 9px;
 
@@ -2210,7 +2279,15 @@
 
 
 .ts-service-card:hover
+.ts-service-card-footer {
+  color: rgba(18, 32, 58, 0.75) !important;
+}
+
+
+.ts-service-card:hover
 .ts-service-card-footer i {
+  color: #ff6b6b !important;
+
   transform: translateX(5px);
 }
 
@@ -2224,13 +2301,15 @@
 
   padding: 105px 0;
 
-  background: #faf7f0;
+  background: #faf7f0 !important;
+
+  color: #12203a !important;
 
   border-top:
-    1px solid rgba(212, 160, 23, 0.055);
+    1px solid rgba(18, 32, 58, 0.07) !important;
 
   border-bottom:
-    1px solid rgba(212, 160, 23, 0.055);
+    1px solid rgba(18, 32, 58, 0.07) !important;
 }
 
 
@@ -2250,11 +2329,11 @@
 .ts-process-header h2 {
   margin: 0;
 
-  color: #12203a;
+  color: #12203a !important;
 
-  font-size: clamp(34px, 4vw, 50px);
+  font-size: clamp(34px, 4vw, 50px) !important;
 
-  font-weight: 500;
+  font-weight: 500 !important;
 
   line-height: 1.05;
 
@@ -2263,16 +2342,16 @@
 
 
 .ts-process-header h2 strong {
-  color: #d4a017;
+  color: #ff6b6b !important;
 
-  font-weight: 650;
+  font-weight: 650 !important;
 }
 
 
 .ts-process-header > p {
   margin: 0;
 
-  color: rgba(212, 160, 23, 0.40);
+  color: rgba(18, 32, 58, 0.62) !important;
 
   font-size: 11px;
 
@@ -2295,10 +2374,10 @@
   margin-top: 60px;
 
   border-top:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
   border-bottom:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 }
 
 
@@ -2310,7 +2389,7 @@
   padding: 28px 25px;
 
   border-right:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
   transition:
     background 0.3s ease;
@@ -2319,18 +2398,18 @@
 
 .ts-process-item:first-child {
   border-left:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 }
 
 
 .ts-process-item:hover {
   background:
-    rgba(212, 160, 23, 0.035);
+    rgba(255, 107, 107, 0.035) !important;
 }
 
 
 .ts-process-number {
-  color: rgba(212, 160, 23, 0.22);
+  color: rgba(18, 32, 58, 0.42) !important;
 
   font-size: 9px;
 
@@ -2351,16 +2430,18 @@
   align-items: center;
   justify-content: center;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   background:
-    rgba(212, 160, 23, 0.07);
+    rgba(255, 107, 107, 0.075) !important;
 
   border-radius: 10px;
 }
 
 
 .ts-process-icon i {
+  color: #ff6b6b !important;
+
   font-size: 14px;
 }
 
@@ -2368,11 +2449,11 @@
 .ts-process-item h3 {
   margin: 18px 0 7px;
 
-  color: #12203a;
+  color: #12203a !important;
 
-  font-size: 17px;
+  font-size: 17px !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 
@@ -2381,7 +2462,7 @@
 
   margin: 0;
 
-  color: rgba(212, 160, 23, 0.38);
+  color: rgba(18, 32, 58, 0.62) !important;
 
   font-size: 10px;
 
@@ -2396,7 +2477,9 @@
 .ts-services-contact-strip {
   padding: 55px 0;
 
-  background: #f3ede0;
+  background: #f3ede0 !important;
+
+  color: #12203a !important;
 }
 
 
@@ -2412,12 +2495,12 @@
   background:
     linear-gradient(
       100deg,
-      rgba(212, 160, 23, 0.075),
-      rgba(212, 160, 23, 0.025)
-    );
+      rgba(255, 107, 107, 0.075),
+      rgba(18, 32, 58, 0.025)
+    ) !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.14);
+    1px solid rgba(18, 32, 58, 0.14) !important;
 
   border-radius: 16px;
 }
@@ -2434,16 +2517,18 @@
 
   flex-shrink: 0;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   background:
-    rgba(212, 160, 23, 0.09);
+    rgba(255, 107, 107, 0.09) !important;
 
   border-radius: 12px;
 }
 
 
 .ts-contact-icon i {
+  color: #ff6b6b !important;
+
   font-size: 17px;
 }
 
@@ -2458,7 +2543,7 @@
 
   margin-bottom: 5px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 7px;
 
@@ -2471,11 +2556,11 @@
 .ts-contact-content h3 {
   margin: 0;
 
-  color: #12203a;
+  color: #12203a !important;
 
-  font-size: 16px;
+  font-size: 16px !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 
@@ -2493,9 +2578,11 @@
 
   padding: 12px 17px;
 
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
+
+  border: 1px solid #ff6b6b !important;
 
   border-radius: 8px;
 
@@ -2503,16 +2590,18 @@
 
   font-size: 9px;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
   transition: all 0.3s ease;
 }
 
 
 .ts-contact-button:hover {
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #e8b445;
+  background: #12203a !important;
+
+  border-color: #12203a !important;
 
   transform: translateY(-2px);
 }
@@ -2525,28 +2614,28 @@
 @media (max-width: 1050px) {
 
   .ts-services-hero-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
 
   .ts-services-hero-copy {
-    max-width: 800px;
+    max-width: 800px !important;
   }
 
 
   .ts-services-hero-visual {
-    display: none;
+    display: none !important;
   }
 
 
   .ts-services-grid {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+      repeat(2, minmax(0, 1fr)) !important;
   }
 
 
   .ts-process-header {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
 
     gap: 40px;
   }
@@ -2561,14 +2650,14 @@
 @media (max-width: 700px) {
 
   .ts-services-hero {
-    min-height: auto;
+    min-height: auto !important;
   }
 
 
   .ts-services-hero-inner {
-    min-height: auto;
+    min-height: auto !important;
 
-    display: block;
+    display: block !important;
   }
 
 
@@ -2584,29 +2673,35 @@
 
   .ts-services-hero-copy > p {
     font-size: 12px !important;
+
+    color: rgba(18, 32, 58, 0.65) !important;
   }
 
 
   .ts-services-hero-actions {
-    flex-direction: column;
+    flex-direction: column !important;
 
-    align-items: stretch;
+    align-items: stretch !important;
   }
 
 
   .ts-services-btn-primary,
   .ts-services-btn-outline {
-    width: 100%;
+    width: 100% !important;
   }
 
 
   .ts-services-section {
     padding: 80px 0;
+
+    background: #f3ede0 !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
 
     margin-top: 45px;
   }
@@ -2614,23 +2709,29 @@
 
   .ts-service-card {
     min-height: 260px;
+
+    color: #12203a !important;
   }
 
 
   .ts-services-process {
     padding: 80px 0;
+
+    background: #faf7f0 !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-process-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
 
     gap: 25px;
   }
 
 
   .ts-process-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
 
     margin-top: 45px;
   }
@@ -2640,12 +2741,12 @@
     min-height: 210px;
 
     border-bottom:
-      1px solid rgba(212, 160, 23, 0.08);
+      1px solid rgba(18, 32, 58, 0.10) !important;
   }
 
 
   .ts-process-item:nth-child(2) {
-    border-right: 0;
+    border-right: 0 !important;
   }
 
 
@@ -2655,7 +2756,7 @@
 
 
   .ts-contact-button {
-    display: none;
+    display: none !important;
   }
 
 }
@@ -2678,12 +2779,14 @@
 
 
   .ts-services-eyebrow {
-    font-size: 8px;
+    font-size: 8px !important;
   }
 
 
   .ts-services-section {
     padding: 70px 0;
+
+    background: #f3ede0 !important;
   }
 
 
@@ -2693,6 +2796,8 @@
     padding: 21px;
 
     border-radius: 15px;
+
+    color: #12203a !important;
   }
 
 
@@ -2703,29 +2808,33 @@
 
   .ts-service-card-content h3 {
     font-size: 17px !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-service-card-content p {
     font-size: 10px !important;
+
+    color: rgba(18, 32, 58, 0.65) !important;
   }
 
 
   .ts-process-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
 
   .ts-process-item {
-    border-left: 1px solid rgba(212, 160, 23, 0.08);
+    border-left: 1px solid rgba(18, 32, 58, 0.10) !important;
 
-    border-right: 1px solid rgba(212, 160, 23, 0.08);
+    border-right: 1px solid rgba(18, 32, 58, 0.10) !important;
   }
 
 
   .ts-process-item:nth-child(2) {
     border-right:
-      1px solid rgba(212, 160, 23, 0.08);
+      1px solid rgba(18, 32, 58, 0.10) !important;
   }
 
 
@@ -2735,14 +2844,216 @@
 
 
   .ts-contact-content h3 {
-    font-size: 14px;
+    font-size: 14px !important;
+
+    color: #12203a !important;
   }
 
 }
 
 
 /* =========================================================
+   FINAL HARD COLOR OVERRIDE
+   THIS BLOCK MUST REMAIN LAST
+========================================================= */
+
+
+/* REMOVE TEXT SHADOW / COLOR INTERFERENCE */
+
+.ts-services-section .ts-service-card,
+.ts-services-section .ts-service-card *,
+.ts-services-section .ts-service-card-content,
+.ts-services-section .ts-service-card-content h3,
+.ts-services-section .ts-service-card-content p,
+.ts-services-section .ts-service-card-top,
+.ts-services-section .ts-service-number,
+.ts-services-section .ts-service-card-footer {
+  text-shadow: none !important;
+}
+
+
+/* =========================================================
+   CARD HEADING — ALWAYS VISIBLE
+========================================================= */
+
+.ts-services-section .ts-service-card-content h3 {
+  color: #12203a !important;
+}
+
+
+/* =========================================================
+   CARD PARAGRAPH — ALWAYS VISIBLE
+========================================================= */
+
+.ts-services-section .ts-service-card-content p {
+  color: rgba(18, 32, 58, 0.65) !important;
+}
+
+
+/* =========================================================
+   HOVER HEADING
+========================================================= */
+
+.ts-services-section .ts-service-card:hover
+.ts-service-card-content h3 {
+  color: #ff6b6b !important;
+}
+
+
+/* =========================================================
+   HOVER PARAGRAPH
+========================================================= */
+
+.ts-services-section .ts-service-card:hover
+.ts-service-card-content p {
+  color: rgba(18, 32, 58, 0.78) !important;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-number {
+  color: rgba(18, 32, 58, 0.45) !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-card-footer {
+  color: rgba(18, 32, 58, 0.65) !important;
+
+  border-top-color:
+    rgba(18, 32, 58, 0.12) !important;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-icon {
+  color: #ff6b6b !important;
+
+  background:
+    rgba(255, 107, 107, 0.075) !important;
+
+  border-color:
+    rgba(255, 107, 107, 0.20) !important;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.ts-services-section .ts-service-card:hover
+.ts-service-icon {
+  color: #ffffff !important;
+
+  background: #ff6b6b !important;
+
+  border-color: #ff6b6b !important;
+}
+
+
+/* =========================================================
+   ICON INNER
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-icon i {
+  color: #ff6b6b !important;
+}
+
+
+.ts-services-section .ts-service-card:hover
+.ts-service-icon i {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-bg-number {
+  color: rgba(18, 32, 58, 0.055) !important;
+}
+
+
+.ts-services-section .ts-service-card:hover
+.ts-service-bg-number {
+  color: rgba(255, 107, 107, 0.09) !important;
+}
+
+
+/* =========================================================
+   FOOTER ICON
+========================================================= */
+
+.ts-services-section .ts-service-card
+.ts-service-card-footer i {
+  color: #ff6b6b !important;
+}
+
+
+/* =========================================================
+   HOVER LINE
+========================================================= */
+
+.ts-services-section .ts-service-card::after {
+  background: #ff6b6b !important;
+}
+
+
+/* =========================================================
+   FINAL GLOBAL TEXT PROTECTION
+========================================================= */
+
+.ts-services-page h1,
+.ts-services-page h2,
+.ts-services-page h3,
+.ts-services-page h4,
+.ts-services-page h5,
+.ts-services-page h6 {
+  color: #12203a !important;
+}
+
+
+.ts-services-page p {
+  color: rgba(18, 32, 58, 0.65) !important;
+}
+
+
+.ts-services-page strong,
+.ts-services-page b {
+  color: #12203a !important;
+}
+
+
+.ts-services-page a {
+  color: #12203a !important;
+}
+
+
+.ts-services-page a:hover {
+  color: #ff6b6b !important;
+} 
+ 
+
+ 
+/* =========================================================
    TECHNOSAFE PRODUCTS PAGE
+   NAVY DARK + LIGHT RED COLOR SYSTEM
+   BACKGROUND COLORS KEPT UNCHANGED
    FULLY SCOPED CSS
 ========================================================= */
 
@@ -2750,8 +3061,8 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background: #faf7f0;
-  color: #12203a;
+  background: #faf7f0 !important;
+  color: #12203a !important;
 }
 
 
@@ -2769,17 +3080,24 @@
 
   overflow: hidden;
 
+  /* BACKGROUND UNCHANGED */
   background:
     radial-gradient(
       circle at 85% 50%,
       rgba(212, 160, 23, 0.12),
       transparent 32%
     ),
-    #faf7f0;
+    #faf7f0 !important;
 
-  border-bottom: 1px solid rgba(212, 160, 23, 0.08);
+  border-bottom:
+    1px solid rgba(18, 32, 58, 0.10) !important;
 }
 
+
+/* =========================================================
+   HERO DECORATION
+   BACKGROUND UNCHANGED
+========================================================= */
 
 .ts-products-hero::before {
   content: "";
@@ -2794,7 +3112,8 @@
 
   border-radius: 50%;
 
-  background: rgba(212, 160, 23, 0.07);
+  /* BACKGROUND UNCHANGED */
+  background: rgba(212, 160, 23, 0.07) !important;
 
   filter: blur(100px);
 
@@ -2808,6 +3127,7 @@
   position: absolute;
   inset: 0;
 
+  /* BACKGROUND UNCHANGED */
   background-image:
     linear-gradient(
       rgba(212, 160, 23, 0.018) 1px,
@@ -2817,7 +3137,7 @@
       90deg,
       rgba(212, 160, 23, 0.018) 1px,
       transparent 1px
-    );
+    ) !important;
 
   background-size: 70px 70px;
 
@@ -2851,7 +3171,7 @@
 
   margin-bottom: 20px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 10px;
 
@@ -2869,7 +3189,7 @@
   width: 28px;
   height: 1px;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
 }
 
 
@@ -2896,7 +3216,7 @@
 
 
 .ts-products-hero h1 strong {
-  color: #d4a017 !important;
+  color: #ff6b6b !important;
 
   font-weight: 650 !important;
 }
@@ -2909,7 +3229,7 @@
 
   padding: 0 !important;
 
-  color: rgba(212, 160, 23, 0.48) !important;
+  color: rgba(18, 32, 58, 0.62) !important;
 
   font-size: 14px !important;
 
@@ -2938,12 +3258,12 @@
   margin-right: 28px;
 
   border-right:
-    1px solid rgba(212, 160, 23, 0.12);
+    1px solid rgba(18, 32, 58, 0.14) !important;
 }
 
 
 .ts-products-hero-stats > div:last-child {
-  border-right: none;
+  border-right: none !important;
 }
 
 
@@ -2952,11 +3272,11 @@
 
   margin: 0;
 
-  color: #12203a;
+  color: #12203a !important;
 
   font-size: 27px;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 
@@ -2965,7 +3285,7 @@
 
   margin-top: 5px;
 
-  color: rgba(212, 160, 23, 0.35);
+  color: rgba(18, 32, 58, 0.48) !important;
 
   font-size: 9px;
 
@@ -2979,6 +3299,7 @@
 
 /* =========================================================
    PRODUCTS CONTENT
+   BACKGROUND UNCHANGED
 ========================================================= */
 
 .ts-products-content {
@@ -2986,7 +3307,7 @@
 
   padding: 100px 0 80px;
 
-  background: #f3ede0;
+  background: #f3ede0 !important;
 }
 
 
@@ -3006,7 +3327,7 @@
 
   margin-bottom: 12px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 9px;
 
@@ -3034,7 +3355,7 @@
 
 
 .ts-products-intro h2 strong {
-  color: #d4a017 !important;
+  color: #ff6b6b !important;
 
   font-weight: 650 !important;
 }
@@ -3045,7 +3366,7 @@
 
   margin: 18px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.4) !important;
+  color: rgba(18, 32, 58, 0.58) !important;
 
   font-size: 13px !important;
 
@@ -3063,13 +3384,13 @@
   padding: 60px 0;
 
   border-top:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 }
 
 
 .ts-product-section:last-child {
   border-bottom:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 }
 
 
@@ -3100,7 +3421,7 @@
 
   margin-bottom: 8px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 8px;
 
@@ -3135,7 +3456,7 @@
 
   margin: 0 !important;
 
-  color: rgba(212, 160, 23, 0.38) !important;
+  color: rgba(18, 32, 58, 0.58) !important;
 
   font-size: 11px !important;
 
@@ -3181,21 +3502,15 @@
 }
 
 
-/* LEFT TO RIGHT */
-
 .ts-product-carousel.ts-carousel-left {
   animation-name: ts-products-left;
 }
 
 
-/* RIGHT TO LEFT */
-
 .ts-product-carousel.ts-carousel-right {
   animation-name: ts-products-right;
 }
 
-
-/* PAUSE */
 
 .ts-product-carousel:hover {
   animation-play-state: paused;
@@ -3255,6 +3570,7 @@
 
 /* =========================================================
    PRODUCT CARD
+   BACKGROUND UNCHANGED
 ========================================================= */
 
 .ts-product-card {
@@ -3268,11 +3584,12 @@
   overflow: hidden;
 
   border:
-    1px solid rgba(212, 160, 23, 0.09);
+    1px solid rgba(18, 32, 58, 0.12) !important;
 
   border-radius: 20px;
 
-  background: #ece3d1;
+  /* BACKGROUND UNCHANGED */
+  background: #ece3d1 !important;
 
   cursor: pointer;
 
@@ -3289,11 +3606,11 @@
   transform: translateY(-8px);
 
   border-color:
-    rgba(212, 160, 23, 0.4);
+    rgba(255, 107, 107, 0.55) !important;
 
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.55),
-    0 0 35px rgba(212, 160, 23, 0.08);
+    0 0 35px rgba(255, 107, 107, 0.10) !important;
 }
 
 
@@ -3328,6 +3645,7 @@
 
 /* =========================================================
    IMAGE OVERLAY
+   BACKGROUND UNCHANGED
 ========================================================= */
 
 .ts-product-card-overlay {
@@ -3337,13 +3655,14 @@
 
   z-index: -2;
 
+  /* BACKGROUND UNCHANGED */
   background:
     linear-gradient(
       to top,
       rgba(0, 0, 0, 0.96) 0%,
       rgba(0, 0, 0, 0.72) 40%,
       rgba(0, 0, 0, 0.18) 100%
-    );
+    ) !important;
 
   transition:
     background 0.45s ease;
@@ -3352,12 +3671,13 @@
 
 .ts-product-card:hover
 .ts-product-card-overlay {
+  /* BACKGROUND UNCHANGED */
   background:
     linear-gradient(
       to top,
       rgba(0, 0, 0, 0.97),
       rgba(0, 0, 0, 0.88)
-    );
+    ) !important;
 }
 
 
@@ -3380,16 +3700,17 @@
   justify-content: center;
 
   border:
-    1px solid rgba(212, 160, 23, 0.15);
+    1px solid rgba(255, 107, 107, 0.25) !important;
 
   border-radius: 50%;
 
+  /* BACKGROUND UNCHANGED */
   background:
-    rgba(0, 0, 0, 0.32);
+    rgba(0, 0, 0, 0.32) !important;
 
   backdrop-filter: blur(10px);
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 13px;
 
@@ -3402,9 +3723,11 @@
 
 .ts-product-card:hover
 .ts-product-card-icon {
-  color: #12203a;
+  color: #ffffff !important;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
+
+  border-color: #ff6b6b !important;
 
   transform: rotate(-8deg);
 }
@@ -3439,7 +3762,7 @@
 
   margin-bottom: 9px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 8px;
 
@@ -3453,7 +3776,7 @@
   margin: 0 !important;
   padding: 0 !important;
 
-  color: #12203a !important;
+  color: #ffffff !important;
 
   font-size: 23px !important;
 
@@ -3474,7 +3797,7 @@
 
   padding: 0 !important;
 
-  color: rgba(212, 160, 23, 0.48) !important;
+  color: rgba(255, 255, 255, 0.72) !important;
 
   font-size: 10px !important;
 
@@ -3516,10 +3839,10 @@
   padding-top: 12px;
 
   border-top:
-    1px solid rgba(212, 160, 23, 0.1);
+    1px solid rgba(255, 107, 107, 0.25) !important;
 
   color:
-    rgba(212, 160, 23, 0.7);
+    rgba(255, 255, 255, 0.82) !important;
 
   text-decoration: none;
 
@@ -3549,7 +3872,7 @@
 
 
 .ts-product-card-link i {
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   transition:
     transform 0.3s ease;
@@ -3557,7 +3880,7 @@
 
 
 .ts-product-card-link:hover {
-  color: #12203a;
+  color: #ff6b6b !important;
 }
 
 
@@ -3568,6 +3891,7 @@
 
 /* =========================================================
    BOTTOM CONTACT
+   BACKGROUND UNCHANGED
 ========================================================= */
 
 .ts-products-bottom {
@@ -3575,7 +3899,7 @@
 
   padding: 70px 0 90px;
 
-  background: #faf7f0;
+  background: #faf7f0 !important;
 }
 
 
@@ -3589,16 +3913,17 @@
   padding: 30px;
 
   border:
-    1px solid rgba(212, 160, 23, 0.16);
+    1px solid rgba(18, 32, 58, 0.16) !important;
 
   border-radius: 20px;
 
+  /* BACKGROUND UNCHANGED */
   background:
     linear-gradient(
       110deg,
       rgba(212, 160, 23, 0.065),
       rgba(212, 160, 23, 0.015)
-    );
+    ) !important;
 }
 
 
@@ -3615,10 +3940,11 @@
 
   border-radius: 15px;
 
+  /* BACKGROUND UNCHANGED */
   background:
-    rgba(212, 160, 23, 0.11);
+    rgba(212, 160, 23, 0.11) !important;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 19px;
 }
@@ -3634,7 +3960,7 @@
 
   margin-bottom: 6px;
 
-  color: #d4a017;
+  color: #ff6b6b !important;
 
   font-size: 8px;
 
@@ -3659,7 +3985,7 @@
   margin: 6px 0 0 !important;
 
   color:
-    rgba(212, 160, 23, 0.4) !important;
+    rgba(18, 32, 58, 0.58) !important;
 
   font-size: 10px !important;
 
@@ -3682,24 +4008,31 @@
 
   border-radius: 9px;
 
-  background: #d4a017;
+  background: #ff6b6b !important;
 
-  color: #12203a;
+  color: #ffffff !important;
+
+  border: 1px solid #ff6b6b !important;
 
   text-decoration: none;
 
   font-size: 9px;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease;
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
 .ts-products-bottom-btn:hover {
-  background: #e8b445;
+  background: #12203a !important;
+
+  border-color: #12203a !important;
+
+  color: #ffffff !important;
 
   transform: translateY(-3px);
 }
@@ -3766,6 +4099,8 @@
 
   .ts-products-hero-content > p {
     font-size: 12px !important;
+
+    color: rgba(18, 32, 58, 0.62) !important;
   }
 
 
@@ -3791,17 +4126,24 @@
 
 
   .ts-products-hero-stats strong {
-    font-size: 21px;
+    font-size: 21px !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-products-hero-stats span {
     font-size: 7px;
+
+    color: rgba(18, 32, 58, 0.48) !important;
   }
 
 
   .ts-products-content {
     padding: 70px 0 50px;
+
+    /* BACKGROUND UNCHANGED */
+    background: #f3ede0 !important;
   }
 
 
@@ -3812,21 +4154,30 @@
 
   .ts-products-intro h2 {
     font-size: 35px !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-product-section {
     padding: 45px 0;
+
+    border-top:
+      1px solid rgba(18, 32, 58, 0.10) !important;
   }
 
 
   .ts-product-section-title h2 {
     font-size: 26px !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-product-section-head > p {
     font-size: 10px !important;
+
+    color: rgba(18, 32, 58, 0.58) !important;
   }
 
 
@@ -3841,6 +4192,8 @@
 
   .ts-products-bottom {
     padding: 50px 0 65px;
+
+    background: #faf7f0 !important;
   }
 
 
@@ -3848,11 +4201,14 @@
     align-items: flex-start;
 
     padding: 22px;
+
+    border-color:
+      rgba(18, 32, 58, 0.16) !important;
   }
 
 
   .ts-products-bottom-btn {
-    display: none;
+    display: none !important;
   }
 
 }
@@ -3870,12 +4226,16 @@
 
 
   .ts-products-hero-stats strong {
-    font-size: 18px;
+    font-size: 18px !important;
+
+    color: #12203a !important;
   }
 
 
   .ts-product-section-title h2 {
     font-size: 23px !important;
+
+    color: #12203a !important;
   }
 
 
@@ -3890,22 +4250,294 @@
 
   .ts-product-card h3 {
     font-size: 20px !important;
+
+    color: #ffffff !important;
   }
 
 }
 
 
 /* =========================================================
+   FINAL HARD COLOR OVERRIDE
+   MUST REMAIN LAST
+========================================================= */
+
+
+/* MAIN PAGE TEXT */
+
+.ts-products-page {
+  color: #12203a !important;
+}
+
+
+/* HERO */
+
+.ts-products-page .ts-products-eyebrow {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-eyebrow > span {
+  background: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-hero h1 {
+  color: #12203a !important;
+}
+
+
+.ts-products-page .ts-products-hero h1 strong {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-hero-content > p {
+  color: rgba(18, 32, 58, 0.62) !important;
+}
+
+
+/* HERO STATS */
+
+.ts-products-page .ts-products-hero-stats strong {
+  color: #12203a !important;
+}
+
+
+.ts-products-page .ts-products-hero-stats span {
+  color: rgba(18, 32, 58, 0.48) !important;
+}
+
+
+/* INTRO */
+
+.ts-products-page .ts-products-intro > span {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-intro h2 {
+  color: #12203a !important;
+}
+
+
+.ts-products-page .ts-products-intro h2 strong {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-intro p {
+  color: rgba(18, 32, 58, 0.58) !important;
+}
+
+
+/* SECTION */
+
+.ts-products-page .ts-product-section-label {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-product-section-title h2 {
+  color: #12203a !important;
+}
+
+
+.ts-products-page .ts-product-section-head > p {
+  color: rgba(18, 32, 58, 0.58) !important;
+}
+
+
+/* CARD */
+
+.ts-products-page .ts-product-card {
+  border-color:
+    rgba(18, 32, 58, 0.12) !important;
+}
+
+
+.ts-products-page .ts-product-card:hover {
+  border-color:
+    rgba(255, 107, 107, 0.55) !important;
+}
+
+
+/* CARD ICON */
+
+.ts-products-page .ts-product-card-icon {
+  color: #ff6b6b !important;
+
+  border-color:
+    rgba(255, 107, 107, 0.25) !important;
+}
+
+
+.ts-products-page .ts-product-card:hover
+.ts-product-card-icon {
+  color: #ffffff !important;
+
+  background: #ff6b6b !important;
+
+  border-color: #ff6b6b !important;
+}
+
+
+/* CARD LABEL */
+
+.ts-products-page .ts-product-card-label {
+  color: #ff6b6b !important;
+}
+
+
+/* CARD TITLE */
+
+.ts-products-page .ts-product-card h3 {
+  color: #ffffff !important;
+}
+
+
+/* CARD DESCRIPTION */
+
+.ts-products-page .ts-product-card p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+/* CARD LINK */
+
+.ts-products-page .ts-product-card-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+
+  border-top-color:
+    rgba(255, 107, 107, 0.25) !important;
+}
+
+
+.ts-products-page .ts-product-card-link i {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-product-card-link:hover {
+  color: #ff6b6b !important;
+}
+
+
+/* BOTTOM CONTACT */
+
+.ts-products-page .ts-products-bottom-box {
+  border-color:
+    rgba(18, 32, 58, 0.16) !important;
+}
+
+
+.ts-products-page .ts-products-bottom-icon {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-bottom-box
+> div:nth-child(2) > span {
+  color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-bottom-box h2 {
+  color: #12203a !important;
+}
+
+
+.ts-products-page .ts-products-bottom-box p {
+  color: rgba(18, 32, 58, 0.58) !important;
+}
+
+
+/* BOTTOM BUTTON */
+
+.ts-products-page .ts-products-bottom-btn {
+  background: #ff6b6b !important;
+
+  color: #ffffff !important;
+
+  border-color: #ff6b6b !important;
+}
+
+
+.ts-products-page .ts-products-bottom-btn:hover {
+  background: #12203a !important;
+
+  color: #ffffff !important;
+
+  border-color: #12203a !important;
+}
+
+
+/* =========================================================
+   FINAL GLOBAL PROTECTION
+========================================================= */
+
+.ts-products-page h1,
+.ts-products-page h2,
+.ts-products-page h3,
+.ts-products-page h4,
+.ts-products-page h5,
+.ts-products-page h6 {
+  color: #12203a !important;
+}
+
+
+.ts-products-page strong {
+  color: #12203a !important;
+}
+
+
+.ts-products-page a {
+  color: #12203a !important;
+}
+
+
+.ts-products-page a:hover {
+  color: #ff6b6b !important;
+}
+
+
+/* CARD TEXT MUST STAY WHITE OVER IMAGE */
+
+.ts-products-page .ts-product-card h3 {
+  color: #ffffff !important;
+}
+
+
+.ts-products-page .ts-product-card p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+.ts-products-page .ts-product-card-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+
+.ts-products-page .ts-product-card-link:hover {
+  color: #ff6b6b !important;
+}
+ 
+/* =========================================================
    TECHNOSAFE CONTACT PAGE
    FULLY SCOPED CSS
+   COLOR SYSTEM:
+   DARK NAVY  : #12203A
+   LIGHT RED  : #FF6B6B
+   BACKGROUNDS PRESERVED
+   STRONG OVERRIDE SYSTEM
 ========================================================= */
 
 .ts-contact-page {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  background: #faf7f0;
-  color: #12203a;
+  width: 100% !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  background: #faf7f0 !important;
+  color: #12203a !important;
 }
 
 
@@ -3914,14 +4546,14 @@
 ========================================================= */
 
 .ts-contact-hero {
-  position: relative;
-  width: 100%;
-  min-height: 510px;
+  position: relative !important;
+  width: 100% !important;
+  min-height: 510px !important;
 
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 
   background:
     radial-gradient(
@@ -3934,68 +4566,67 @@
       rgba(255, 78, 52, 0.06),
       transparent 28%
     ),
-    #faf7f0;
+    #faf7f0 !important;
 
-  border-bottom: 1px solid rgba(212, 160, 23, 0.08);
+  border-bottom: 1px solid rgba(18, 32, 58, 0.08) !important;
 }
 
 
 .ts-contact-hero::before {
-  content: "";
+  content: "" !important;
 
-  position: absolute;
-  inset: 0;
+  position: absolute !important;
+  inset: 0 !important;
 
   background-image:
     linear-gradient(
-      rgba(212, 160, 23, 0.018) 1px,
+      rgba(18, 32, 58, 0.018) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(212, 160, 23, 0.018) 1px,
+      rgba(18, 32, 58, 0.018) 1px,
       transparent 1px
-    );
+    ) !important;
 
-  background-size: 70px 70px;
+  background-size: 70px 70px !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 
 .ts-contact-hero::after {
-  content: "";
+  content: "" !important;
 
-  position: absolute;
+  position: absolute !important;
 
-  width: 430px;
-  height: 430px;
+  width: 430px !important;
+  height: 430px !important;
 
-  right: -190px;
-  top: -130px;
+  right: -190px !important;
+  top: -130px !important;
 
-  border-radius: 50%;
+  border-radius: 50% !important;
 
-  border: 1px solid rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.10) !important;
 
   box-shadow:
-    0 0 0 60px rgba(212, 160, 23, 0.025),
-    0 0 0 120px rgba(212, 160, 23, 0.015);
+    0 0 0 60px rgba(255, 107, 107, 0.025),
+    0 0 0 120px rgba(18, 32, 58, 0.015) !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 
 .ts-contact-hero .container {
-  position: relative;
-  z-index: 2;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 
 .ts-contact-hero-content {
-  max-width: 820px;
-
-  padding: 100px 0 85px;
+  max-width: 820px !important;
+  padding: 100px 0 85px !important;
 }
 
 
@@ -4004,28 +4635,29 @@
 ========================================================= */
 
 .ts-contact-eyebrow {
-  display: inline-flex;
+  display: inline-flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 9px;
+  gap: 9px !important;
 
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 9px;
+  font-size: 9px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2em !important;
 
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 
 .ts-contact-eyebrow i {
-  font-size: 5px;
+  font-size: 5px !important;
+  color: #FF6B6B !important;
 }
 
 
@@ -4037,7 +4669,7 @@
   margin: 0 !important;
   padding: 0 !important;
 
-  max-width: 800px;
+  max-width: 800px !important;
 
   color: #12203a !important;
 
@@ -4052,18 +4684,18 @@
 
 
 .ts-contact-hero h1 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-weight: 650 !important;
 }
 
 
 .ts-contact-hero-content > p {
-  max-width: 620px;
+  max-width: 620px !important;
 
   margin: 25px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.46) !important;
+  color: rgba(18, 32, 58, 0.62) !important;
 
   font-size: 14px !important;
 
@@ -4076,34 +4708,34 @@
 ========================================================= */
 
 .ts-contact-hero-line {
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 14px;
+  gap: 14px !important;
 
-  margin-top: 38px;
+  margin-top: 38px !important;
 }
 
 
 .ts-contact-hero-line span {
-  display: block;
+  display: block !important;
 
-  width: 55px;
-  height: 1px;
+  width: 55px !important;
+  height: 1px !important;
 
-  background: #d4a017;
+  background: #FF6B6B !important;
 }
 
 
 .ts-contact-hero-line small {
-  color: rgba(212, 160, 23, 0.3);
+  color: rgba(18, 32, 58, 0.42) !important;
 
-  font-size: 8px;
+  font-size: 8px !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 
-  letter-spacing: 0.16em;
+  letter-spacing: 0.16em !important;
 }
 
 
@@ -4112,9 +4744,9 @@
 ========================================================= */
 
 .ts-contact-main {
-  width: 100%;
+  width: 100% !important;
 
-  padding: 95px 0 80px;
+  padding: 95px 0 80px !important;
 
   background:
     radial-gradient(
@@ -4122,7 +4754,7 @@
       rgba(212, 160, 23, 0.045),
       transparent 25%
     ),
-    #f3ede0;
+    #f3ede0 !important;
 }
 
 
@@ -4131,15 +4763,15 @@
 ========================================================= */
 
 .ts-contact-layout {
-  display: grid;
+  display: grid !important;
 
   grid-template-columns:
     minmax(0, 1.15fr)
-    minmax(340px, 0.85fr);
+    minmax(340px, 0.85fr) !important;
 
-  gap: 25px;
+  gap: 25px !important;
 
-  align-items: stretch;
+  align-items: stretch !important;
 }
 
 
@@ -4148,47 +4780,47 @@
 ========================================================= */
 
 .ts-contact-form-box {
-  position: relative;
+  position: relative !important;
 
-  padding: 42px;
+  padding: 42px !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.09);
+    1px solid rgba(18, 32, 58, 0.09) !important;
 
-  border-radius: 24px;
+  border-radius: 24px !important;
 
   background:
     linear-gradient(
       145deg,
       rgba(212, 160, 23, 0.045),
       rgba(212, 160, 23, 0.018)
-    );
+    ) !important;
 
   box-shadow:
-    0 25px 80px rgba(0, 0, 0, 0.35);
+    0 25px 80px rgba(18, 32, 58, 0.35) !important;
 }
 
 
 .ts-contact-form-box::before {
-  content: "";
+  content: "" !important;
 
-  position: absolute;
+  position: absolute !important;
 
-  width: 260px;
-  height: 260px;
+  width: 260px !important;
+  height: 260px !important;
 
-  top: -150px;
-  right: -100px;
+  top: -150px !important;
+  right: -100px !important;
 
-  border-radius: 50%;
+  border-radius: 50% !important;
 
-  background: rgba(212, 160, 23, 0.07);
+  background: rgba(255, 107, 107, 0.07) !important;
 
-  filter: blur(70px);
+  filter: blur(70px) !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 
@@ -4197,27 +4829,27 @@
 ========================================================= */
 
 .ts-contact-form-head {
-  position: relative;
-  z-index: 2;
+  position: relative !important;
+  z-index: 2 !important;
 
-  margin-bottom: 35px;
+  margin-bottom: 35px !important;
 }
 
 
 .ts-contact-label {
-  display: block;
+  display: block !important;
 
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 8px;
+  font-size: 8px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2em !important;
 
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 
@@ -4232,23 +4864,23 @@
 
   line-height: 1.1 !important;
 
-  letter-spacing: -0.035em;
+  letter-spacing: -0.035em !important;
 }
 
 
 .ts-contact-form-head h2 span {
-  color: #d4a017 !important;
+  color: #FF6B6B !important;
 
   font-weight: 650 !important;
 }
 
 
 .ts-contact-form-head p {
-  max-width: 500px;
+  max-width: 500px !important;
 
   margin: 13px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.38) !important;
+  color: rgba(18, 32, 58, 0.58) !important;
 
   font-size: 11px !important;
 
@@ -4261,43 +4893,43 @@
 ========================================================= */
 
 .ts-contact-form {
-  position: relative;
-  z-index: 2;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 
 .ts-form-grid {
-  display: grid;
+  display: grid !important;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(2, minmax(0, 1fr)) !important;
 
-  gap: 19px;
+  gap: 19px !important;
 }
 
 
 .ts-form-group {
-  min-width: 0;
+  min-width: 0 !important;
 }
 
 
 .ts-form-full {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1 !important;
 }
 
 
 .ts-form-group label {
-  display: block;
+  display: block !important;
 
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 
-  color: rgba(212, 160, 23, 0.65);
+  color: rgba(18, 32, 58, 0.70) !important;
 
-  font-size: 9px;
+  font-size: 9px !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em !important;
 }
 
 
@@ -4307,35 +4939,35 @@
 
 .ts-input-wrap,
 .ts-textarea-wrap {
-  position: relative;
+  position: relative !important;
 
-  width: 100%;
+  width: 100% !important;
 }
 
 
 .ts-input-wrap > i,
 .ts-textarea-wrap > i {
-  position: absolute;
+  position: absolute !important;
 
-  left: 15px;
-  top: 50%;
+  left: 15px !important;
+  top: 50% !important;
 
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
 
-  color: rgba(212, 160, 23, 0.3);
+  color: rgba(255, 107, 107, 0.55) !important;
 
-  font-size: 11px;
+  font-size: 11px !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 
-  transition: color 0.25s ease;
+  transition: color 0.25s ease !important;
 }
 
 
 .ts-textarea-wrap > i {
-  top: 18px;
+  top: 18px !important;
 
-  transform: none;
+  transform: none !important;
 }
 
 
@@ -4346,64 +4978,64 @@
 .ts-contact-form input,
 .ts-contact-form select,
 .ts-contact-form textarea {
-  width: 100%;
+  width: 100% !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.1);
+    1px solid rgba(18, 32, 58, 0.12) !important;
 
-  outline: none;
+  outline: none !important;
 
-  border-radius: 10px;
+  border-radius: 10px !important;
 
-  background: rgba(212, 160, 23, 0.035);
+  background: rgba(212, 160, 23, 0.035) !important;
 
-  color: #12203a;
+  color: #12203a !important;
 
-  font-family: inherit;
+  font-family: inherit !important;
 
-  font-size: 11px;
+  font-size: 11px !important;
 
   transition:
     border-color 0.25s ease,
     background 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease !important;
 }
 
 
 .ts-contact-form input,
 .ts-contact-form select {
-  height: 50px;
+  height: 50px !important;
 
-  padding: 0 15px 0 40px;
+  padding: 0 15px 0 40px !important;
 }
 
 
 .ts-contact-form textarea {
-  min-height: 125px;
+  min-height: 125px !important;
 
-  resize: vertical;
+  resize: vertical !important;
 
-  padding: 15px 15px 15px 40px;
+  padding: 15px 15px 15px 40px !important;
 }
 
 
 .ts-contact-form input::placeholder,
 .ts-contact-form textarea::placeholder {
-  color: rgba(212, 160, 23, 0.23);
+  color: rgba(18, 32, 58, 0.35) !important;
 }
 
 
 .ts-contact-form select {
-  appearance: none;
+  appearance: none !important;
 
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 
 .ts-contact-form select option {
-  background: #ece3d1;
+  background: #ece3d1 !important;
 
-  color: #12203a;
+  color: #12203a !important;
 }
 
 
@@ -4411,33 +5043,33 @@
   position: absolute !important;
 
   left: auto !important;
-  right: 15px;
+  right: 15px !important;
 
   top: 50% !important;
 
   transform: translateY(-50%) !important;
 
-  color: rgba(212, 160, 23, 0.3) !important;
+  color: rgba(255, 107, 107, 0.55) !important;
 
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 
 .ts-contact-form input:focus,
 .ts-contact-form select:focus,
 .ts-contact-form textarea:focus {
-  border-color: rgba(212, 160, 23, 0.55);
+  border-color: rgba(255, 107, 107, 0.65) !important;
 
-  background: rgba(212, 160, 23, 0.025);
+  background: rgba(212, 160, 23, 0.025) !important;
 
   box-shadow:
-    0 0 0 3px rgba(212, 160, 23, 0.06);
+    0 0 0 3px rgba(255, 107, 107, 0.08) !important;
 }
 
 
 .ts-input-wrap:focus-within > i,
 .ts-textarea-wrap:focus-within > i {
-  color: #d4a017;
+  color: #FF6B6B !important;
 }
 
 
@@ -4446,65 +5078,67 @@
 ========================================================= */
 
 .ts-contact-submit {
-  width: 100%;
+  width: 100% !important;
 
-  height: 54px;
+  height: 54px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: space-between;
+  justify-content: space-between !important;
 
-  margin-top: 27px;
+  margin-top: 27px !important;
 
-  padding: 0 20px;
+  padding: 0 20px !important;
 
-  border: 0;
+  border: 0 !important;
 
-  border-radius: 10px;
+  border-radius: 10px !important;
 
-  background: #d4a017;
+  background: #FF6B6B !important;
 
-  color: #12203a;
+  color: #12203a !important;
 
-  font-family: inherit;
+  font-family: inherit !important;
 
-  font-size: 10px;
+  font-size: 10px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.06em;
+  letter-spacing: 0.06em !important;
 
-  cursor: pointer;
+  cursor: pointer !important;
 
   transition:
     background 0.3s ease,
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease !important;
 }
 
 
 .ts-contact-submit i {
-  font-size: 11px;
+  font-size: 11px !important;
+
+  color: #12203a !important;
 
   transition:
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-contact-submit:hover {
-  background: #e8b445;
+  background: #e8b445 !important;
 
-  transform: translateY(-3px);
+  transform: translateY(-3px) !important;
 
   box-shadow:
-    0 15px 35px rgba(212, 160, 23, 0.18);
+    0 15px 35px rgba(255, 107, 107, 0.18) !important;
 }
 
 
 .ts-contact-submit:hover i {
-  transform: translateX(5px);
+  transform: translateX(5px) !important;
 }
 
 
@@ -4513,24 +5147,24 @@
 ========================================================= */
 
 .ts-form-note {
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  gap: 7px;
+  gap: 7px !important;
 
   margin: 13px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.25) !important;
+  color: rgba(18, 32, 58, 0.38) !important;
 
   font-size: 8px !important;
 }
 
 
 .ts-form-note i {
-  color: #d4a017;
+  color: #FF6B6B !important;
 }
 
 
@@ -4539,20 +5173,20 @@
 ========================================================= */
 
 .ts-contact-sidebar {
-  min-width: 0;
+  min-width: 0 !important;
 
-  display: flex;
+  display: flex !important;
 
-  flex-direction: column;
+  flex-direction: column !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.09);
+    1px solid rgba(18, 32, 58, 0.09) !important;
 
-  border-radius: 24px;
+  border-radius: 24px !important;
 
-  background: #f3ede0;
+  background: #f3ede0 !important;
 }
 
 
@@ -4561,83 +5195,83 @@
 ========================================================= */
 
 .ts-contact-image {
-  position: relative;
+  position: relative !important;
 
-  height: 275px;
+  height: 275px !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 
 .ts-contact-image img {
-  display: block;
+  display: block !important;
 
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
 
-  object-fit: cover;
+  object-fit: cover !important;
 
-  filter: saturate(0.7);
+  filter: saturate(0.7) !important;
 
   transition:
-    transform 0.7s ease;
+    transform 0.7s ease !important;
 }
 
 
 .ts-contact-sidebar:hover
 .ts-contact-image img {
-  transform: scale(1.06);
+  transform: scale(1.06) !important;
 }
 
 
 .ts-contact-image-overlay {
-  position: absolute;
+  position: absolute !important;
 
-  inset: 0;
+  inset: 0 !important;
 
   background:
     linear-gradient(
       to top,
       rgba(0, 0, 0, 0.92),
       rgba(0, 0, 0, 0.15)
-    );
+    ) !important;
 }
 
 
 .ts-contact-image-content {
-  position: absolute;
+  position: absolute !important;
 
-  left: 25px;
-  right: 25px;
-  bottom: 23px;
+  left: 25px !important;
+  right: 25px !important;
+  bottom: 23px !important;
 }
 
 
 .ts-contact-image-content span {
-  display: block;
+  display: block !important;
 
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 7px;
+  font-size: 7px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.17em;
+  letter-spacing: 0.17em !important;
 }
 
 
 .ts-contact-image-content strong {
-  color: #12203a;
+  color: #12203a !important;
 
-  font-size: 23px;
+  font-size: 23px !important;
 
-  font-weight: 550;
+  font-weight: 550 !important;
 
-  line-height: 1.15;
+  line-height: 1.15 !important;
 
-  letter-spacing: -0.025em;
+  letter-spacing: -0.025em !important;
 }
 
 
@@ -4646,45 +5280,45 @@
 ========================================================= */
 
 .ts-contact-info {
-  padding: 28px;
+  padding: 28px !important;
 }
 
 
 .ts-contact-company {
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  gap: 13px;
+  gap: 13px !important;
 
-  padding-bottom: 22px;
+  padding-bottom: 22px !important;
 
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 
   border-bottom:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.08) !important;
 }
 
 
 .ts-contact-company-icon {
-  width: 45px;
-  height: 45px;
+  width: 45px !important;
+  height: 45px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 
-  border-radius: 12px;
+  border-radius: 12px !important;
 
   background:
-    rgba(212, 160, 23, 0.1);
+    rgba(212, 160, 23, 0.1) !important;
 
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 
@@ -4702,7 +5336,7 @@
 .ts-contact-company p {
   margin: 4px 0 0 !important;
 
-  color: rgba(212, 160, 23, 0.32) !important;
+  color: rgba(18, 32, 58, 0.45) !important;
 
   font-size: 9px !important;
 }
@@ -4713,72 +5347,74 @@
 ========================================================= */
 
 .ts-contact-detail {
-  display: flex;
+  display: flex !important;
 
-  align-items: flex-start;
+  align-items: flex-start !important;
 
-  gap: 13px;
+  gap: 13px !important;
 
-  padding: 17px 0;
+  padding: 17px 0 !important;
 
-  color: inherit;
+  color: #12203a !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   border-bottom:
-    1px solid rgba(212, 160, 23, 0.06);
+    1px solid rgba(18, 32, 58, 0.06) !important;
 
   transition:
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-contact-detail:hover {
-  transform: translateX(4px);
+  transform: translateX(4px) !important;
+
+  color: #12203a !important;
 }
 
 
 .ts-contact-detail > span {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 
-  border-radius: 9px;
+  border-radius: 9px !important;
 
   background:
-    rgba(212, 160, 23, 0.045);
+    rgba(212, 160, 23, 0.045) !important;
 
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 11px;
+  font-size: 11px !important;
 }
 
 
 .ts-contact-detail small {
-  display: block;
+  display: block !important;
 
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 
-  color: rgba(212, 160, 23, 0.25);
+  color: rgba(18, 32, 58, 0.40) !important;
 
-  font-size: 7px;
+  font-size: 7px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15em !important;
 }
 
 
 .ts-contact-detail p {
   margin: 0 !important;
 
-  color: rgba(212, 160, 23, 0.58) !important;
+  color: rgba(18, 32, 58, 0.68) !important;
 
   font-size: 10px !important;
 
@@ -4791,70 +5427,70 @@
 ========================================================= */
 
 .ts-contact-social-row {
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: space-between;
+  justify-content: space-between !important;
 
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 
 .ts-contact-social-row > span {
-  color: rgba(212, 160, 23, 0.25);
+  color: rgba(18, 32, 58, 0.40) !important;
 
-  font-size: 7px;
+  font-size: 7px !important;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  letter-spacing: 0.14em;
+  letter-spacing: 0.14em !important;
 }
 
 
 .ts-contact-social-row > div {
-  display: flex;
+  display: flex !important;
 
-  gap: 7px;
+  gap: 7px !important;
 }
 
 
 .ts-contact-social-row a {
-  width: 32px;
-  height: 32px;
+  width: 32px !important;
+  height: 32px !important;
 
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
-  border-radius: 50%;
+  border-radius: 50% !important;
 
   background:
-    rgba(212, 160, 23, 0.025);
+    rgba(212, 160, 23, 0.025) !important;
 
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(18, 32, 58, 0.60) !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
-  font-size: 10px;
+  font-size: 10px !important;
 
   transition:
     color 0.3s ease,
     background 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease !important;
 }
 
 
 .ts-contact-social-row a:hover {
-  color: #12203a;
+  color: #12203a !important;
 
-  background: #d4a017;
+  background: #FF6B6B !important;
 
-  transform: translateY(-3px);
+  transform: translateY(-3px) !important;
 }
 
 
@@ -4863,63 +5499,63 @@
 ========================================================= */
 
 .ts-contact-trust-strip {
-  display: grid;
+  display: grid !important;
 
   grid-template-columns:
-    repeat(4, 1fr);
+    repeat(4, 1fr) !important;
 
-  margin-top: 25px;
+  margin-top: 25px !important;
 
   border:
-    1px solid rgba(212, 160, 23, 0.08);
+    1px solid rgba(18, 32, 58, 0.10) !important;
 
-  border-radius: 16px;
+  border-radius: 16px !important;
 
   background:
-    rgba(212, 160, 23, 0.025);
+    rgba(212, 160, 23, 0.025) !important;
 
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 
 .ts-contact-trust-strip > div {
-  display: flex;
+  display: flex !important;
 
-  align-items: center;
+  align-items: center !important;
 
-  justify-content: center;
+  justify-content: center !important;
 
-  gap: 9px;
+  gap: 9px !important;
 
-  min-height: 65px;
+  min-height: 65px !important;
 
-  padding: 10px;
+  padding: 10px !important;
 
   border-right:
-    1px solid rgba(212, 160, 23, 0.07);
+    1px solid rgba(18, 32, 58, 0.08) !important;
 }
 
 
 .ts-contact-trust-strip > div:last-child {
-  border-right: none;
+  border-right: none !important;
 }
 
 
 .ts-contact-trust-strip i {
-  color: #d4a017;
+  color: #FF6B6B !important;
 
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 
 .ts-contact-trust-strip span {
-  color: rgba(212, 160, 23, 0.4);
+  color: rgba(18, 32, 58, 0.55) !important;
 
-  font-size: 8px;
+  font-size: 8px !important;
 
-  font-weight: 600;
+  font-weight: 600 !important;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em !important;
 }
 
 
@@ -4930,25 +5566,25 @@
 @media (max-width: 1000px) {
 
   .ts-contact-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
 
   .ts-contact-sidebar {
-    display: grid;
+    display: grid !important;
 
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.9fr 1.1fr !important;
   }
 
 
   .ts-contact-image {
-    height: 100%;
-    min-height: 430px;
+    height: 100% !important;
+    min-height: 430px !important;
   }
 
 
   .ts-contact-info {
-    padding: 30px;
+    padding: 30px !important;
   }
 
 }
@@ -4961,12 +5597,12 @@
 @media (max-width: 700px) {
 
   .ts-contact-hero {
-    min-height: auto;
+    min-height: auto !important;
   }
 
 
   .ts-contact-hero-content {
-    padding: 75px 0 65px;
+    padding: 75px 0 65px !important;
   }
 
 
@@ -4981,14 +5617,14 @@
 
 
   .ts-contact-main {
-    padding: 65px 0;
+    padding: 65px 0 !important;
   }
 
 
   .ts-contact-form-box {
-    padding: 27px 20px;
+    padding: 27px 20px !important;
 
-    border-radius: 18px;
+    border-radius: 18px !important;
   }
 
 
@@ -4998,50 +5634,50 @@
 
 
   .ts-form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
 
-    gap: 17px;
+    gap: 17px !important;
   }
 
 
   .ts-form-full {
-    grid-column: auto;
+    grid-column: auto !important;
   }
 
 
   .ts-contact-sidebar {
-    display: flex;
+    display: flex !important;
 
-    border-radius: 18px;
+    border-radius: 18px !important;
   }
 
 
   .ts-contact-image {
-    height: 260px;
+    height: 260px !important;
 
-    min-height: 0;
+    min-height: 0 !important;
   }
 
 
   .ts-contact-info {
-    padding: 24px 20px;
+    padding: 24px 20px !important;
   }
 
 
   .ts-contact-trust-strip {
     grid-template-columns:
-      repeat(2, 1fr);
+      repeat(2, 1fr) !important;
   }
 
 
   .ts-contact-trust-strip > div:nth-child(2) {
-    border-right: none;
+    border-right: none !important;
   }
 
 
   .ts-contact-trust-strip > div:nth-child(-n + 2) {
     border-bottom:
-      1px solid rgba(212, 160, 23, 0.07);
+      1px solid rgba(18, 32, 58, 0.08) !important;
   }
 
 }
@@ -5059,12 +5695,12 @@
 
 
   .ts-contact-hero-line {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
 
 
   .ts-contact-hero-line small {
-    line-height: 1.5;
+    line-height: 1.5 !important;
   }
 
 
@@ -5074,17 +5710,17 @@
 
 
   .ts-contact-image {
-    height: 230px;
+    height: 230px !important;
   }
 
 
   .ts-contact-image-content strong {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
 
   .ts-contact-trust-strip span {
-    font-size: 7px;
+    font-size: 7px !important;
   }
 
 }
