@@ -1,9 +1,15 @@
- /* =========================================================
+ 
+/* =========================================================
    TECHNOSAFE NAVBAR
    PREMIUM DARK HIGH-CONTRAST THEME
-   MATCHES HERO COLOR SYSTEM
-   NO GRADIENT
-   NO GLOW
+   UPDATED:
+   - WIDER HEADER CONTENT
+   - LARGER LOGO
+   - FULL LOGO FIT
+   - NO LOGO CROPPING
+   - RESPONSIVE
+   - NO GRADIENT
+   - NO GLOW
 ========================================================= */
 
 .ts-nav {
@@ -14,10 +20,6 @@
 
   width: 100%;
 
-  /*
-     Solid deep navy-black.
-     This keeps navbar clearly separated from hero video.
-  */
   background: #05090D;
 
   color: #FFFFFF;
@@ -46,7 +48,7 @@
 
 
 .ts-nav-top-inner {
-  width: min(1280px, calc(100% - 40px));
+  width: min(1440px, calc(100% - 40px));
 
   min-height: 36px;
 
@@ -75,9 +77,6 @@
 
   gap: 7px;
 
-  /*
-     Brighter than muted global variable.
-  */
   color: #CBD2D9;
 
   font-size: 9px;
@@ -120,11 +119,8 @@
   position: relative;
 
   width: 100%;
-  height: 100px;
+  height: 104px;
 
-  /*
-     Deep solid background gives maximum contrast.
-  */
   background: #05090D;
 
   border: none;
@@ -135,10 +131,11 @@
 
 /* =========================================================
    NAV INNER
+   WIDER THAN BEFORE
 ========================================================= */
 
 .ts-nav-inner {
-  width: min(1280px, calc(100% - 40px));
+  width: min(1440px, calc(100% - 32px));
 
   height: 100%;
 
@@ -148,94 +145,95 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 32px;
 }
 
 
 /* =========================================================
-   LOGO
+LOGO
+UPDATED — LARGER DESKTOP LOGO
 ========================================================= */
 
 .ts-nav-logo {
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
+display: flex;
 
-  /*
-     White logo box ensures the actual logo
-     is always visible on dark navbar.
-  */
-  width: 210px !important;
-  height: 72px !important;
+align-items: center;
 
-  flex-shrink: 0;
+justify-content: center;
 
-  margin: 0 !important;
-  padding: 0 !important;
+width: 280px !important;
 
-  background: #FFFFFF !important;
+height: 90px !important;
 
-  border: 1px solid rgba(255, 255, 255, 0.90) !important;
+flex-shrink: 0;
 
-  border-radius: 7px !important;
+margin: 0 !important;
 
-  text-decoration: none !important;
+padding: 0 !important;
 
-  overflow: hidden !important;
+background: #FFFFFF !important;
 
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.32);
+border: 1px solid rgba(255, 255, 255, 0.90) !important;
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+border-radius: 8px !important;
+
+text-decoration: none !important;
+
+overflow: hidden !important;
+
+box-shadow:
+0 6px 18px rgba(0, 0, 0, 0.32);
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+
 }
 
-
 /* =========================================================
-   LOGO IMAGE
+LOGO IMAGE
+FULL LOGO MUST FIT — NO CROPPING
 ========================================================= */
 
 .ts-nav-logo img {
-  display: block !important;
 
-  width: 100% !important;
-  height: 100% !important;
+display: block !important;
 
-  max-width: none !important;
-  max-height: none !important;
+width: 100% !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
+height: 100% !important;
 
-  /*
-     contain keeps the complete logo visible.
-  */
-  object-fit: contain !important;
+max-width: 100% !important;
 
-  object-position: center center !important;
+max-height: 100% !important;
 
-  background: #FFFFFF !important;
+margin: 0 !important;
 
-  border: none !important;
+padding: 7px !important;
 
-  border-radius: 7px !important;
+object-fit: contain !important;
 
-  box-shadow: none !important;
+object-position: center center !important;
 
-  /*
-     Reduced from previous 1.22 because excessive
-     scaling can crop the actual logo.
-  */
-  transform: scale(1.08);
+background: #FFFFFF !important;
 
-  transform-origin: center center;
+border: none !important;
 
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+border-radius: 8px !important;
+
+box-shadow: none !important;
+
+transform: scale(1) !important;
+
+transform-origin: center center;
+
+transition:
+transform 0.25s ease,
+opacity 0.25s ease;
+
 }
+
 
 
 /* =========================================================
@@ -251,7 +249,7 @@
 
 
 .ts-nav-logo:hover img {
-  transform: scale(1.11);
+  transform: scale(1.02) !important;
 
   opacity: 0.97;
 }
@@ -267,7 +265,9 @@
   align-items: center;
   justify-content: flex-end;
 
-  gap: 24px;
+  gap: 20px;
+
+  min-width: 0;
 }
 
 
@@ -294,9 +294,6 @@
 
   padding: 0 13px;
 
-  /*
-     Bright white-gray instead of dark muted text.
-  */
   color: #D8DEE4 !important;
 
   background: transparent;
@@ -387,9 +384,6 @@
 
   color: #FFFFFF !important;
 
-  /*
-     Strong red CTA.
-  */
   background: #E1261C;
 
   border: 1px solid #E1261C !important;
@@ -493,33 +487,31 @@
 
 
 /* =========================================================
-   TABLET
+   LARGE TABLET / SMALL DESKTOP
 ========================================================= */
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
+
+  .ts-nav-top-inner {
+    width: min(1380px, calc(100% - 30px));
+  }
+
+
+  .ts-nav-inner {
+    width: min(1380px, calc(100% - 30px));
+
+    gap: 22px;
+  }
+
 
   .ts-nav-logo {
-    width: 190px !important;
-    height: 68px !important;
-
-    border-radius: 7px !important;
-  }
-
-
-  .ts-nav-logo img {
-    border-radius: 7px !important;
-
-    transform: scale(1.06);
-  }
-
-
-  .ts-nav-logo:hover img {
-    transform: scale(1.09);
+    width: 225px !important;
+    height: 78px !important;
   }
 
 
   .ts-nav-menu {
-    gap: 12px;
+    gap: 10px;
   }
 
 
@@ -531,7 +523,61 @@
 
 
   .ts-nav-button {
+    min-width: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1080px) {
+
+  .ts-nav-main {
+    height: 98px;
+  }
+
+
+  .ts-nav-inner {
+    width: calc(100% - 26px);
+
+    gap: 18px;
+  }
+
+
+  .ts-nav-logo {
+    width: 210px !important;
+    height: 74px !important;
+
+    border-radius: 7px !important;
+  }
+
+
+  .ts-nav-logo img {
+    padding: 6px !important;
+
+    border-radius: 7px !important;
+  }
+
+
+  .ts-nav-menu {
+    gap: 8px;
+  }
+
+
+  .ts-nav-link {
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+
+
+  .ts-nav-button {
     min-width: 125px;
+
+    padding: 0 14px;
   }
 
 }
@@ -550,16 +596,18 @@
 
   .ts-nav-top-inner {
     justify-content: center;
+
+    width: calc(100% - 30px);
   }
 
 
   .ts-nav-main {
-    height: 76px;
+    height: 80px;
   }
 
 
   .ts-nav-inner {
-    width: calc(100% - 30px);
+    width: calc(100% - 24px);
 
     gap: 15px;
   }
@@ -567,11 +615,12 @@
 
   /* =====================================================
      MOBILE LOGO
+     LARGER + COMPLETE FIT
   ===================================================== */
 
   .ts-nav-logo {
-    width: 180px !important;
-    height: 62px !important;
+    width: 200px !important;
+    height: 68px !important;
 
     border-radius: 7px !important;
 
@@ -583,14 +632,18 @@
 
 
   .ts-nav-logo img {
-    border-radius: 7px !important;
+    padding: 6px !important;
 
-    transform: scale(1.05);
+    object-fit: contain !important;
+
+    transform: scale(1) !important;
+
+    border-radius: 7px !important;
   }
 
 
   .ts-nav-logo:hover img {
-    transform: scale(1.08);
+    transform: scale(1.02) !important;
   }
 
 
@@ -610,7 +663,7 @@
   .ts-nav-menu {
     position: absolute;
 
-    top: 76px;
+    top: 80px;
     left: 0;
 
     width: 100%;
@@ -744,6 +797,8 @@
 
   .ts-nav-top-inner {
     min-height: 32px;
+
+    width: calc(100% - 20px);
   }
 
 
@@ -755,17 +810,18 @@
 
 
   .ts-nav-main {
-    height: 70px;
+    height: 72px;
   }
 
 
   /* =====================================================
      SMALL MOBILE LOGO
+     COMPLETE LOGO FIT
   ===================================================== */
 
   .ts-nav-logo {
-    width: 165px !important;
-    height: 58px !important;
+    width: 185px !important;
+    height: 62px !important;
 
     border-radius: 6px !important;
 
@@ -774,14 +830,18 @@
 
 
   .ts-nav-logo img {
-    border-radius: 6px !important;
+    padding: 5px !important;
 
-    transform: scale(1.04);
+    object-fit: contain !important;
+
+    transform: scale(1) !important;
+
+    border-radius: 6px !important;
   }
 
 
   .ts-nav-logo:hover img {
-    transform: scale(1.07);
+    transform: scale(1.02) !important;
   }
 
 
@@ -794,7 +854,7 @@
 
 
   .ts-nav-menu {
-    top: 70px;
+    top: 72px;
 
     background: #05090D;
   }
