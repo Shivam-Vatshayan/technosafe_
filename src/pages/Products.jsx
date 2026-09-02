@@ -1,22 +1,22 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./InnerPage.css";
 
 /* =========================================================
    BASE URL
-   ========================================================= */
+========================================================= */
 
 const BASE_URL = import.meta.env.BASE_URL;
 
 
 /* =========================================================
    IMAGE HELPER
-   ========================================================= */
+========================================================= */
 
 const getImagePath = (path) => {
   if (!path) return "";
 
-  // If image is already an absolute/external URL
   if (
     path.startsWith("http://") ||
     path.startsWith("https://") ||
@@ -31,148 +31,318 @@ const getImagePath = (path) => {
 
 /* =========================================================
    PRODUCT DATA
-   Future me image add/change karna ho:
-   
-   image: "images/products/fire-extinguishers.jpg"
-
-   Bas image path change karo.
+   ALL PRODUCTS ARE BASED ON PROVIDED IMAGES
 ========================================================= */
 
 const productSections = [
+
+  /* =========================================================
+     FIRE PROTECTION
+  ========================================================= */
+
   {
     title: "Fire Protection",
 
     description:
-      "Complete fire protection equipment for detection, prevention, first response and emergency control.",
+      "Professional fire protection equipment designed for rapid response, fire control and emergency preparedness.",
 
     direction: "left",
 
     products: [
-      {
-        name: "Fire Extinguishers",
 
-        image: "images/products/fire-extinguishers.jpg",
+      {
+        name: "Portable Monitor",
+
+        image: "images/PORTABLE MONITOR.jpeg",
 
         icon: "fa-solid fa-fire-extinguisher",
 
         text:
-          "ABC, CO₂, Foam and Clean Agent fire extinguishers."
+          "Portable fire monitoring equipment designed for controlled and effective fire suppression."
       },
 
       {
-        name: "Fire Alarm & Detection",
+        name: "Multi Purpose Nozzle",
 
-        image: "images/products/fire-alarm.jpg",
+        image: "images/MULTI PURPOSE NOZZLE.jpeg",
 
-        icon: "fa-solid fa-bell",
+        icon: "fa-solid fa-faucet",
 
         text:
-          "Addressable panels, detectors, MCPs, sounders and modules."
+          "Versatile fire-fighting nozzle designed for efficient water delivery and controlled fire suppression."
       },
 
       {
-        name: "Hydrant & Sprinkler Systems",
+        name: "Fire Fighter Flashlight",
 
-        image: "images/products/hydrant-sprinkler.jpg",
+        image: "images/FIRE FIGHTER FLASHLIGHT.jpeg",
 
-        icon: "fa-solid fa-droplet",
+        icon: "fa-solid fa-lightbulb",
 
         text:
-          "Hydrant, hose reel, sprinkler and water-based protection equipment."
+          "Reliable emergency flashlight designed to provide clear illumination during fire-fighting and emergency operations."
       },
 
       {
-        name: "Fire Fighting Equipment",
+        name: "Forehead Flashlight",
 
-        image: "images/products/fire-fighting-equipment.jpg",
+        image: "images/FOREHEAD FLASHLIGHT.jpeg",
 
-        icon: "fa-solid fa-shield-halved",
+        icon: "fa-solid fa-lightbulb",
 
         text:
-          "Fire blankets, hose accessories and emergency response equipment."
+          "Hands-free lighting solution for emergency response, inspection and industrial safety applications."
+      },
+
+      {
+        name: "Safety Flashlight",
+
+        image: "images/SAFETY FLASHLIGHT.jpeg",
+
+        icon: "fa-solid fa-lightbulb",
+
+        text:
+          "Industrial safety flashlight designed for dependable visibility in demanding work environments."
+      },
+
+      {
+        name: "Fireman Boots",
+
+        image: "images/FIREMAN BOOTS.jpeg",
+
+        icon: "fa-solid fa-shoe-prints",
+
+        text:
+          "Protective fire-fighting boots designed to provide durable foot protection in demanding emergency environments."
       }
+
     ]
   },
 
 
   /* =========================================================
-     PPE
+     PERSONAL PROTECTIVE EQUIPMENT
   ========================================================= */
 
   {
     title: "Personal Protective Equipment",
 
     description:
-      "Workplace PPE designed to protect personnel against everyday industrial and occupational hazards.",
+      "Protective equipment designed to help safeguard personnel from chemical, electrical, impact, heat and workplace hazards.",
 
     direction: "right",
 
     products: [
-      {
-        name: "Eye & Face Protection",
 
-        image: "images/products/eye-face-protection.jpg",
+      {
+        name: "Chemical Protection Glass",
+
+        image: "images/CHEMICAL PROTECTION GLASS.png",
 
         icon: "fa-solid fa-glasses",
 
         text:
-          "Safety goggles, spectacles, face shields and splash protection."
+          "Protective eyewear designed to shield eyes from chemical splashes and hazardous substances."
       },
 
       {
-        name: "Head Protection",
+        name: "Autoclave Goggles",
 
-        image: "images/products/head-protection.jpg",
+        image: "images/AUTOCLAVE GOOGLES.png",
+
+        icon: "fa-solid fa-glasses",
+
+        text:
+          "Protective goggles designed for applications involving heat, steam and splash hazards."
+      },
+
+      {
+        name: "Gas Cutting Goggles",
+
+        image: "images/GAS CUTTING GOOGLES.png",
+
+        icon: "fa-solid fa-glasses",
+
+        text:
+          "Protective eyewear designed to help shield eyes from sparks, heat and harmful radiation during gas cutting."
+      },
+
+      {
+        name: "General Spectacles",
+
+        image: "images/GENERAL SPECTACLES.png",
+
+        icon: "fa-solid fa-glasses",
+
+        text:
+          "Protective safety spectacles designed for everyday workplace eye protection against dust and debris."
+      },
+
+      {
+        name: "Hand Welding Shield",
+
+        image: "images/HAND WELDING SHIELD.png",
+
+        icon: "fa-solid fa-shield-halved",
+
+        text:
+          "Hand-held welding protection designed to protect the face and eyes from welding sparks, heat and radiation."
+      },
+
+      {
+        name: "Face Shield",
+
+        image: "images/FACE SHIELD.png",
+
+        icon: "fa-solid fa-shield-halved",
+
+        text:
+          "Full-face protective shield designed to provide additional protection against splashes, particles and workplace hazards."
+      },
+
+      {
+        name: "Helmet Face Shield",
+
+        image: "images/HELMET FACE SHIELD.png",
 
         icon: "fa-solid fa-helmet-safety",
 
         text:
-          "Industrial safety helmets, bump caps and helmet accessories."
+          "Helmet-mounted face protection designed to provide additional facial protection during industrial operations."
       },
 
       {
-        name: "Hand Protection",
+        name: "Auto Darkening",
 
-        image: "images/products/hand-protection.jpg",
+        image: "images/AUTO DARKENING.png",
+
+        icon: "fa-solid fa-helmet-safety",
+
+        text:
+          "Auto-darkening welding protection designed to improve visibility and protect against intense welding light."
+      },
+
+      {
+        name: "Premium Safety Helmet",
+
+        image: "images/PREMIUM SAFETY HELMET.png",
+
+        icon: "fa-solid fa-helmet-safety",
+
+        text:
+          "Premium industrial safety helmet designed to provide reliable head protection in demanding workplaces."
+      },
+
+      {
+        name: "Safety Helmet",
+
+        image: "images/SAFETY HELMET.png",
+
+        icon: "fa-solid fa-helmet-safety",
+
+        text:
+          "Industrial safety helmet designed to protect personnel against common workplace impact hazards."
+      },
+
+      {
+        name: "Safety Helmet With Head Lamp",
+
+        image: "images/SAFETY HELMET WITH HEAD LAMP.png",
+
+        icon: "fa-solid fa-helmet-safety",
+
+        text:
+          "Safety helmet with integrated head lamp for improved visibility during low-light industrial operations."
+      },
+
+      {
+        name: "Chemical Gloves",
+
+        image: "images/CHEMICAL GLOVES.jpeg",
 
         icon: "fa-solid fa-hand",
 
         text:
-          "Cut, heat, chemical and general-purpose industrial gloves."
+          "Protective gloves designed to provide hand protection during chemical handling and related applications."
       },
 
       {
-        name: "Foot Protection",
+        name: "Cut Resistant Gloves",
 
-        image: "images/products/foot-protection.jpg",
+        image: "images/CUT RESISTANT GLOVES.jpeg",
+
+        icon: "fa-solid fa-hand",
+
+        text:
+          "Cut-resistant hand protection designed for applications involving sharp edges and cutting hazards."
+      },
+
+      {
+        name: "Electric Gloves",
+
+        image: "images/ELECTRIC GLOVES.jpeg",
+
+        icon: "fa-solid fa-bolt",
+
+        text:
+          "Electrical protective gloves designed for suitable electrical safety applications and personnel protection."
+      },
+
+      {
+        name: "Heat Resistant Gloves",
+
+        image: "images/HEAT RESISTANT GLOVES.jpeg",
+
+        icon: "fa-solid fa-temperature-high",
+
+        text:
+          "Heat-resistant gloves designed to help protect hands during high-temperature industrial applications."
+      },
+
+      {
+        name: "Lab Nitrile Gloves",
+
+        image: "images/LAB NITRILE GLOVES.jpeg",
+
+        icon: "fa-solid fa-hand",
+
+        text:
+          "Nitrile protective gloves designed for laboratory, handling and general workplace applications."
+      },
+
+      {
+        name: "Safety Shoes",
+
+        image: "images/SAFETY SHOES.jpeg",
 
         icon: "fa-solid fa-shoe-prints",
 
         text:
-          "Safety shoes, boots and protective industrial footwear."
+          "Protective safety footwear designed to provide dependable foot protection in industrial environments."
       },
 
       {
-        name: "Protective Clothing",
+        name: "PVC Shoes",
 
-        image: "images/products/protective-clothing.jpg",
+        image: "images/PVC SHOES.jpeg",
 
-        icon: "fa-solid fa-shirt",
+        icon: "fa-solid fa-shoe-prints",
 
         text:
-          "Coveralls, flame-resistant and high-visibility protective clothing."
+          "Durable PVC protective footwear designed for demanding workplace and industrial applications."
       },
 
       {
-        name: "Fall Protection Systems",
+        name: "Dielectric Shoes",
 
-        image: "images/products/fall-protection.jpg",
+        image: "images/DIELECTRIC SHOES.png",
 
-        icon: "fa-solid fa-person-falling",
+        icon: "fa-solid fa-bolt",
 
         text:
-          "Harnesses, lanyards, lifelines and anchorage systems."
+          "Dielectric protective footwear designed for applications requiring additional electrical insulation protection."
       }
+
     ]
   },
 
@@ -185,165 +355,227 @@ const productSections = [
     title: "Emergency & Spill Response",
 
     description:
-      "Emergency equipment that helps teams respond quickly and safely to workplace incidents.",
+      "Emergency response equipment designed to provide immediate support during workplace incidents, contamination and spill situations.",
 
     direction: "left",
 
     products: [
-      {
-        name: "Emergency Eye & Safety Showers",
 
-        image: "images/products/safety-showers.jpg",
+      {
+        name: "Emergency Eye Shower",
+
+        image: "images/EYE SHOWER.png",
 
         icon: "fa-solid fa-shower",
 
         text:
-          "Emergency eye wash stations, safety showers and combined units."
+          "Emergency eye wash equipment designed to provide immediate flushing support following eye contamination."
       },
 
       {
-        name: "Spill Containment Solutions",
+        name: "Portable Eye Wash",
 
-        image: "images/products/spill-containment.jpg",
+        image: "images/PORTABLEYE WASH.png",
 
-        icon: "fa-solid fa-droplet",
+        icon: "fa-solid fa-eye",
 
         text:
-          "Spill kits, absorbents, trays and containment equipment."
+          "Portable emergency eye wash solution designed for quick access to eye flushing facilities."
       },
 
       {
-        name: "Emergency Response Kits",
+        name: "Wall Mounted Eyewash",
 
-        image: "images/products/emergency-response.jpg",
+        image: "images/WALL MOUNTED EYEWASH.png",
+
+        icon: "fa-solid fa-eye",
+
+        text:
+          "Wall-mounted emergency eyewash equipment designed for accessible workplace eye protection."
+      },
+
+      {
+        name: "Safety Shower",
+
+        image: "images/SAFETY SHOWER.png",
+
+        icon: "fa-solid fa-shower",
+
+        text:
+          "Emergency safety shower designed to provide rapid decontamination support during hazardous exposure."
+      },
+
+      {
+        name: "Cabinet Shower Unicare",
+
+        image: "images/CABINET SHOWER UNICARE.png",
+
+        icon: "fa-solid fa-shower",
+
+        text:
+          "Emergency shower cabinet solution designed for accessible workplace decontamination and emergency response."
+      },
+
+      {
+        name: "Spill Kit",
+
+        image: "images/SPILL KIT.png",
 
         icon: "fa-solid fa-kit-medical",
 
         text:
-          "Ready-to-use equipment for workplace emergency situations."
+          "Spill response kit designed to help contain and manage workplace liquid spills quickly and safely."
       },
 
       {
-        name: "Safety Signs & Evacuation",
+        name: "4 Drum Pallet",
 
-        image: "images/products/safety-signs.jpg",
+        image: "images/4 DRUM PALLET.png",
 
-        icon: "fa-solid fa-person-running",
+        icon: "fa-solid fa-box",
 
         text:
-          "Safety signage, evacuation aids and emergency identification."
+          "Spill containment pallet designed to support safe storage and containment of multiple drums."
       }
+
     ]
   },
 
 
   /* =========================================================
-     HAZARDOUS AREA SAFETY
+     HAZARDOUS AREA & FALL PROTECTION
   ========================================================= */
 
   {
-    title: "Hazardous Area Safety",
+    title: "Hazardous Area & Fall Protection",
 
     description:
-      "Specialized equipment for environments where electrical equipment must meet hazardous-area safety requirements.",
+      "Specialized safety equipment designed for hazardous environments, working at height and demanding industrial operations.",
 
     direction: "right",
 
     products: [
-      {
-        name: "Intrinsically Safe Flashlights",
 
-        image: "images/products/intrinsically-safe-flashlights.jpg",
+      {
+        name: "Safety Flashlight",
+
+        image: "images/SAFETY FLASHLIGHT.jpeg",
 
         icon: "fa-solid fa-lightbulb",
 
         text:
-          "Intrinsically safe torches and industrial lighting solutions."
+          "Industrial lighting solution designed to provide dependable illumination in demanding work environments."
       },
 
       {
-        name: "Explosion Protected Lighting",
+        name: "Fire Fighter Flashlight",
 
-        image: "images/products/explosion-protected-lighting.jpg",
+        image: "images/FIRE FIGHTER FLASHLIGHT.jpeg",
 
         icon: "fa-solid fa-lightbulb",
 
         text:
-          "Specialized lighting solutions for hazardous working environments."
+          "Emergency lighting solution designed for visibility during fire-fighting and rescue operations."
       },
 
       {
-        name: "Industrial Inspection Lights",
+        name: "Harness",
 
-        image: "images/products/inspection-lights.jpg",
+        image: "images/HARNESS.jpeg",
 
-        icon: "fa-solid fa-magnifying-glass",
+        icon: "fa-solid fa-person-falling",
 
         text:
-          "Portable inspection lighting for demanding industrial applications."
+          "Full-body safety harness designed to provide fall protection for suitable work-at-height applications."
+      },
+
+      {
+        name: "Retrievable Blocks",
+
+        image: "images/RETRIEVABLE BLOCKS.jpeg",
+
+        icon: "fa-solid fa-person-falling",
+
+        text:
+          "Retrieval and fall protection equipment designed to support safer work-at-height operations."
+      },
+
+      {
+        name: "Davit Arm System",
+
+        image: "images/DEVIT ARM SYSTEM.jpeg",
+
+        icon: "fa-solid fa-person-falling",
+
+        text:
+          "Davit arm system designed to support controlled access, fall protection and retrieval applications."
       }
+
     ]
   },
 
 
   /* =========================================================
-     SAFE STORAGE
+     SAFE STORAGE & LABORATORY SOLUTIONS
   ========================================================= */
 
   {
-    title: "Safe Storage Solutions",
+    title: "Safe Storage & Laboratory Solutions",
 
     description:
-      "Purpose-built storage solutions for safer handling, segregation and organization of hazardous materials.",
+      "Purpose-built solutions for safer storage, chemical segregation and controlled laboratory environments.",
 
     direction: "left",
 
     products: [
-      {
-        name: "Safety Storage Cabinets",
-
-        image: "images/products/safety-cabinets.jpg",
-
-        icon: "fa-solid fa-box",
-
-        text:
-          "Safety cabinets for organized storage of hazardous materials."
-      },
 
       {
-        name: "Chemical Storage",
+        name: "Chemical Storage Cabinet",
 
-        image: "images/products/chemical-storage.jpg",
+        image: "images/FOR FLAMABLES ACIDS,BASE &TOXICS.jpeg",
 
         icon: "fa-solid fa-flask",
 
         text:
-          "Storage solutions designed for controlled chemical handling."
+          "Storage solution designed for organized handling and segregation of hazardous chemicals."
       },
 
       {
-        name: "Flammable Storage",
+        name: "Flammable Storage Cabinet",
 
-        image: "images/products/flammable-storage.jpg",
+        image: "images/FOR FLAMABLES.jpeg",
 
         icon: "fa-solid fa-fire",
 
         text:
-          "Dedicated storage solutions for flammable substances."
+          "Dedicated storage solution designed for safer organization and handling of flammable substances."
       },
 
       {
-        name: "Safety Containers",
+        name: "Document & File Storage",
 
-        image: "images/products/safety-containers.jpg",
+        image: "images/FOR DOCUMENTS AND FILES.jpeg",
 
-        icon: "fa-solid fa-box",
+        icon: "fa-solid fa-folder-open",
 
         text:
-          "Durable containers for safer handling and workplace storage."
+          "Dedicated storage solution designed for organized protection and management of documents and files."
+      },
+
+      {
+        name: "Lab Faucet",
+
+        image: "images/LAB FAUCET.png",
+
+        icon: "fa-solid fa-faucet",
+
+        text:
+          "Laboratory faucet solution designed for controlled water supply in laboratory and technical environments."
       }
+
     ]
   }
+
 ];
 
 
@@ -352,6 +584,7 @@ const productSections = [
 ========================================================= */
 
 function ProductCard({ product }) {
+
   const imageSrc = getImagePath(product.image);
 
   return (
@@ -364,6 +597,7 @@ function ProductCard({ product }) {
       <div className="ts-product-card-image-wrapper">
 
         {imageSrc ? (
+
           <img
             src={imageSrc}
             alt={product.name}
@@ -373,21 +607,23 @@ function ProductCard({ product }) {
               event.currentTarget.style.display = "none";
             }}
           />
-        ) : (
-          <div className="ts-product-card-image-placeholder">
-            <i className={product.icon}></i>
-          </div>
-        )}
 
-        {/* Overlay */}
+        ) : (
+
+          <div className="ts-product-card-image-placeholder">
+
+            <i className={product.icon}></i>
+
+          </div>
+
+        )}
 
         <div className="ts-product-card-overlay"></div>
 
-
-        {/* Icon */}
-
         <div className="ts-product-card-icon">
+
           <i className={product.icon}></i>
+
         </div>
 
       </div>
@@ -418,6 +654,7 @@ function ProductCard({ product }) {
           Enquire Now
 
           <i className="fa-solid fa-arrow-right"></i>
+
         </Link>
 
       </div>
@@ -432,7 +669,9 @@ function ProductCard({ product }) {
 ========================================================= */
 
 export default function Products() {
+
   return (
+
     <main className="ts-products-page">
 
 
@@ -456,15 +695,23 @@ export default function Products() {
 
 
             <h1>
+
               Equipment built around
-              <strong> workplace safety.</strong>
+
+              <strong>
+                workplace safety.
+              </strong>
+
             </h1>
 
 
             <p>
+
               Explore our complete range of fire protection,
-              personal protective equipment, emergency response
-              and industrial safety solutions.
+              personal protective equipment, emergency response,
+              hazardous-area protection, fall protection and
+              safe storage solutions.
+
             </p>
 
 
@@ -488,7 +735,7 @@ export default function Products() {
               <div>
 
                 <strong>
-                  30+
+                  39+
                 </strong>
 
                 <span>
@@ -528,7 +775,9 @@ export default function Products() {
         <div className="container">
 
 
-          {/* INTRO */}
+          {/* =================================================
+              INTRO
+          ================================================= */}
 
           <div className="ts-products-intro">
 
@@ -537,14 +786,22 @@ export default function Products() {
             </span>
 
             <h2>
+
               Complete protection.
-              <strong> One place.</strong>
+
+              <strong>
+                One place.
+              </strong>
+
             </h2>
 
             <p>
+
               From fire protection and PPE to emergency response,
-              hazardous-area equipment and safe storage solutions,
-              discover products selected around real workplace risks.
+              hazardous-area protection, fall protection and safe
+              storage solutions, discover products selected around
+              real workplace risks.
+
             </p>
 
           </div>
@@ -606,8 +863,9 @@ export default function Products() {
                   }`}
                 >
 
-
-                  {/* FIRST SET */}
+                  {/* =================================================
+                      FIRST SET
+                  ================================================= */}
 
                   <div className="ts-product-carousel-track">
 
@@ -623,7 +881,9 @@ export default function Products() {
                   </div>
 
 
-                  {/* DUPLICATE SET */}
+                  {/* =================================================
+                      DUPLICATE SET
+                  ================================================= */}
 
                   <div
                     className="ts-product-carousel-track"
@@ -687,9 +947,11 @@ export default function Products() {
               </h2>
 
               <p>
+
                 Share your application or safety requirement
                 with our team and get guidance on suitable
                 equipment and protection solutions.
+
               </p>
 
             </div>
@@ -701,6 +963,7 @@ export default function Products() {
               to="/contact"
               className="ts-products-bottom-btn"
             >
+
               Talk to an Expert
 
               <i className="fa-solid fa-arrow-right"></i>
@@ -716,3 +979,4 @@ export default function Products() {
     </main>
   );
 }
+
