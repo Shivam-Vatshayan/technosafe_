@@ -1,8 +1,16 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+ 
+import React, { useEffect } from "react";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import FloatingContact from "./components/FloatingContact";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,6 +18,29 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 
+
+/* =========================================================
+   SCROLL TO PAGE TOP ON EVERY ROUTE CHANGE
+========================================================= */
+
+function RouteScrollTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, [pathname]);
+
+  return null;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
 
 export default function App() {
   return (
@@ -20,6 +51,27 @@ export default function App() {
       ===================================================== */}
 
       <Navbar />
+
+
+      {/* =====================================================
+          FLOATING PHONE + WHATSAPP
+      ===================================================== */}
+
+      <FloatingContact />
+
+
+      {/* =====================================================
+          RESET SCROLL WHEN CHANGING PAGE
+      ===================================================== */}
+
+      <RouteScrollTop />
+
+
+      {/* =====================================================
+          BACK TO TOP BUTTON
+      ===================================================== */}
+
+      <ScrollToTop />
 
 
       {/* =====================================================
@@ -109,3 +161,4 @@ export default function App() {
     </div>
   );
 }
+ 

@@ -1,0 +1,151 @@
+ 
+/* =========================================================
+   TECHNOSAFE — FLOATING PHONE + WHATSAPP
+========================================================= */
+
+.ts-floating-contact {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 24px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  pointer-events: none;
+
+  z-index: 9997;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.ts-floating-contact a {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 21px;
+
+  pointer-events: auto;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/* =========================================================
+   PHONE — LEFT
+========================================================= */
+
+.ts-floating-phone {
+  background: #e50914;
+}
+
+
+/* =========================================================
+   WHATSAPP — RIGHT
+========================================================= */
+
+.ts-floating-whatsapp {
+  background: #25d366;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.ts-floating-contact a:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.30);
+
+  filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.ts-floating-contact a:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.ts-floating-contact i {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ts-floating-contact {
+    bottom: 18px;
+    padding: 0 18px;
+  }
+
+  .ts-floating-contact a {
+    width: 48px;
+    height: 48px;
+
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .ts-floating-contact {
+    bottom: 14px;
+    padding: 0 14px;
+  }
+
+  .ts-floating-contact a {
+    width: 44px;
+    height: 44px;
+
+    font-size: 17px;
+  }
+
+}
+ 

@@ -1,33 +1,70 @@
- 
+
 /* =========================================================
    TECHNOSAFE NAVBAR
-   PREMIUM DARK HIGH-CONTRAST THEME
+   BLACK + RED + WHITE THEME
    UPDATED:
-   - WIDER HEADER CONTENT
-   - LARGER LOGO
-   - FULL LOGO FIT
-   - NO LOGO CROPPING
-   - RESPONSIVE
-   - NO GRADIENT
-   - NO GLOW
+   - Larger TECHNOSAFE™
+   - Wider Header / Container
+   - White Text
+   - Red Solutions Badge
+   - Light Red CTA
+========================================================= */
+
+
+
+:root {
+  --ts-black: #050505;
+  --ts-black-2: #0b0b0b;
+  --ts-red: #e50914;
+  --ts-red-dark: #b90710;
+  --ts-light-red: #ff5c63;
+  --ts-white: #ffffff;
+  --ts-white-soft: #eeeeee;
+  --ts-border: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   GLOBAL NAV
 ========================================================= */
 
 .ts-nav {
+  width: 100%;
+  background: var(--ts-black);
+  color: var(--ts-white);
+
   position: fixed;
   top: 0;
   left: 0;
+
   z-index: 9999;
 
-  width: 100%;
+  font-family: "Outfit", Arial, sans-serif;
+}
 
-  background: #05090D;
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  color: #FFFFFF;
+#root {
+  padding-top: 132px;
+}
 
-  border: none;
+.ts-nav *,
+.ts-nav *::before,
+.ts-nav *::after {
+  box-sizing: border-box;
+}
 
-  box-shadow:
-    0 4px 18px rgba(0, 0, 0, 0.28);
+
+/* =========================================================
+   WIDER CONTAINER
+========================================================= */
+
+.ts-nav .container {
+  width: min(100% - 32px, 1500px);
+  margin: 0 auto;
 }
 
 
@@ -37,246 +74,273 @@
 
 .ts-nav-top {
   width: 100%;
-  min-height: 36px;
-
-  background: #080D12;
-
-  border: none;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: #000000;
+  border-bottom: 1px solid var(--ts-border);
 }
 
-
 .ts-nav-top-inner {
-  width: min(1440px, calc(100% - 40px));
-
-  min-height: 36px;
-
-  margin: 0 auto;
+  min-height: 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 25px;
 }
 
+
+/* =========================================================
+   TOP BAR LEFT
+========================================================= */
 
 .ts-nav-top-left {
   display: flex;
   align-items: center;
+  gap: 18px;
 
-  gap: 15px;
+  min-width: 0;
 }
-
 
 .ts-nav-top span,
 .ts-nav-top a {
-  display: inline-flex;
-  align-items: center;
-
-  gap: 7px;
-
-  color: #CBD2D9;
-
-  font-size: 9px;
-  font-weight: 500;
+  color: var(--ts-white);
 
   text-decoration: none;
 
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1;
+
   white-space: nowrap;
-
-  transition:
-    color 0.25s ease;
 }
-
 
 .ts-nav-top i {
-  color: #FF766D;
+  color: var(--ts-light-red);
 
-  font-size: 9px;
-}
+  margin-right: 7px;
 
-
-.ts-nav-top a:hover {
-  color: #FFFFFF;
-}
-
-
-.ts-nav-separator {
-  width: 1px !important;
-  height: 12px !important;
-
-  background: rgba(255, 255, 255, 0.15);
+  font-size: 11px;
 }
 
 
 /* =========================================================
-   MAIN NAV
+   TOP BAR SEPARATOR
+========================================================= */
+
+.ts-nav-separator {
+  width: 1px;
+  height: 15px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  display: inline-block;
+}
+
+
+/* =========================================================
+   TOP BAR HOVER
+========================================================= */
+
+.ts-nav-top a {
+  transition: color 0.25s ease;
+}
+
+.ts-nav-top a:hover {
+  color: var(--ts-light-red);
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
 ========================================================= */
 
 .ts-nav-main {
-  position: relative;
-
   width: 100%;
-  height: 104px;
 
-  background: #05090D;
+  background: var(--ts-black);
 
-  border: none;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--ts-border);
 }
 
 
 /* =========================================================
-   NAV INNER
-   WIDER THAN BEFORE
+   HEADER INNER
 ========================================================= */
 
 .ts-nav-inner {
-  width: min(1440px, calc(100% - 32px));
-
-  height: 100%;
-
-  margin: 0 auto;
+  min-height: 92px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 32px;
+  gap: 45px;
 }
 
 
 /* =========================================================
-LOGO
-UPDATED — LARGER DESKTOP LOGO
+   TEXT LOGO
 ========================================================= */
 
 .ts-nav-logo {
+  display: flex;
+  align-items: center;
 
-display: flex;
+  text-decoration: none;
 
-align-items: center;
+  color: var(--ts-white);
 
-justify-content: center;
+  flex-shrink: 0;
 
-width: 280px !important;
-
-height: 90px !important;
-
-flex-shrink: 0;
-
-margin: 0 !important;
-
-padding: 0 !important;
-
-background: #FFFFFF !important;
-
-border: 1px solid rgba(255, 255, 255, 0.90) !important;
-
-border-radius: 8px !important;
-
-text-decoration: none !important;
-
-overflow: hidden !important;
-
-box-shadow:
-0 6px 18px rgba(0, 0, 0, 0.32);
-
-transition:
-transform 0.25s ease,
-box-shadow 0.25s ease;
-
-}
-
-/* =========================================================
-LOGO IMAGE
-FULL LOGO MUST FIT — NO CROPPING
-========================================================= */
-
-.ts-nav-logo img {
-
-display: block !important;
-
-width: 100% !important;
-
-height: 100% !important;
-
-max-width: 100% !important;
-
-max-height: 100% !important;
-
-margin: 0 !important;
-
-padding: 7px !important;
-
-object-fit: contain !important;
-
-object-position: center center !important;
-
-background: #FFFFFF !important;
-
-border: none !important;
-
-border-radius: 8px !important;
-
-box-shadow: none !important;
-
-transform: scale(1) !important;
-
-transform-origin: center center;
-
-transition:
-transform 0.25s ease,
-opacity 0.25s ease;
-
+  min-width: 290px;
 }
 
 
-
 /* =========================================================
-   LOGO HOVER
+   LOGO TEXT WRAPPER
 ========================================================= */
 
-.ts-nav-logo:hover {
-  transform: translateY(-2px);
+.ts-logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   TECHNOSAFE BRAND
+   EXTRA LARGE + BOLD
+========================================================= */
+
+.ts-logo-brand {
+  color: var(--ts-white);
+
+  font-family:
+    "Arial Black",
+    "Outfit",
+    Arial,
+    sans-serif;
+
+  font-size: 40px;
+
+  line-height: 0.95;
+
+  font-weight: 950;
+
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   TRADEMARK ™
+   BIGGER
+========================================================= */
+
+.ts-logo-tm {
+  font-family: Arial, sans-serif;
+
+  color: var(--ts-white);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  margin-left: 5px;
+
+  position: relative;
+
+  top: -19px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LOGO BOTTOM ROW
+========================================================= */
+
+.ts-logo-bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   ISO CERTIFIED TEXT
+========================================================= */
+
+.ts-logo-certified {
+  color: var(--ts-white-soft);
+
+  font-size: 7px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: 0.75px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SOLUTIONS RED BADGE
+========================================================= */
+
+.ts-logo-solutions {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--ts-red);
+
+  color: var(--ts-white);
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  padding: 5px 9px;
+
+  border-radius: 2px;
+
+  white-space: nowrap;
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.40);
-}
-
-
-.ts-nav-logo:hover img {
-  transform: scale(1.02) !important;
-
-  opacity: 0.97;
+    0 3px 14px rgba(229, 9, 20, 0.28);
 }
 
 
 /* =========================================================
-   NAV MENU
+   NAVIGATION MENU
 ========================================================= */
 
 .ts-nav-menu {
   display: flex;
 
   align-items: center;
+
   justify-content: flex-end;
 
-  gap: 20px;
+  gap: 35px;
 
-  min-width: 0;
-}
-
-
-.ts-nav-links {
-  display: flex;
-
-  align-items: center;
-
-  gap: 3px;
+  margin-left: auto;
 }
 
 
@@ -284,41 +348,78 @@ opacity 0.25s ease;
    NAV LINKS
 ========================================================= */
 
-.ts-nav-link {
-  position: relative;
-
-  height: 44px;
-
+.ts-nav-links {
   display: flex;
+
   align-items: center;
 
-  padding: 0 13px;
-
-  color: #D8DEE4 !important;
-
-  background: transparent;
-
-  border-radius: 7px;
-
-  text-decoration: none !important;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  transition:
-    color 0.25s ease,
-    background-color 0.25s ease;
+  gap: 7px;
 }
 
 
 /* =========================================================
-   LINK HOVER
+   INDIVIDUAL NAV LINK
+========================================================= */
+
+.ts-nav-link {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  color: var(--ts-white);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  padding: 11px 15px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   NAV LINK UNDERLINE
+========================================================= */
+
+.ts-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  bottom: 3px;
+
+  height: 2px;
+
+  background: var(--ts-light-red);
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* =========================================================
+   NAV LINK HOVER
 ========================================================= */
 
 .ts-nav-link:hover {
-  color: #FFFFFF !important;
+  color: var(--ts-light-red);
+}
 
-  background: #111820;
+.ts-nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 
@@ -327,40 +428,13 @@ opacity 0.25s ease;
 ========================================================= */
 
 .ts-nav-link.active {
-  color: #FFFFFF !important;
+  color: var(--ts-white);
 
-  background: #111820;
+  font-weight: 650;
 }
-
-
-/* =========================================================
-   ACTIVE RED LINE
-========================================================= */
-
-.ts-nav-link::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  bottom: 3px;
-
-  width: 0;
-  height: 2px;
-
-  background: #FF5C52;
-
-  border-radius: 2px;
-
-  transform: translateX(-50%);
-
-  transition:
-    width 0.25s ease;
-}
-
 
 .ts-nav-link.active::after {
-  width: 20px;
+  transform: scaleX(1);
 }
 
 
@@ -369,10 +443,6 @@ opacity 0.25s ease;
 ========================================================= */
 
 .ts-nav-button {
-  height: 45px;
-
-  min-width: 145px;
-
   display: inline-flex;
 
   align-items: center;
@@ -380,26 +450,46 @@ opacity 0.25s ease;
 
   gap: 9px;
 
-  padding: 0 18px;
+  min-height: 45px;
 
-  color: #FFFFFF !important;
+  padding: 0 22px;
 
-  background: #E1261C;
+  background: var(--ts-light-red);
 
-  border: 1px solid #E1261C !important;
+  color: #ffffff;
 
-  border-radius: 7px;
+  border: 1px solid var(--ts-light-red);
 
-  text-decoration: none !important;
+  border-radius: 4px;
 
-  font-size: 10px;
+  text-decoration: none;
+
+  font-size: 13px;
+
   font-weight: 700;
 
+  white-space: nowrap;
+
+  box-shadow:
+    0 6px 20px rgba(255, 92, 99, 0.18);
+
   transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
+    background 0.25s ease,
     border-color 0.25s ease,
+    transform 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CTA ICON
+========================================================= */
+
+.ts-nav-button i {
+  font-size: 11px;
+
+  transition:
+    transform 0.25s ease;
 }
 
 
@@ -408,124 +498,179 @@ opacity 0.25s ease;
 ========================================================= */
 
 .ts-nav-button:hover {
-  color: #FFFFFF !important;
+  background: var(--ts-red);
 
-  background: #FF4A40;
+  border-color: var(--ts-red);
 
-  border-color: #FF4A40 !important;
+  color: #ffffff;
 
   transform: translateY(-2px);
 
   box-shadow:
-    0 8px 22px rgba(225, 38, 28, 0.24);
+    0 9px 25px rgba(229, 9, 20, 0.28);
 }
-
-
-.ts-nav-button i {
-  font-size: 9px;
-
-  transition:
-    transform 0.25s ease;
-}
-
 
 .ts-nav-button:hover i {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
 
 /* =========================================================
-   MOBILE TOGGLE
+   MOBILE MENU TOGGLE
 ========================================================= */
 
 .ts-nav-toggle {
   display: none;
 
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   padding: 0;
 
-  flex-direction: column;
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 4px;
+
+  background: #0b0b0b;
+
+  cursor: pointer;
 
   align-items: center;
   justify-content: center;
 
+  flex-direction: column;
+
   gap: 5px;
 
-  background: #111820;
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-
-  border-radius: 7px;
-
-  cursor: pointer;
-
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-.ts-nav-toggle:hover {
-  background: #171F27;
-
-  border-color: #E1261C;
-}
-
-
-.ts-nav-toggle span {
-  width: 18px;
-  height: 2px;
-
-  display: block;
-
-  background: #FFFFFF;
-
-  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 
 /* =========================================================
-   LARGE TABLET / SMALL DESKTOP
+   HAMBURGER LINES
+========================================================= */
+
+.ts-nav-toggle span {
+  width: 21px;
+  height: 2px;
+
+  background: #ffffff;
+
+  display: block;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   TOGGLE ACTIVE
+========================================================= */
+
+.ts-nav-toggle.active span:nth-child(1) {
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+.ts-nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ts-nav-toggle.active span:nth-child(3) {
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+  .ts-nav .container {
+    width: min(100% - 60px, 1580px);
+  }
+
+  .ts-nav-inner {
+    min-height: 96px;
+
+    gap: 55px;
+  }
+
+  .ts-logo-brand {
+    font-size: 43px;
+  }
+
+  .ts-logo-tm {
+    font-size: 16px;
+
+    top: -21px;
+  }
+
+  .ts-nav-link {
+    font-size: 15px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ts-nav-menu {
+    gap: 38px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
 ========================================================= */
 
 @media (max-width: 1200px) {
 
-  .ts-nav-top-inner {
-    width: min(1380px, calc(100% - 30px));
-  }
-
-
   .ts-nav-inner {
-    width: min(1380px, calc(100% - 30px));
-
-    gap: 22px;
+    gap: 25px;
   }
-
 
   .ts-nav-logo {
-    width: 225px !important;
-    height: 78px !important;
+    min-width: 260px;
   }
 
+  .ts-logo-brand {
+    font-size: 35px;
+  }
+
+  .ts-logo-tm {
+    font-size: 13px;
+
+    top: -16px;
+  }
 
   .ts-nav-menu {
-    gap: 10px;
+    gap: 20px;
   }
-
 
   .ts-nav-link {
-    padding: 0 9px;
+    font-size: 13px;
 
-    font-size: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
+  .ts-nav-link::after {
+    left: 10px;
+    right: 10px;
+  }
 
   .ts-nav-button {
-    min-width: 135px;
-  }
+    padding: 0 17px;
 
+    font-size: 12px;
+  }
 }
 
 
@@ -533,53 +678,39 @@ opacity 0.25s ease;
    TABLET
 ========================================================= */
 
-@media (max-width: 1080px) {
+@media (max-width: 1000px) {
 
-  .ts-nav-main {
-    height: 98px;
+  .ts-nav .container {
+    width: min(100% - 28px, 1500px);
   }
-
 
   .ts-nav-inner {
-    width: calc(100% - 26px);
-
-    gap: 18px;
+    min-height: 84px;
   }
-
 
   .ts-nav-logo {
-    width: 210px !important;
-    height: 74px !important;
-
-    border-radius: 7px !important;
+    min-width: 240px;
   }
 
-
-  .ts-nav-logo img {
-    padding: 6px !important;
-
-    border-radius: 7px !important;
+  .ts-logo-brand {
+    font-size: 31px;
   }
 
+  .ts-logo-tm {
+    font-size: 12px;
 
-  .ts-nav-menu {
-    gap: 8px;
+    top: -14px;
   }
 
-
-  .ts-nav-link {
-    padding: 0 8px;
-
-    font-size: 10px;
+  .ts-logo-certified {
+    font-size: 6px;
   }
 
+  .ts-logo-solutions {
+    font-size: 8px;
 
-  .ts-nav-button {
-    min-width: 125px;
-
-    padding: 0 14px;
+    padding: 4px 7px;
   }
-
 }
 
 
@@ -587,90 +718,99 @@ opacity 0.25s ease;
    MOBILE
 ========================================================= */
 
-@media (max-width: 820px) {
+@media (max-width: 850px) {
+
+  .ts-nav .container {
+    width: min(100% - 28px, 1500px);
+  }
+
+
+  /* -----------------------------------------
+     TOP BAR
+  ----------------------------------------- */
+
+  .ts-nav-top-inner {
+    min-height: 34px;
+  }
 
   .ts-nav-top-left {
+    gap: 0;
+  }
+
+  .ts-nav-top-left > span:first-child,
+  .ts-nav-separator,
+  .ts-nav-top-left a {
     display: none;
   }
 
+  .ts-nav-top-inner > a {
+    margin-left: auto;
+  }
 
-  .ts-nav-top-inner {
-    justify-content: center;
-
-    width: calc(100% - 30px);
+  .ts-nav-top span,
+  .ts-nav-top a {
+    font-size: 10px;
   }
 
 
-  .ts-nav-main {
-    height: 80px;
-  }
-
+  /* -----------------------------------------
+     MAIN HEADER
+  ----------------------------------------- */
 
   .ts-nav-inner {
-    width: calc(100% - 24px);
+    min-height: 78px;
 
     gap: 15px;
   }
 
 
-  /* =====================================================
-     MOBILE LOGO
-     LARGER + COMPLETE FIT
-  ===================================================== */
+  /* -----------------------------------------
+     LOGO
+  ----------------------------------------- */
 
   .ts-nav-logo {
-    width: 200px !important;
-    height: 68px !important;
+    min-width: auto;
+  }
 
-    border-radius: 7px !important;
+  .ts-logo-brand {
+    font-size: 28px;
 
-    background: #FFFFFF !important;
+    letter-spacing: 0.8px;
+  }
 
-    box-shadow:
-      0 6px 18px rgba(0, 0, 0, 0.35);
+  .ts-logo-tm {
+    font-size: 10px;
+
+    top: -13px;
+
+    margin-left: 3px;
+  }
+
+  .ts-logo-certified {
+    font-size: 5.5px;
+
+    letter-spacing: 0.35px;
+  }
+
+  .ts-logo-solutions {
+    font-size: 7px;
+
+    padding: 4px 6px;
   }
 
 
-  .ts-nav-logo img {
-    padding: 6px !important;
-
-    object-fit: contain !important;
-
-    transform: scale(1) !important;
-
-    border-radius: 7px !important;
-  }
-
-
-  .ts-nav-logo:hover img {
-    transform: scale(1.02) !important;
-  }
-
-
-  /* =====================================================
-     MOBILE TOGGLE
-  ===================================================== */
-
-  .ts-nav-toggle {
-    display: flex;
-  }
-
-
-  /* =====================================================
+  /* -----------------------------------------
      MOBILE MENU
-  ===================================================== */
+  ----------------------------------------- */
 
   .ts-nav-menu {
     position: absolute;
 
-    top: 80px;
+    top: 100%;
     left: 0;
+    right: 0;
 
     width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 15px;
 
     display: flex;
 
@@ -678,42 +818,51 @@ opacity 0.25s ease;
 
     align-items: stretch;
 
-    gap: 10px;
+    gap: 0;
 
-    background: #05090D;
+    background: #050505;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top:
+      1px solid rgba(255, 255, 255, 0.1);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.1);
 
-    box-shadow:
-      0 20px 40px rgba(0, 0, 0, 0.40);
+    padding: 10px 14px 18px;
 
     opacity: 0;
 
     visibility: hidden;
 
-    transform: translateY(-10px);
-
     pointer-events: none;
+
+    transform: translateY(-10px);
 
     transition:
       opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0.25s ease;
+      visibility 0.25s ease,
+      transform 0.25s ease;
   }
 
+
+  /* -----------------------------------------
+     OPEN MENU
+  ----------------------------------------- */
 
   .ts-nav-menu.open {
     opacity: 1;
 
     visibility: visible;
 
-    transform: translateY(0);
-
     pointer-events: auto;
+
+    transform: translateY(0);
   }
 
+
+  /* -----------------------------------------
+     MOBILE LINKS
+  ----------------------------------------- */
 
   .ts-nav-links {
     width: 100%;
@@ -722,63 +871,57 @@ opacity 0.25s ease;
 
     flex-direction: column;
 
-    gap: 4px;
-  }
+    align-items: stretch;
 
+    gap: 2px;
+  }
 
   .ts-nav-link {
     width: 100%;
 
-    height: 47px;
+    min-height: 46px;
 
-    box-sizing: border-box;
+    padding: 12px 14px;
 
-    justify-content: flex-start;
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.07);
 
-    padding: 0 16px;
-
-    color: #DDE2E7 !important;
-
-    background: #0A1016;
+    font-size: 14px;
   }
-
-
-  .ts-nav-link:hover {
-    color: #FFFFFF !important;
-
-    background: #121A22;
-  }
-
-
-  .ts-nav-link.active {
-    color: #FFFFFF !important;
-
-    background: #121A22;
-  }
-
 
   .ts-nav-link::after {
-    left: 16px;
+    left: 14px;
 
-    bottom: 7px;
+    right: auto;
 
-    transform: none;
+    width: 25px;
+
+    bottom: 8px;
   }
 
 
-  .ts-nav-link.active::after {
-    width: 22px;
-  }
-
+  /* -----------------------------------------
+     MOBILE CTA
+  ----------------------------------------- */
 
   .ts-nav-button {
     width: 100%;
 
-    height: 48px;
+    min-height: 46px;
 
-    border-radius: 7px;
+    margin-top: 14px;
+
+    font-size: 13px;
   }
 
+
+  /* -----------------------------------------
+     TOGGLE
+  ----------------------------------------- */
+
+  .ts-nav-toggle {
+    display: flex;
+  }
 }
 
 
@@ -788,76 +931,85 @@ opacity 0.25s ease;
 
 @media (max-width: 480px) {
 
-  .ts-nav-top {
-    min-height: 32px;
+  .ts-nav .container {
+    width: min(100% - 20px, 1500px);
+  }
 
-    background: #070C11;
+  .ts-nav-inner {
+    min-height: 72px;
   }
 
 
-  .ts-nav-top-inner {
-    min-height: 32px;
+  /* LOGO */
 
-    width: calc(100% - 20px);
+  .ts-logo-brand {
+    font-size: 24px;
+
+    letter-spacing: 0.6px;
+  }
+
+  .ts-logo-tm {
+    font-size: 9px;
+
+    top: -11px;
+  }
+
+  .ts-logo-bottom {
+    gap: 4px;
+
+    margin-top: 5px;
+  }
+
+  .ts-logo-certified {
+    font-size: 5px;
+
+    letter-spacing: 0.25px;
+  }
+
+  .ts-logo-solutions {
+    font-size: 6px;
+
+    padding: 3px 5px;
+
+    letter-spacing: 0.6px;
   }
 
 
-  .ts-nav-top a {
-    color: #CBD2D9;
-
-    font-size: 8px;
-  }
-
-
-  .ts-nav-main {
-    height: 72px;
-  }
-
-
-  /* =====================================================
-     SMALL MOBILE LOGO
-     COMPLETE LOGO FIT
-  ===================================================== */
-
-  .ts-nav-logo {
-    width: 185px !important;
-    height: 62px !important;
-
-    border-radius: 6px !important;
-
-    background: #FFFFFF !important;
-  }
-
-
-  .ts-nav-logo img {
-    padding: 5px !important;
-
-    object-fit: contain !important;
-
-    transform: scale(1) !important;
-
-    border-radius: 6px !important;
-  }
-
-
-  .ts-nav-logo:hover img {
-    transform: scale(1.02) !important;
-  }
-
+  /* TOGGLE */
 
   .ts-nav-toggle {
-    width: 41px;
-    height: 41px;
-
-    background: #111820;
+    width: 42px;
+    height: 42px;
   }
 
+  .ts-nav-toggle span {
+    width: 19px;
+  }
+}
 
-  .ts-nav-menu {
-    top: 72px;
 
-    background: #05090D;
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .ts-logo-brand {
+    font-size: 21px;
   }
 
+  .ts-logo-tm {
+    font-size: 8px;
+
+    top: -10px;
+  }
+
+  .ts-logo-certified {
+    font-size: 4.5px;
+  }
+
+  .ts-logo-solutions {
+    font-size: 5.5px;
+  }
 }
  

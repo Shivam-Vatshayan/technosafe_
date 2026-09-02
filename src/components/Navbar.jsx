@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -13,12 +13,12 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.jpeg`;
-
   return (
     <header className="ts-nav">
 
-      {/* TOP BAR */}
+      {/* =========================================================
+          TOP BAR
+      ========================================================= */}
       <div className="ts-nav-top">
         <div className="container ts-nav-top-inner">
 
@@ -47,25 +47,49 @@ export default function Navbar() {
       </div>
 
 
-      {/* MAIN NAV */}
+      {/* =========================================================
+          MAIN NAVIGATION
+      ========================================================= */}
       <nav className="ts-nav-main">
 
         <div className="container ts-nav-inner">
 
-          {/* LOGO */}
+          {/* =====================================================
+              TEXT LOGO
+          ===================================================== */}
           <NavLink
             to="/"
             className="ts-nav-logo"
             onClick={() => setOpen(false)}
           >
-            <img
-              src={logoPath}
-              alt="TechnoSafe Solutions"
-            />
+
+            <div className="ts-logo-text">
+
+              <div className="ts-logo-brand">
+                TECHNOSAFE
+                <span className="ts-logo-tm">™</span>
+              </div>
+
+              <div className="ts-logo-bottom">
+
+                <span className="ts-logo-certified">
+                  ISO 9001:2015 CERTIFIED COMPANY
+                </span>
+
+                <span className="ts-logo-solutions">
+                  SOLUTIONS.
+                </span>
+
+              </div>
+
+            </div>
+
           </NavLink>
 
 
-          {/* NAVIGATION MENU */}
+          {/* =====================================================
+              NAVIGATION MENU
+          ===================================================== */}
           <div className={`ts-nav-menu ${open ? "open" : ""}`}>
 
             <div className="ts-nav-links">
@@ -87,7 +111,9 @@ export default function Navbar() {
             </div>
 
 
-            {/* CTA BUTTON */}
+            {/* =================================================
+                CTA BUTTON
+            ================================================= */}
             <NavLink
               to="/contact"
               className="ts-nav-button"
@@ -100,10 +126,12 @@ export default function Navbar() {
           </div>
 
 
-          {/* MOBILE MENU BUTTON */}
+          {/* =====================================================
+              MOBILE MENU BUTTON
+          ===================================================== */}
           <button
             type="button"
-            className="ts-nav-toggle"
+            className={`ts-nav-toggle ${open ? "active" : ""}`}
             onClick={() => setOpen((prev) => !prev)}
             aria-label="Toggle navigation"
             aria-expanded={open}
@@ -120,3 +148,4 @@ export default function Navbar() {
     </header>
   );
 }
+ 

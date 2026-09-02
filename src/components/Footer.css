@@ -1,15 +1,8 @@
+ 
 /* =========================================================
    TECHNOSAFE FOOTER
-   UPDATED GLOBAL COLOR SYSTEM
-
-   COLORS:
-   BACKGROUND  : #faf7f0 / #f6f1e6 / #ffffff
-   DARK NAVY   : #12203A
-   LIGHT RED   : #FF6B6B
-
-   FULLY SCOPED
-   LOGO SIZE REDUCED
-   STRONG !IMPORTANT OVERRIDE
+   BLACK + WHITE + RED LOGO
+   LOGO MATCHED WITH HEADER
 ========================================================= */
 
 
@@ -41,6 +34,13 @@
     #faf7f0 !important;
 
   border: none !important;
+}
+
+
+.ts-footer *,
+.ts-footer *::before,
+.ts-footer *::after {
+  box-sizing: border-box;
 }
 
 
@@ -130,8 +130,8 @@
 
 
 /* =========================================================
-   LOGO WRAPPER
-   REDUCED SIZE
+   FOOTER TEXT LOGO
+   SAME VISUAL STYLE AS HEADER
 ========================================================= */
 
 .ts-footer-logo-wrap {
@@ -140,75 +140,175 @@
 
   align-items: center !important;
 
-  justify-content: center !important;
+  justify-content: flex-start !important;
 
-  width: 220px !important;
+  width: auto !important;
 
-  height: 74px !important;
+  min-width: 300px !important;
 
-  margin-bottom: 24px !important;
+  height: auto !important;
+
+  margin: 0 0 24px !important;
 
   padding: 0 !important;
 
-  overflow: hidden !important;
+  overflow: visible !important;
 
   text-decoration: none !important;
 
-  background: #ffffff !important;
+  background: transparent !important;
 
   border: none !important;
 
-  border-radius: 9px !important;
+  border-radius: 0 !important;
 
-  box-shadow:
-    0 8px 28px rgba(18, 32, 58, 0.20) !important;
+  box-shadow: none !important;
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease !important;
+    transform 0.3s ease !important;
 }
 
 
 /* =========================================================
-   LOGO
-   REDUCED SCALE TO PREVENT CROPPING
+   LOGO TEXT WRAPPER
 ========================================================= */
 
-.ts-footer-logo {
+.ts-footer-logo-text {
 
-  display: block !important;
+  display: flex !important;
 
-  width: 100% !important;
+  flex-direction: column !important;
 
-  height: 100% !important;
+  justify-content: center !important;
 
-  max-width: none !important;
+}
 
-  max-height: none !important;
 
-  margin: 0 !important;
+/* =========================================================
+   TECHNOSAFE
+   LARGE + EXTRA BOLD
+========================================================= */
 
-  padding: 0 !important;
+.ts-footer-logo-brand {
 
-  object-fit: contain !important;
+  color: #12203A !important;
 
-  object-position: center center !important;
+  font-family:
+    "Arial Black",
+    "Outfit",
+    Arial,
+    sans-serif !important;
 
-  background: #ffffff !important;
+  font-size: 40px !important;
 
-  border: none !important;
+  line-height: 0.95 !important;
 
-  border-radius: 9px !important;
+  font-weight: 950 !important;
 
-  box-shadow: none !important;
+  letter-spacing: 1.2px !important;
 
-  transform: scale(1.08) !important;
+  white-space: nowrap !important;
 
-  transform-origin: center center !important;
+  text-shadow:
+    0 1px 0 rgba(18, 32, 58, 0.08) !important;
 
   transition:
-    transform 0.3s ease,
-    opacity 0.3s ease !important;
+    color 0.25s ease !important;
+}
+
+
+/* =========================================================
+   TM
+========================================================= */
+
+.ts-footer-logo-tm {
+
+  color: #12203A !important;
+
+  font-family: Arial, sans-serif !important;
+
+  font-size: 15px !important;
+
+  font-weight: 800 !important;
+
+  margin-left: 5px !important;
+
+  position: relative !important;
+
+  top: -19px !important;
+
+  line-height: 1 !important;
+}
+
+
+/* =========================================================
+   LOGO BOTTOM ROW
+========================================================= */
+
+.ts-footer-logo-bottom {
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 8px !important;
+
+  margin-top: 7px !important;
+}
+
+
+/* =========================================================
+   ISO CERTIFIED
+========================================================= */
+
+.ts-footer-logo-certified {
+
+  color: #555D64 !important;
+
+  font-size: 7px !important;
+
+  line-height: 1 !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.75px !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   SOLUTIONS RED BADGE
+========================================================= */
+
+.ts-footer-logo-solutions {
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  background: #e50914 !important;
+
+  color: #ffffff !important;
+
+  font-size: 9px !important;
+
+  line-height: 1 !important;
+
+  font-weight: 800 !important;
+
+  letter-spacing: 1px !important;
+
+  padding: 5px 9px !important;
+
+  border-radius: 2px !important;
+
+  white-space: nowrap !important;
+
+  box-shadow:
+    0 3px 14px rgba(229, 9, 20, 0.22) !important;
 }
 
 
@@ -218,18 +318,14 @@
 
 .ts-footer-logo-wrap:hover {
 
-  transform: translateY(-2px) !important;
-
-  box-shadow:
-    0 12px 32px rgba(18, 32, 58, 0.25) !important;
+  transform:
+    translateY(-2px) !important;
 }
 
+.ts-footer-logo-wrap:hover
+.ts-footer-logo-brand {
 
-.ts-footer-logo-wrap:hover .ts-footer-logo {
-
-  transform: scale(1.11) !important;
-
-  opacity: 0.97 !important;
+  color: #e50914 !important;
 }
 
 
@@ -699,29 +795,23 @@
   }
 
 
-  /* REDUCED TABLET LOGO */
-
   .ts-footer-logo-wrap {
 
-    width: 210px !important;
-
-    height: 70px !important;
-
-    border-radius: 8px !important;
+    min-width: 270px !important;
   }
 
 
-  .ts-footer-logo {
+  .ts-footer-logo-brand {
 
-    border-radius: 8px !important;
-
-    transform: scale(1.06) !important;
+    font-size: 35px !important;
   }
 
 
-  .ts-footer-logo-wrap:hover .ts-footer-logo {
+  .ts-footer-logo-tm {
 
-    transform: scale(1.09) !important;
+    font-size: 13px !important;
+
+    top: -16px !important;
   }
 
 }
@@ -750,31 +840,45 @@
   }
 
 
-  /* REDUCED MOBILE LOGO */
-
   .ts-footer-logo-wrap {
 
-    width: 195px !important;
+    min-width: 0 !important;
 
-    height: 65px !important;
+    width: auto !important;
 
     margin-bottom: 20px !important;
-
-    border-radius: 8px !important;
   }
 
 
-  .ts-footer-logo {
+  .ts-footer-logo-brand {
 
-    border-radius: 8px !important;
+    font-size: 28px !important;
 
-    transform: scale(1.05) !important;
+    letter-spacing: 0.8px !important;
   }
 
 
-  .ts-footer-logo-wrap:hover .ts-footer-logo {
+  .ts-footer-logo-tm {
 
-    transform: scale(1.08) !important;
+    font-size: 10px !important;
+
+    top: -13px !important;
+  }
+
+
+  .ts-footer-logo-certified {
+
+    font-size: 5.5px !important;
+
+    letter-spacing: 0.35px !important;
+  }
+
+
+  .ts-footer-logo-solutions {
+
+    font-size: 7px !important;
+
+    padding: 4px 6px !important;
   }
 
 
@@ -836,29 +940,37 @@
   }
 
 
-  /* REDUCED SMALL MOBILE LOGO */
+  .ts-footer-logo-brand {
 
-  .ts-footer-logo-wrap {
+    font-size: 24px !important;
 
-    width: 180px !important;
-
-    height: 60px !important;
-
-    border-radius: 7px !important;
+    letter-spacing: 0.6px !important;
   }
 
 
-  .ts-footer-logo {
+  .ts-footer-logo-tm {
 
-    border-radius: 7px !important;
+    font-size: 9px !important;
 
-    transform: scale(1.04) !important;
+    top: -11px !important;
   }
 
 
-  .ts-footer-logo-wrap:hover .ts-footer-logo {
+  .ts-footer-logo-certified {
 
-    transform: scale(1.07) !important;
+    font-size: 5px !important;
+
+    letter-spacing: 0.25px !important;
+  }
+
+
+  .ts-footer-logo-solutions {
+
+    font-size: 6px !important;
+
+    padding: 3px 5px !important;
+
+    letter-spacing: 0.6px !important;
   }
 
 
@@ -911,3 +1023,4 @@
   }
 
 }
+ 

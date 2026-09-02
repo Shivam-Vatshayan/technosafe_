@@ -1,10 +1,9 @@
+ 
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
-  const logoPath = `${import.meta.env.BASE_URL}images/technosafe-logo.jpeg`;
-
   return (
     <footer className="ts-footer">
 
@@ -19,21 +18,42 @@ export default function Footer() {
           {/* BRAND */}
           <div className="ts-footer-brand">
 
+            {/* TEXT LOGO - SAME STYLE AS HEADER */}
             <Link to="/" className="ts-footer-logo-wrap">
-              <img
-                className="ts-footer-logo"
-                src={logoPath}
-                alt="TechnoSafe Solutions"
-              />
+
+              <div className="ts-footer-logo-text">
+
+                <div className="ts-footer-logo-brand">
+                  TECHNOSAFE
+                  <span className="ts-footer-logo-tm">™</span>
+                </div>
+
+                <div className="ts-footer-logo-bottom">
+
+                  <span className="ts-footer-logo-certified">
+                    ISO 9001:2015 CERTIFIED COMPANY
+                  </span>
+
+                  <span className="ts-footer-logo-solutions">
+                    SOLUTIONS.
+                  </span>
+
+                </div>
+
+              </div>
+
             </Link>
+
 
             <p className="ts-footer-description">
               Engineered fire safety solutions for people,
               property and uninterrupted business.
             </p>
 
+
             {/* Trust badge */}
             <div className="ts-footer-trust">
+
               <span className="ts-footer-trust-icon">
                 <i className="fa-solid fa-shield-halved"></i>
               </span>
@@ -41,7 +61,9 @@ export default function Footer() {
               <span>
                 Protection you can depend on.
               </span>
+
             </div>
+
 
             {/* Socials */}
             <div className="ts-footer-socials">
@@ -138,6 +160,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <span className="ts-footer-contact-icon">
                   <i className="fa-solid fa-location-dot"></i>
                 </span>
@@ -149,6 +172,7 @@ export default function Footer() {
                   <br />
                   Ambala City, Haryana – 134003
                 </span>
+
               </a>
 
 
@@ -223,3 +247,4 @@ export default function Footer() {
     </footer>
   );
 }
+ 
